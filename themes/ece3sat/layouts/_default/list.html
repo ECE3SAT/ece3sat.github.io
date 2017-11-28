@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+{{ if eq .URL "/theproject/" }}
+    {{ partial "theproject.html" . }}
+{{ else if eq .URL "/cubesatmodules/" }}
+    {{ partial "cubesatmodules.html" . }}
+{{ else if eq .URL "/blog/" }}
+    {{ partial "blog.html" . }}
+{{ else }}
+    <h1>You seems lost...</h1>
+{{ end }}
+
+{{ $paginator := .Paginator }}
+
+{{ range $index, $page := $paginator.Pages }}
+    <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <section class="post-excerpt">
+            <p>{{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">&raquo;</a></p>
+        </section>
+    </article>
+{{ end }}
+
+{{ end }}

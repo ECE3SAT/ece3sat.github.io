@@ -26,7 +26,7 @@ ball. In addition, there are millions of pieces too small to be
 detected.
 
 The vast majority of space debris is located in Low Earth Orbit (LEO)
-where most space missions are located or planned. Figure 1 illustrates
+where most space missions are located or planned. Figure 1 illustrates
 the distribution of debris around the Earth in 2013.
 
 ![Representation of the distribution of the space debris in LEO
@@ -218,6 +218,3 @@ the experiment, prior to flight, in-flight and post flight.
 
 * [PDF from PRODEX explaining Phases](pdf/PRODEX_USERGUIDE_V7_may2011.pdf)
 * [Complete management project architecture developed](pdf/Management_Plan_ECE³SAT_draft.pdf)
-
-
-Made by ECE3SAT's team - [ece3sat@gmail.com](mailto:ece3sat@gmail.com) - [Contribute to this site](https://github.com) - [Facebook](https://www.facebook.com/Ece3sat/)

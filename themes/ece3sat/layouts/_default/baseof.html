@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {{ .Title }} - {{ .Site.Title }}
+        </title>
+        <link href='/css/styles.css' rel='stylesheet' type="text/css" />
+    </head>
+    <body lang="en">
+        <div class="body_wrapper">
+            {{ partial "header.html" . }}
+
+            {{ block "header" . }}
+                <div style="height: 40px"></div>
+            {{ end }}
+
+            <div class="content-bg">
+                <div class="content">
+                    {{ block "main" . }}
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+</html>

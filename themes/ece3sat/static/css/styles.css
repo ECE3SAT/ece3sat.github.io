@@ -1,0 +1,132 @@
+
+/*
+    Page layout:
+        Navigation bar at the top
+        Header image (parallax) just under it
+        Footer at the bottom
+*/
+
+/* page layout */
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+.body_wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+.content-bg {
+    padding-bottom: 100px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.header_image {
+    position: fixed;
+    top: -200px;
+    width: 100%;
+    z-index: -1;
+}
+
+/* elements design */
+
+.content-bg {
+    width: 100%;
+    background-color: #FFF;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #000;
+    color: #CCC;
+}
+
+footer a {
+    color: #CCC;
+}
+
+.content {
+    margin: auto;
+    padding: 10px 0;
+    width: 70%;
+}
+
+.content img {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+/*
+    Top bar
+*/
+
+#top_bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #FFF;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+#top_bar a {
+    padding: 10px;
+    display: inline-block;
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#top_bar a:hover {
+    background-color: #CCC;
+}
+
+#top_bar a:visited {
+    color: #444;
+}
+
+/*
+    Main content
+*/
+
+.content {
+    color: #666;
+    font-family: "Lato", sans-serif;
+}
+
+.content a {
+    color: #666;
+    text-decoration: underline;
+}
+
+.content h1 { color: #00C; }
+.content h2 { color: #03D; }
+.content h3 { color: #06E; }
+.content h4 { color: #09F; }
+
+.content h1 {
+    text-decoration: underline;
+}
+
+article p {
+    margin-top: 0;
+}
+
+article h2 {
+    margin-bottom: 10px;
+}
+
+/*
+    Miscs
+*/
