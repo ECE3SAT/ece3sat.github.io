@@ -1,64 +1,59 @@
 
 /*
-    Page layout:
-        Navigation bar at the top
-        Header image (parallax) just under it
-        Footer at the bottom
+    1. General
+    2. Nav Bar, Home Page Header, breadcrumb
+    3. Footer
+    4. Home Page
+    5. Listing Page
+    6. Article Page
+    7. Miscs
 */
 
-/* page layout */
+/*******************************************************************************
+    1. General
+*******************************************************************************/
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+}
 
 html,
 body {
-   margin:0;
-   padding:0;
-   height:100%;
+   margin: 0;
+   padding: 0;
+   height: 100%;
 }
 
-.body_wrapper {
-    position: relative;
-    min-height: 100%;
+p, li {
+    text-align: justify;
 }
 
-.content-bg {
-    padding-bottom: 100px;
+a {
+    color: #444;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-}
+h1, h2, h3, h4, h5, h6 {margin-top:0; margin-bottom:0.5rem; line-height:1.2;}
 
-.header_image {
-    position: fixed;
-    top: -200px;
-    width: 100%;
-    z-index: -1;
-}
-
-/* elements design */
+/* From http://www.color-hex.com/color-palette/1294 */
+h1 { color: #011f4b; font-size: 2.50rem; text-decoration: underline; }
+h2 { color: #03396c; font-size: 2.00rem; }
+h3 { color: #005b96; font-size: 1.75rem; }
+h4 { color: #6497b1; font-size: 1.50rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.00rem; }
 
 .content-bg {
     width: 100%;
     background-color: #FFF;
 }
 
-footer {
-    text-align: center;
-    width: 100%;
-    padding: 40px 0;
-    background-color: #000;
-    color: #CCC;
-}
-
-footer a {
-    color: #CCC;
-}
-
 .content {
     margin: auto;
-    padding: 10px 0;
-    width: 70%;
+    padding: 0 15px;
+    max-width: 800px;
+    color: #444;
+    font-family: "Lato", sans-serif;
 }
 
 .content img {
@@ -67,66 +62,142 @@ footer a {
     display: block;
 }
 
-/*
-    Top bar
-*/
-
-#top_bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: #FFF;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-}
-
-#top_bar a {
-    padding: 10px;
-    display: inline-block;
-    color: #444;
-    font-weight: bold;
+.content_listing h1, .content_single h1 {
     text-decoration: none;
+    color: black;
+    font-size: 2.00rem;
+    margin: 20px 0;
 }
 
-#top_bar a:hover {
-    background-color: #CCC;
-}
-
-#top_bar a:visited {
-    color: #444;
-}
-
-/*
-    Main content
-*/
-
-.content {
-    color: #666;
-    font-family: "Lato", sans-serif;
-}
-
-.content a {
-    color: #666;
-    text-decoration: underline;
-}
-
-.content h1 { color: #00C; }
-.content h2 { color: #03D; }
-.content h3 { color: #06E; }
-.content h4 { color: #09F; }
-
-.content h1 {
-    text-decoration: underline;
-}
-
-article p {
+.content_listing hr, .content_single hr {
+    border-top: 1px solid #CCC;
     margin-top: 0;
 }
 
-article h2 {
-    margin-bottom: 10px;
+/*******************************************************************************
+    2. Nav Bar, Home Page Header, Breadcrumb
+*******************************************************************************/
+
+#nav_bar {
+    position: fixed;
 }
 
-/*
-    Miscs
-*/
+#nav_bar_desktop {
+    float: right;
+}
+
+#nav_bar {
+    background-color: rgba(192, 192, 192, 0.75); /* 192 == #CC */
+    float: right;
+}
+
+#nav_bar .active, .v1-button:hover {
+    background-color: #eee !important;
+}
+
+#nav_bar .active {
+    color: black !important;
+}
+
+.header_image_container {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.header_image_container p {
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    max-width: 500px;
+
+    font-size: 120%;
+    text-align: right;
+    color: #FFF;
+}
+
+.header_image {
+    position: relative;
+    top: -100px; /* image vertical pos */
+    width: 1400px;
+    margin-left: -700px;  /* image width/2 */
+    left: 50%;
+}
+
+.header_height {
+    height: 450px; /* text vertical pos */
+}
+
+/*******************************************************************************
+    3. Footer
+*******************************************************************************/
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #000;
+    color: #CCC;
+}
+
+footer a {
+    color: #CCC;
+}
+
+footer .social_media {
+    font-size: 150%;
+    position: relative;
+    top: 3px;
+}
+
+/*******************************************************************************
+    4. Home Page
+*******************************************************************************/
+
+.content_home {
+
+}
+
+/*******************************************************************************
+    5. Listing Page
+*******************************************************************************/
+
+.content_listing h2 a {
+    color: #005b96;
+    text-decoration: none;
+}
+
+.content_listing h2 a:hover {
+    text-decoration: underline;
+}
+
+.content_listing h2 span {
+    font-size: 50%;
+}
+
+.content_listing .post_summary {
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content_listing .post_illustration {
+    float: left;
+    margin-right: 10px;
+    min-height: 100px;
+    max-height: 150px;
+    width: auto;
+    min-width: 150px;
+}
+
+/*******************************************************************************
+    6. Article Page
+*******************************************************************************/
+
+.content_single {
+
+}
+
+/*******************************************************************************
+    7. Miscs
+*******************************************************************************/

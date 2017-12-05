@@ -11,17 +11,17 @@
     
     
     <item>
-      <title>ADCS</title>
+      <title>ADCS: Attitude Determination And Control System</title>
       <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</guid>
-      <description>Attitude Determination Control System (ADCS) The ADCS is divided into 4 modules. It is important to note that the ADCS system is currently based on a preliminary design and is subject to changes. The objectives of each module are depicted in the following list:
+      <description>Attitude Determination And Control System (ADCS) The ADCS is divided into 4 modules. It is important to note that the ADCS system is currently based on a preliminary design and is subject to changes. The objectives of each module are depicted in the following list:
  The SENS is composed of a set of sensors. This set will have to harvest data in order to get information about the CubeSat position.</description>
     </item>
     
     <item>
-      <title>EPS</title>
+      <title>EPS: Electrical Power Supply</title>
       <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -31,7 +31,7 @@ Subsystems of EPS PCC is responsible for the voltage regulation, the modules pro
     </item>
     
     <item>
-      <title>OBC</title>
+      <title>OBC: On Board Computer</title>
       <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -41,7 +41,7 @@ Subsystem division The OBC is divided into three subsystems which are Microcontr
     </item>
     
     <item>
-      <title>TCS</title>
+      <title>TCS: Telecommunication System</title>
       <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

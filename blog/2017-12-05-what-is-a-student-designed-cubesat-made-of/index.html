@@ -1,3 +1,9 @@
+
+
+    
+    
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
     <head>
@@ -5,16 +11,56 @@
         <title>
             What is a student-designed cubesat made of? - ECE3SAT
         </title>
-        <link href='https://nodraak.github.io/ece3satwikiv2/css/styles.css' rel='stylesheet' type="text/css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/v1.css">
+        <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/fonts-googleapis-com-css-family-Lato.css">
+        <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
+
+        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/menu.js"></script>
+
     </head>
     <body lang="en">
-        <div class="body_wrapper">
-            <nav id="top_bar">
-    <a href="https://nodraak.github.io/ece3satwikiv2/">Home</a>
-    <a href="https://nodraak.github.io/ece3satwikiv2/theproject/">The Project</a>
-    <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules">Cubesat Modules</a>
-    <a href="https://nodraak.github.io/ece3satwikiv2/blog">Blog</a>
-</nav>
+
+            <div id="nav_bar" class="v1-top">
+    <div id="nav_bar_desktop">
+        <a class="v1-bar-item v1-button v1-hover-black v1-hide-medium v1-hide-large v1-right" href="javascript:void(0);" onclick="menu_toggle()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <a class="v1-bar-item v1-button v1-hide-small " href="https://nodraak.github.io/ece3satwikiv2/">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small " href="https://nodraak.github.io/ece3satwikiv2/theproject">
+            <i class="fa fa-rocket"></i> The Project
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small " href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules">
+            <i class="fa fa-cube"></i> ECE3Sat SubModules
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small active" href="https://nodraak.github.io/ece3satwikiv2/blog">
+            <i class="fa fa-calendar-o"></i> Blog
+        </a>
+
+    </div>
+
+    
+    <div id="nav_bar_mobile" class="v1-bar-block v1-dark-grey v1-hide v1-hide-large v1-hide-medium">
+        <a class="v1-bar-item v1-button " href="https://nodraak.github.io/ece3satwikiv2/">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a class="v1-bar-item v1-button " href="https://nodraak.github.io/ece3satwikiv2/theproject">
+            <i class="fa fa-rocket"></i> The Project
+        </a>
+        <a class="v1-bar-item v1-button " href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules">
+            <i class="fa fa-cube"></i> ECE3Sat SubModules
+        </a>
+        <a class="v1-bar-item v1-button active" href="https://nodraak.github.io/ece3satwikiv2/blog">
+            <i class="fa fa-calendar-o"></i> Blog
+        </a>
+    </div>
+</div>
 
 
             
@@ -22,14 +68,13 @@
             
 
             <div class="content-bg">
-                <div class="content">
-                    
+                
+
+<div class="content content_single">
+
     <h1>What is a student-designed cubesat made of?</h1>
-    
-
-<h1 id="what-is-a-student-designed-cubesat-made-of">What is a student-designed cubesat made of?</h1>
-
-<p>Building a satellite is a big adventure for students like us! Even so this enterprise could seem demanding and perhaps intimidating, we have to manage this just as any other project. And it starts with <em>defining system functionalities</em>.</p>
+    <hr />
+    <p>Building a satellite is a big adventure for students like us! Even so this enterprise could seem demanding and perhaps intimidating, we have to manage this just as any other project. And it starts with <em>defining system functionalities</em>.</p>
 
 <p>Actually, few core functionalities are a standard in nanosatellites:</p>
 
@@ -48,19 +93,34 @@ Tumbling satellite (extracted from the ESA video &ldquo;Space debris - a journey
 <li><p>Finally, we often name <strong>On Board Computer (OBC)</strong> the entity dedicated to the whole satellite <em>management</em>. OBC is in charge of other modules&rsquo; supervision; it is our CubeSat&rsquo;s brain!</p></li>
 </ul>
 
-<p>Here is a short video about these entities:
-@<a href="https://www.youtube.com/watch?v=LLoQZBPVrpQ">youtube</a></p>
+<p>Here is a short video about these entities:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/LLoQZBPVrpQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
 
 <p>And what now? Well, that depends on the mission&rsquo;s goals! Here at ECE³Sat, our payload is a deorbiting system.</p>
 
 <p>These entities constitute a logical splitting, but does not necessarily reflect the final hardware division. Several functionalities can be handled by the same microcontroller, and one functionality can be implemented with several pieces of hardware according to its needs. Gathering or splitting entities among different boards, and communication between these boards, are a serious strategic concern. An article dedicated to this <strong>architecture design</strong> will be released soon, stay tuned!</p>
 
 
-                </div>
+</div>
+
+
             </div>
 
-            <footer>ECE3SAT - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a> - <a href="https://nodraak.github.io/ece3satwikiv2/about_tech">About this website</a> - <a href="https://www.facebook.com/Ece3sat/" target="_blank">Facebook</a></footer>
+            <footer>
+    <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io">Source Code</a>
+    - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a>
+    - <span class="social_media">
+        <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
+        <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
+    </span>
+</footer>
 
-        </div>
+
     </body>
 </html>
