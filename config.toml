@@ -1,5 +1,5 @@
-baseurl = "http://ece3sat.com/"
+baseurl = "https://nodraak.github.io/ece3satwikiv2"
 languageCode = "en-us"
 theme = "ece3sat"
 title = "ECE3SAT"
-publishDir = "docs"
+canonifyURLs = true
