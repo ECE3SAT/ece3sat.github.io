@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            ADCS - ECE3SAT
+        </title>
+        <link href='/css/styles.css' rel='stylesheet' type="text/css" />
+    </head>
+    <body lang="en">
+        <div class="body_wrapper">
+            <nav id="top_bar">
+    <a href="/">Home</a>
+    <a href="/theproject/">The Project</a>
+    <a href="/cubesatmodules">Cubesat Modules</a>
+    <a href="/blog">Blog</a>
+</nav>
+
+
+            
+                <div style="height: 40px"></div>
+            
+
+            <div class="content-bg">
+                <div class="content">
+                    
+    <h1>ADCS</h1>
+    
+
+<h2 id="attitude-determination-control-system-adcs">Attitude Determination Control System (ADCS)</h2>
+
+<p>The ADCS is divided into 4 modules. It is important to note that the
+ADCS system is currently based on a preliminary design and is subject to
+changes. The objectives of each module are depicted in the following
+list:</p>
+
+<ul>
+<li>The SENS is composed of a set of sensors. This set will have to
+harvest data in order to get information about the CubeSat position.</li>
+<li>The ACT are the CubeSat attitude actuators. ACT will have to adapt
+the CubeSat’s attitude according to the mission needs.</li>
+<li>The ADCS controller (CTRL) objectives are to collect data from
+sensors and to process it to get reliable positioning information.
+Then the ADCS will send orders to ACT in order to correct/modify the
+CubeSat’s attitude if <a href="ECE3SAT/wiki/obc/index.html">OBC</a> and
+<a href="ECE3SAT/wiki/eps/index.html">EPS</a> subsystems allow it.</li>
+<li>The Interface (INT) module has for objective to ensure good
+connection with other systems of the satellite and to send data to
+the other systems.</li>
+</ul>
+
+<p><img src="/images/ADCS_subsystem.png" alt="ADCS Subsystems" />
+Figure 1: ADCS Subsystems</p>
+
+<h3 id="sensors-system-sens">Sensors System (SENS)</h3>
+
+<p>ADCS Sensors system will be composed of absolute sensors to get constant
+access to the attitude relative to an external frame. And relative
+sensors to get access to the current attitude relative to the previous
+one.</p>
+
+<h3 id="actuators-system-act">Actuators System (ACT)</h3>
+
+<p>The actuators goal is to position the CubeSat in the target attitude by
+rotation it around 3 axes: Yaw / Pitch / Roll. So the Actuators System
+will be placed to have control over the 3 axes (X, Y, Z).</p>
+
+<h3 id="controller-ctrl">Controller (CTRL)</h3>
+
+<p>The ADCS Controller will calculate the attitude in which the CubeSat is
+thanks to the data coming from Sensors. Also the Algorithm inside the
+controller will calculate the targeted attitude. And then will determine
+the rotations to accomplish for each axis.</p>
+
+<h3 id="interface-int">Interface (INT)</h3>
+
+<p>The ADCS Interface is the hardware part of ADCS which transmit the
+signal received from Sensors to the micro-controller and it also
+distributes power supply coming from the EPS subsystem to the Actuators.</p>
+
+<p><img src="/images/ADCS_Récap.png" alt="ADCS Recap" />
+Figure 1: ADCS Subsystems</p>
+
+<h3 id="document">Document</h3>
+
+<p><a href="/wiki/pdf/System_Specifications_ADCS_+_SOA.pdf">System Specifications ADCS and SOA</a></p>
+
+<h2 id="state-of-the-art">State Of The Art</h2>
+
+<h3 id="positioning-method-and-algorithm">Positioning method and algorithm</h3>
+
+<p><strong>Aim</strong> : Calculate CubeSat orientation and chose best physical input
+for actuators.</p>
+
+<p>Estimate an angular rotation:</p>
+
+<ul>
+<li>Euler angles</li>
+<li>Gimbal angles</li>
+<li>Quaternions</li>
+</ul>
+
+<p>Measuring the attitude:</p>
+
+<ul>
+<li>TRIAD Algorithm</li>
+<li>Kalman Filter </li>
+</ul>
+
+<p><a href="/wiki/pdf/Positioning_method_and_algorithm_ADCS.pdf">Positioning method and algorithm ADCS</a></p>
+
+<h3 id="sensors">Sensors</h3>
+
+<p><strong>Aim</strong>: Calculate CubeSat orientation and chose best physical input
+for actuators.</p>
+
+<p>Estimate an angular rotation:</p>
+
+<ul>
+<li>Gyroscope</li>
+<li>Gyrometer</li>
+<li>Sun sensor</li>
+<li>Star tracker</li>
+<li>Horizon sensors</li>
+<li>Magnetometer</li>
+<li>Temperature sensors</li>
+</ul>
+
+<p><a href="/wiki/pdf/Sensors_ADCS.pdf">Sensors ADCS</a></p>
+
+<h3 id="actuators">Actuators</h3>
+
+<p><strong>Aim</strong>: Collect useful data for attitude determination.</p>
+
+<p>Estimate an angular rotation:</p>
+
+<ul>
+<li>Reaction wheel</li>
+<li>Momentum wheel</li>
+<li>Control momentum gyroscope</li>
+<li>Magnetorquer</li>
+<li>Permanent magnet</li>
+</ul>
+
+<p><a href="/wiki/pdf/Actuators_ADCS.pdf">Actuators ADCS</a></p>
+
+<h3 id="electronic-board">Electronic board</h3>
+
+<p><strong>Aim</strong>: Get access to sensors and then perform attitude algorithm.</p>
+
+<ul>
+<li>Hardware</li>
+<li>Software</li>
+</ul>
+
+<p><a href="/wiki/pdf/Electronic_board_ADCS.pdf">Electronic board ADCS</a></p>
+
+<h2 id="system-specifications-adcs .v1-center">System Specifications ADCS</h2>
+
+<h3 id="global">Global</h3>
+
+<p>Those requirements concerns all the ADCS card, including the subsystems.
+Their are mainly here to assure the functioning of the module in the
+conditions it will face (temperature, magnetic field, radiations and
+void).</p>
+
+<h3 id="act-actuators">ACT (Actuators)</h3>
+
+<p>As actuator will be our way to move in space, we impose to them to reach
+our precision goal of 5° along each axis. We moreover impose a condition
+on the orientation of the Z face in order to accomplish our mission.</p>
+
+<h3 id="sens-sensors">SENS (Sensors)</h3>
+
+<p>Sensors will be our primary source of information about our attitude. To
+do so, we impose to them a maximum time to give us the data. We also
+them to warn us if they are malfunctioning.</p>
+
+<h3 id="ctrl-controller">CTRL (Controller)</h3>
+
+<p>The controller will collect and process our data. That&rsquo;s why we want the
+result of computation to be in our goal range (5°). CTRL have also to be
+able to determine the necessary correction in order to be able to send
+it to the <a href="ECE3SAT/wiki/obc/index.html">OBC</a>. Finally, the orders coming
+from the <a href="ECE3SAT/wiki/obc/index.html">OBC</a> have to be processed to
+individually power our actuators.</p>
+
+<h3 id="system-specification">System Specification</h3>
+
+<p><a href="/wiki/pdf/System_Specifications_ADCS.pdf">System Specifications ADCS</a></p>
+
+<h3 id="mission-specification">Mission Specification</h3>
+
+<p><a href="/wiki/pdf/Specifications_ADCS.pdf">Specifications ADCS</a></p>
+
+<h2 id="system-specifications-adcs .v1-center-1">System Specifications ADCS</h2>
+
+<p>We decided to include the low level feasability study with our sizing in
+order to sum up our results. Our studies can then be placed into 2
+categories</p>
+
+<h3 id="sens-sensors-1">SENS (Sensors)</h3>
+
+<ul>
+<li><p>Sun sensor: We could use those integrated on solar pannel</p></li>
+
+<li><p>Magnetometer: Three axis magnetometer are an interesting solution</p></li>
+</ul>
+
+<h3 id="act-actuators-1">ACT (Actuators)</h3>
+
+<ul>
+<li>Magnetorquers: The most reliable solution seem to be to locate them
+on solar pannel</li>
+</ul>
+
+<p><a href="/wiki/pdf/Sizing_ADCS.pdf">Sizing ADCS</a></p>
+
+<h2 id="algorithm-adcs">Algorithm ADCS</h2>
+
+<p>The ADCS mission is to get access to sensors for attitude determination
+and then apply correction through actuators.</p>
+
+<p>We designed our decision taking algorithm to be as it follows :</p>
+
+<p><img src="/images/Algorithm_ADCS.png" alt="Algorithm ADCS" />
+Figure 1: ADCS Algorithm</p>
+
+<p>As we can see our algorithm begins with the initialization of our module
+(the IO, communication, sensors and actuators).Then a confirmation of
+well-functioning is sent to the <a href="ECE3SAT/wiki/obc/index.html">OBC</a>.</p>
+
+<p>That’s where we reach the central loop. The
+<a href="ECE3SAT/wiki/obc/index.html">OBC</a> can give us several order which can
+be classified as follow:</p>
+
+<ul>
+<li><p>If it asks us to start to take measure or to move (so to start the
+actuators), we check if a session in not already in progress and if
+it is not we perform the task and send the data.</p></li>
+
+<li><p>If it asks us to stop measures or movement, we check if we were
+doing it and if it is the case, we stop doing it.</p></li>
+
+<li><p>Finally, if the <a href="ECE3SAT/wiki/obc/index.html">OBC</a> ask to shutdown,
+we verify if we were performing action and then stop them. This put
+us to the end of our loop.</p></li>
+</ul>
+
+
+                </div>
+            </div>
+
+            <footer>ECE3SAT - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a> - <a href="/about_tech">About this website</a> - <a href="https://www.facebook.com/Ece3sat/" target="_blank">Facebook</a></footer>
+
+        </div>
+    </body>
+</html>

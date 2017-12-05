@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            TCS - ECE3SAT
+        </title>
+        <link href='/css/styles.css' rel='stylesheet' type="text/css" />
+    </head>
+    <body lang="en">
+        <div class="body_wrapper">
+            <nav id="top_bar">
+    <a href="/">Home</a>
+    <a href="/theproject/">The Project</a>
+    <a href="/cubesatmodules">Cubesat Modules</a>
+    <a href="/blog">Blog</a>
+</nav>
+
+
+            
+                <div style="height: 40px"></div>
+            
+
+            <div class="content-bg">
+                <div class="content">
+                    
+    <h1>TCS</h1>
+    
+
+<h3 id="telecommunication-system-tcs .v1-center">Telecommunication System (TCS)</h3>
+
+<h4 id="presentation">Presentation</h4>
+
+<p>The TCS, or telecommunication system, communicates with the Ground
+Control Station. It sends data to the Earth and receive orders (to shut
+down the satellite because of an external factor for example). The data
+sent to the Ground Control Station are transmitted to the TCS by the
+<a href="ECE3SAT/wiki/obc/index.html">OBC</a>. And, in the same way, orders sent
+from Earth to TCS are transmit to the
+<a href="ECE3SAT/wiki/obc/index.html">OBC</a>.</p>
+
+<h4 id="subsystem-division">Subsystem division</h4>
+
+<p>The TCS is divided in three subsystems which are Antenna,
+Modulation/Demodulation (MODEM) and Data processing.</p>
+
+<p><img src="/wiki/images/TCS_schematic.jpg" alt="TCS Subsystems" />
+TCS Subsystems</p>
+
+<p>The first subsystem, is mixed of two antenna embedded on the CubeSat.
+One to receive order, and the other one to send data and transmit
+messages.</p>
+
+<p>The MODEM convert signals received and sent by and from antenna. It
+apply a digital-to-analog conversion for the orders received, and
+analog-to-digital conversion for the data which has to be send. The
+signal is amplified since there is attenuation of the signal during the
+transmission process.</p>
+
+<p>The third subsystem, data processing, is the encapsulation and
+decapsulation of the frame. It corresponds to the encryption of the
+frame before being sent.</p>
+
+<h3 id="state-of-the-art-tcs .v1-center">State Of The Art TCS</h3>
+
+<h4 id="anthena">Anthena</h4>
+
+<p>The role of the antenna of CubeSat is to create the electromagnetic
+waves which contain the necessary information for the realization of the
+spatial mission to be able to receive them and interpret them on the
+ground. The system converts the existing electric signal containing the
+information in electromagnetic signal in the space.</p>
+
+<h4 id="protocol">Protocol</h4>
+
+<p>The communication subsystem of a CubeSat has two main purposes:</p>
+
+<ul>
+<li>Transmit telemetry data, including a beacon.</li>
+<li>Provide a mean for the satellite to communicate with ground station
+and vice versa. (The Ground station will receive data from the
+CubeSat only in this direction)</li>
+</ul>
+
+<p>The protocol for communication follow the layer Model :</p>
+
+<p><img src="/wiki/images/Protocol_img_TCS.png" alt="Protocol TCS" />
+Protocol TCS</p>
+
+<p>Several protocol can be used for satellites. The most used are the
+following :</p>
+
+<ul>
+<li><p>AX.25 :</p>
+
+<ul>
+<li>It is the most used data link layer protocol between radio
+amateurs is AX.25</li>
+</ul></li>
+
+<li><p>CCSDS :</p>
+
+<ul>
+<li>It is the most used transmission protocol for professional
+satellite</li>
+</ul></li>
+</ul>
+
+<p><img src="/wiki/images/CCSDS_prootcol_img_TCS.png" alt="CCSDS prootcol TCS" />
+CCSDS prootcol TCS</p>
+
+<p><a href="/wiki/pdf/Protocol_TCS.pdf">Protocol TCS</a></p>
+
+<p>The carrier is a pure sinusoidal signal of constant amplitude, frequency
+and phase. This carrier must be modified to carry the signal we want to
+transmit. We say that the signal is modulated.</p>
+
+<p>The carrier is described by the equation y = a sin (2πFt + φ) in which:</p>
+
+<ul>
+<li><p>a is the amplitude of the carrier,</p></li>
+
+<li><p>F is the frequency of the carrier,</p></li>
+
+<li><p>φ is the phase of the carrier.</p></li>
+</ul>
+
+<p>To modulate the carrier, we will modify one of these three parameter as
+function of the signal to transmit.</p>
+
+<p><strong>Concept of envelope</strong>: The envelope of a signal is the external form
+of the modulated signal.</p>
+
+<p><strong>Baud rate</strong>: The baud expresses the number of modulation moments per
+second, this is the modulation rate. Each modulation moment being able
+to transmit one or more bits.</p>
+
+<p><strong>Connection flow</strong>: Produces the baud rate and the length of the symbol
+in bit.</p>
+
+<p><strong>Spectral efficiency</strong>: Ratio between flow rate (kb/s) and bandwidth
+(Hz)</p>
+
+<p><strong>Concept of symbol</strong>: Unit of information transmitted by moment of
+modulation. A symbol is a certain combined state of frequency, amplitude
+and/or phase that represents a number of bits. If a symbol represents
+one bit, it is the binary case. The single bit (k=1) can either be a
+logical 1 or 0, thus rendering two symbol possibilities (M=2). If a
+symbol consists of two bits (k=2), there is a total number of four
+symbols (00, 01, 10 and 11), therefore M=4. The relationship between the
+number of symbols and bits is:</p>
+
+<p>M = 2k</p>
+
+<p>Nyquist’s theorem gives the upper limit of the bit rate for a system
+defined by the following equation:</p>
+
+<p>C = 2 B log2(2k)</p>
+
+<p>C = 2 B log2(M)</p>
+
+<p>C is the channel capacity in bps</p>
+
+<p>B is the channel bandwidth in Hz</p>
+
+<p><a href="/wiki/pdf/Modulation_TCS.pdf">Modulation TCS</a></p>
+
+<h3 id="sizing-tcs .v1-center">Sizing TCS</h3>
+
+<p>The different studies we did are referenced there :</p>
+
+<h4 id="electronic-components">Electronic Components</h4>
+
+<p>General constraints :</p>
+
+<ul>
+<li><p>Altitude: 400 – 1000 km above the sea level</p></li>
+
+<li><p>Inclination: 0° to 56° (inclination of ISS)</p></li>
+
+<li><p>Radiation: resisting UV radiation, X, protons, and plasma in LEO</p></li>
+
+<li><p>Duration of lifetime: 2 weeks to 1,5 month</p></li>
+
+<li><p>Vibration on the launch</p></li>
+
+<li><p>Maximum consumption of the CubeSat communication sub-system is 1,5W.</p></li>
+</ul>
+
+<p>To respect those values, we saw the cards on board of other cubeSats.
+The band chosen for downlink communications is 435-438 MHzand the
+transmission rate: 1200 to 9600 bauds</p>
+
+<p><a href="/wiki/pdf/Electronic_components_TCS.pdf">Electronic components TCS</a></p>
+
+<h4 id="mecanical-components">Mecanical Components</h4>
+
+<ul>
+<li><p>Environmental constraints :</p>
+
+<ul>
+<li>Thermal constraint: -150°C to +150°C</li>
+</ul></li>
+
+<li><p>Radiation constraint: resisting UV radiation, X, protons, and plasma
+in LEO</p>
+
+<ul>
+<li><p>The friction on the external surfaces including the antenna
+shall not impact its functioning</p></li>
+
+<li><p>The erosion due to the Oxygen (200-100km) must be managed</p></li>
+
+<li><p>The luminescence due to the Oxygen (200-100km) must be managed</p></li>
+
+<li><p>Launch vibrations</p></li>
+</ul></li>
+
+<li><p>Compatibility criteria :</p>
+
+<ul>
+<li><p>Transmission rate: 1200 to 9600 bauds</p></li>
+
+<li><p>Broadcast max power: 1,5W</p></li>
+
+<li><p>Frequency band: 435 to 438 MHz</p></li>
+
+<li><p>Antenna gain max: 0 to2 dB</p></li>
+
+<li><p>Dipole length: λ/4 minimum, λ/2 required</p></li>
+
+<li><p>Interface: I²C</p></li>
+
+<li><p>Envelope stowed: 98 mm x 98 mm x 7 mm</p></li>
+</ul></li>
+</ul>
+
+<p>for the choice of the antenna, two companies designing parts for
+CubeSats could propose interesting solutions for our project: ISIS and
+Clyde Space, both proposing systems of antennas. Our choice is towards a
+solution similar to the ISIS dipole antenna because characteristics
+match with system and environmental specifications:</p>
+
+<ul>
+<li><p>low gain: 0bB in UHF</p></li>
+
+<li><p>&lt;2W</p></li>
+
+<li><p>1200 - 9600 bauds - &lt;100g</p></li>
+
+<li><p>almost omnidirectional</p></li>
+
+<li><p>Dipole length: λ/2</p></li>
+</ul>
+
+<p><a href="/wiki/pdf/Mecanical_components_TCS.pdf">Mecanical components TCS</a></p>
+
+<h4 id="orbit-and-data-estimation">Orbit and data estimation</h4>
+
+<p>The orbit period of the ECE3SAT is between 90 and 105 min. It’s about 15
+revolutions around Earth per day. We have only 3 orbits of 7 to 13
+minutes per day that we can truly be exploited. That is aproximatly 30
+minutes of visibility per day.</p>
+
+<p><img src="/wiki/images/Size_of-data-TCS.jpg" alt="Size of data TCS" />
+Size of data TCS</p>
+
+<p>Note : The period of sampling is arbitrarily fixed here.</p>
+
+<p>For the moment the total amount we have to transmit per orbit is 207663
+bits or about 208 kbit.</p>
+
+<p>We must also assure that we can stock the equivalent of 8 orbits of data
+in the memory of the satellite: we are not able to transmit data each
+orbit of our satellite and sometimes, you can have 8 successive orbits
+without visibility as we can see in Gpredict for similar projects.</p>
+
+<p><a href="/wiki/pdf/Orbit-and_data_estimation_TCS.pdf">Orbit and data estimation
+TCS</a></p>
+
+<h4 id="thermal-simulation-tcs">Thermal simulation TCS</h4>
+
+<p>We can identify four sources of heat:</p>
+
+<ul>
+<li><p><strong>Equipment</strong>: The components within the satellite produce heat with
+the energy they consume.</p></li>
+
+<li><p><strong>Solar radiation</strong>: This is the most important source of heat. The
+solar flux accounts between 1353 and 1375 Watts / m².</p></li>
+
+<li><p><strong>Albedo</strong>: This refers to the solar radiation reflected by
+the Earth. This energy represents an average radiance of 196 W / m²
+in the sunny hemisphere of the Earth.</p></li>
+
+<li><p><strong>Earth radiation</strong>: This accounts an energy of 190W / m² up to 240W
+/ m².</p></li>
+</ul>
+
+<p>The data coming from the FUNcube-1 also gave us the temperature range in
+which a satellite operates : from -30 ° C to 85 ° C</p>
+
+<p><a href="/wiki/pdf/Thermal_Simulation_TCS.pdf">Thermal Simulation TCS</a></p>
+
+<h3 id="model-tcs .v1-center">Model TCS</h3>
+
+<p>The purpose of this technical realization was to validate data exchange
+with system specifications. To do so we decided to build our own
+anthena.</p>
+
+<p>That&rsquo;s why we used a communication card provided by the AMSAT-F, a DVB-T
+dongle, an LNA amplifier and our home-made antenna.</p>
+
+<h4 id="software-defined-radio-sdr">Software Defined Radio (SDR)</h4>
+
+<p>For the software part we used the software SDRSharp, a software that
+allows us to pilot the key via an interface of spectrum analysis and
+selection of frequency, bandwidth and signal processing tools.</p>
+
+<p><img src="/wiki/images/TCS_SDR.jpg" alt="TCS SDR" />
+TCS SDR</p>
+
+<h4 id="doppler-effect">Doppler effect</h4>
+
+<p>In parallel with the SDR we used the software Orbitron to have a
+satellite tracking station with TLE (Two-Line Elements) information and
+automatic correction of the retroactive Doppler effect on SDRSharp.</p>
+
+<p><img src="/wiki/images/TCS_orbit.jpg" alt="TCS ORBIT" />
+TCS ORBIT</p>
+
+<p>The two-line orbital parameters (TLE) are elements measured and
+calculated by NORAD and NASA, not only for artificial satellites, but
+also for space debris. They allow Orbitron to calculate the position of
+objects in orbit at any time because they follow the laws of Kepler and
+Newton.</p>
+
+<p>By setting the input text files of the software, we can easily isolate
+the satellites we are interested in, namely the CubeSat of the AMSAT.</p>
+
+<p>Once selected, we have access to a lot of satellite information,
+including emission frequency and Doppler calculation.</p>
+
+<p><img src="/wiki/images/TCS_dopler.jpg" alt="TCS Dopler" />
+TCS Dopler</p>
+
+<p>The Orbitron software allows us to control the frequency selection of
+SDRSharp by taking into account the value of the Doppler in real time.</p>
+
+<h4 id="demodulation">Demodulation</h4>
+
+<p>For the demodulation, we had several choices :</p>
+
+<ul>
+<li><p>The first option is that we can either use an open source amateur
+radio software: MULTIPSK. This one allows us to demodulate the
+signal modulated in BPSK in real time. To send the stream from
+SDRSharp to MULTIPSK, we have installed Virtual Audio Cable which
+allows to direct the output of SDR to the input of the demodulator.</p></li>
+
+<li><p>The second option is to use a more specific software that only works
+with the FUNcube and its associated dongle. This is the FUNcube
+Dashboard software which is dedicated to the telemetry of
+this CubeSat. The software’s interface is a high level of
+programming: We can’t see any treatment of data and that we access
+directly to the data of telemetries interpreted in background by
+the dashboard. In the same way, the software is provided with the
+virtual audio gateway as input and the software identifies and
+interprets in real time the signal which must be at 1200 bauds in
+BPSK modulation. From the moment this software recognizes an AX-25
+frame, it translates it into telemetry data.</p></li>
+</ul>
+
+<h4 id="dongle">Dongle</h4>
+
+<p>We decided to use the following TNT USB key:</p>
+
+<p><img src="/wiki/images/TCS_USB.jpg" alt="TCS USB" />
+TCS USB</p>
+
+<p>This key contains the RLT2832U chip and the R820T2 tuner. It competes
+perfectly with the usual scanners since it covers from 30MHz to 1500MHz,
+and this with two spectrum analyzers:</p>
+
+<ul>
+<li><p>A 2D: frequency / amplitude</p></li>
+
+<li><p>A 3D: &ldquo;waterfall&rdquo; frequency / amplitude / time</p></li>
+</ul>
+
+<p>The disadvantage of this USB kit is that the antenna supplied with it is
+not suitable for the use we want to make of it. To overcome this
+problem, we started the realization of an antenna optimized for our
+study</p>
+
+<h4 id="anthena-realization">Anthena realization</h4>
+
+<p>We were targeting the frequency of the FUNcube in telemetry which is
+145.935MHz. This is why we decided to manufacture an antenna called
+Yagi-Uda 3 elements.</p>
+
+<p>The Yagi-Uda is a type of antenna that has an active element, the
+dipole, which will be fed with high-frequency signals. In front of the
+dipole takes place a slightly shorter element, this element is called
+&ldquo;director&rdquo;. Behind the dipole is positioned a slightly longer element
+called &ldquo;reflector&rdquo;.</p>
+
+<p><img src="/wiki/images/TCS_anthena.jpg" alt="TCS anthena" />
+TCS anthena</p>
+
+<p>We made this antenna with a square aluminum profile and 8 mm aluminum
+rod.</p>
+
+<p>Concerning the length of the dipoles, it was chosen according to the
+frequency of emission of the FUNcube:</p>
+
+<p><img src="/wiki/images/TCS_anthena2.jpg" alt="TCS anthena2" />
+TCS anthena2</p>
+
+<p>To tune the antenna impedance, we installed a gamma match element as
+follows:</p>
+
+<p><img src="/wiki/images/TCS_gammamatch.jpg" alt="TCS gammamatch" />
+TCS gammamatch</p>
+
+<h4 id="preamplifier">Preamplifier</h4>
+
+<p>The chosen preamplifier is the LNA4ALL, a preamplifier and a low-pass
+filter (LNA), with SMA Female connectors, for VHF and UHF frequencies
+covering all bands from 28 MHz to 2500 MHz (2.5Ghz). We chose this one
+because it allows to improve very clearly the reception performance, on
+all bands VHF and UHF up to 2.5Ghz, of a TNT key RTL-SDR.</p>
+
+<p><img src="/wiki/images/TCS_preamplifier.jpg" alt="TCS preamplifier" />
+TCS preamplifier</p>
+
+<p>The LNA was then bought and the model assembled.</p>
+
+<p><img src="/wiki/images/TCS_LNA.jpg" alt="TCS LNA" />
+TCS LNA</p>
+
+<p><a href="/wiki/pdf//Technical_realization_TCS.pdf">Technical realization TCS</a></p>
+
+
+                </div>
+            </div>
+
+            <footer>ECE3SAT - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a> - <a href="/about_tech">About this website</a> - <a href="https://www.facebook.com/Ece3sat/" target="_blank">Facebook</a></footer>
+
+        </div>
+    </body>
+</html>

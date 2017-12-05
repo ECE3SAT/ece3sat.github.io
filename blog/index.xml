@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on ECE3SAT</title>
+    <link>nodraak.github.io/ece3satwikiv2/blog/</link>
+    <description>Recent content in Blogs on ECE3SAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Nov 2017 18:58:44 +0100</lastBuildDate>
+    
+	<atom:link href="nodraak.github.io/ece3satwikiv2/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-article/</link>
+      <pubDate>Tue, 14 Nov 2017 18:58:44 +0100</pubDate>
+      
+      <guid>nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-article/</guid>
+      <description>Lorem Ipsum. Notice draft is set to true.</description>
+    </item>
+    
+  </channel>
+</rss>
