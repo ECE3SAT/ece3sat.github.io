@@ -6,10 +6,21 @@
     <description>Recent content on ECE3SAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Nov 2017 18:58:44 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 05 Dec 2017 17:50:00 +0100</lastBuildDate>
     
 	<atom:link href="https://nodraak.github.io/ece3satwikiv2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is a student-designed cubesat made of?</title>
+      <link>https://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</link>
+      <pubDate>Tue, 05 Dec 2017 17:50:00 +0100</pubDate>
+      
+      <guid>https://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</guid>
+      <description>What is a student-designed cubesat made of? Building a satellite is a big adventure for students like us! Even so this enterprise could seem demanding and perhaps intimidating, we have to manage this just as any other project. And it starts with defining system functionalities.
+Actually, few core functionalities are a standard in nanosatellites:
+ First of all, as any other device, the satellite needs power to work. Electricity is produced by solar panels and distributed in the whole CubeSat.</description>
+    </item>
     
     <item>
       <title>My First Post</title>
@@ -17,7 +28,7 @@
       <pubDate>Tue, 14 Nov 2017 18:58:44 +0100</pubDate>
       
       <guid>https://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</guid>
-      <description>Lorem Ipsum.</description>
+      <description>Lorem Ipsum. Update</description>
     </item>
     
     <item>
