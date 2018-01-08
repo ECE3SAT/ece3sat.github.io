@@ -1,4 +1,4 @@
-baseurl = "https://nodraak.github.io/ece3satwikiv2"
+baseurl = "http://ece3sat.com/"
 languageCode = "en-us"
 theme = "ece3sat"
 title = "ECE3SAT"

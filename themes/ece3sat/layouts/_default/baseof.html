@@ -5,10 +5,20 @@
         <title>
             {{ .Title }} - {{ .Site.Title }}
         </title>
-        <link href='/css/styles.css' rel='stylesheet' type="text/css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/css/v1.css">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="/css/nav.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/fonts-googleapis-com-css-family-Lato.css">
+        <link rel="stylesheet" type="text/css" href="/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
+
+        <script type="text/javascript" src="/js/menu.js"></script>
+
     </head>
     <body lang="en">
-        <div class="body_wrapper">
+
             {{ partial "header.html" . }}
 
             {{ block "header" . }}
@@ -23,6 +33,6 @@
             </div>
 
             {{ partial "footer.html" . }}
-        </div>
+
     </body>
 </html>
