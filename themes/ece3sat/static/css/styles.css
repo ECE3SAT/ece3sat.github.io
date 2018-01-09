@@ -1,147 +1,92 @@
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
+
+/*
+    1. General
+    2. Nav Bar
+    3. Footer
+    4. Home Page
+    5. Listing Page
+    6. Article Page
+    7. Miscs
+*/
+
+/*******************************************************************************
+    1. General
+*******************************************************************************/
+
+body {
+    font-family: "Lato", sans-serif;
     line-height: 1.5;
 }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
 }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('../images/parallax1.png');
-    min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("../images/parallax2.jpg");
-    min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("../images/parallax3.jpg");
-    min-height: 400px;
-}
-.bgimg-4 {
-    background-image: url("../images/parallax4.jpg");
-    min-height: 400px;
-}
-.bgimg-5 {
-    background-image: url("../images/ece3satWiki.jpg");
-    min-height: 100%;
-    background-position: 50% 50%
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-        background-attachment: scroll;
-    }
-}
-
-.icon {
-    margin-left: 20px;
-}
-#footerContent {
-    z-index:3;
-    position: relative;
-}
-.skill{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#canvas .circle {
-    display: inline-block;
-    margin: 1em;
-}
-
-.circles-decimals {
-    font-size: 10px;
-}
-.circles-text {
-    color: black;
-    font-family: "Lato", sans-serif;
-}
-#skillHoriz {
-    margin: auto;
-}
-
-.skillRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.v1-eight{
-    width: 125px !important;
-    height: 90px !important;
-
-}
-
-.alert-success {
-    color: green;
-}
-.alert-danger {
-    color: red;
-}
-
-#nomFooter {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.linkNotUnderlined{
-    text-decoration: none;
-}
-
-h3 {
-    color: darkblue;
-}
-h4 {
-    margin-top: 30px;
-    color: mediumblue
-}
-h5 {
-    color: dodgerblue
-}
-li,p {
+p, li {
     text-align: justify;
 }
 
+h1 { color: #00C; text-decoration: underline; }
+h2 { color: #03D; }
+h3 { color: #06E; }
+h4 { color: #09F; }
 
-/******************************************************************************/
-/******************************************************************************/
-
-
-/*
-    Page layout:
-        Navigation bar at the top
-        Header image (parallax) just under it
-        Footer at the bottom
-*/
-
-/* page layout */
-
-html,
-body {
-   margin:0;
-   padding:0;
-   height:100%;
+.content-bg {
+    width: 100%;
+    background-color: #FFF;
 }
 
-.body_wrapper {
-    position: relative;
-    min-height: 100%;
+.content {
+    margin: auto;
+    padding: 15px;
+    max-width: 800px;
+    color: #444;
+    font-family: "Lato", sans-serif;
+}
+
+.content img {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.content a {
+    color: #444;
+}
+
+/*******************************************************************************
+    2. Nav Bar
+*******************************************************************************/
+
+.nav:after, .container:after {
+    display: table;
+        content: " ";
+        clear: both;
+}
+.nav:before, .container:before {
+    display: table;
+        content: " ";
+}
+.nav > li a {
+    /* No more important to override the color */
+    background-color: black; /*color of the dropdown menu elem*/
+    color: #fff !important;
+    display: block;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+    padding-top: 15px;
+}
+.nav > li > a {
+    border-top:2px solid black; /*color of the little bar on top of the menu elem*/
+    background-color: black !important; /*color of the menu elements*/
+}
+.nav > li ul li a {
+    border: 0px !important;
 }
 
 .header_image_container {
@@ -152,7 +97,7 @@ body {
 
 .header_image {
     position: relative;
-    top: -400px; /* image vertical pos */
+    top: -100px; /* image vertical pos */
     width: 1400px;
     margin-left: -700px;  /* image width/2 */
     left: 50%;
@@ -162,12 +107,29 @@ body {
     height: 450px; /* text vertical pos */
 }
 
-/* elements design */
-
-.content-bg {
-    width: 100%;
-    background-color: #FFF;
+#nav_bar {
+    position: fixed;
 }
+
+#nav_bar_desktop {
+    float: right;
+}
+
+.v1-top
+{
+    background-color: rgba(192, 192, 192, 0.5); /* 192 == #CC */
+    float: right;
+}
+
+.v1-eight{
+    width: 125px !important;
+    height: 90px !important;
+
+}
+
+/*******************************************************************************
+    3. Footer
+*******************************************************************************/
 
 footer {
     text-align: center;
@@ -181,68 +143,16 @@ footer a {
     color: #CCC;
 }
 
-.content {
-    margin: auto;
-    padding: 10px 0;
-    width: 70%;
-}
+/*******************************************************************************
+    4. Home Page
+*******************************************************************************/
 
-.content img {
-    width: 80%;
-    margin: auto;
-    display: block;
-}
+/*******************************************************************************
+    5. Listing Page
+*******************************************************************************/
 
-/*
-    Top bar
-*/
-
-#top_bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: #FFF;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-}
-
-#top_bar a {
-    padding: 10px;
-    display: inline-block;
-    color: #444;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#top_bar a:hover {
-    background-color: #CCC;
-}
-
-#top_bar a:visited {
-    color: #444;
-}
-
-/*
-    Main content
-*/
-
-.content {
-    color: #444;
-    font-family: "Lato", sans-serif;
-}
-
-.content a {
-    color: #444;
-    text-decoration: underline;
-}
-
-.content h1 { color: #00C; }
-.content h2 { color: #03D; }
-.content h3 { color: #06E; }
-.content h4 { color: #09F; }
-
-.content h1 {
-    text-decoration: underline;
+article {
+    margin-bottom: 20px;
 }
 
 article p {
@@ -250,9 +160,17 @@ article p {
 }
 
 article h2 {
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-/*
-    Miscs
-*/
+article h2 span {
+    font-size: 50%;
+}
+
+/*******************************************************************************
+    6. Article Page
+*******************************************************************************/
+
+/*******************************************************************************
+    7. Miscs
+*******************************************************************************/

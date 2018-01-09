@@ -133,7 +133,7 @@ The goal of the project is to succeed in the mission, but also to enable
 students to overcome a physical theory through the realization of a
 satellite.
 
-![ECE3SAT](images/ece3sat2.png)
+![ECE3SAT](images/ece3sat_background.png)
 
 ## Project Phases
 
