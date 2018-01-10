@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ECE3SAT</title>
-    <link>http://nodraak.github.io/ece3satwikiv2/</link>
+    <link>https://nodraak.github.io/ece3satwikiv2/</link>
     <description>Recent content on ECE3SAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Jan 2018 16:50:07 +0100</lastBuildDate>
     
-	<atom:link href="http://nodraak.github.io/ece3satwikiv2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nodraak.github.io/ece3satwikiv2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is a student-designed cubesat made of?</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</link>
       <pubDate>Tue, 05 Dec 2017 17:50:00 +0100</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</guid>
       <description>Building a satellite is a big adventure for students like us! Even so this enterprise could seem demanding and perhaps intimidating, we have to manage this just as any other project. And it starts with defining system functionalities.
 Actually, few core functionalities are a standard in nanosatellites:
  First of all, as any other device, the satellite needs power to work. Electricity is produced by solar panels and distributed in the whole CubeSat.</description>
@@ -24,79 +24,79 @@ Actually, few core functionalities are a standard in nanosatellites:
     
     <item>
       <title>My First Post</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</link>
       <pubDate>Tue, 14 Nov 2017 18:58:44 +0100</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</guid>
       <description>Lorem Ipsum. Update</description>
     </item>
     
     <item>
       <title>2017-2018 Objectives</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/theproject/objectives_2017-2018/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/theproject/objectives_2017-2018/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/theproject/objectives_2017-2018/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/theproject/objectives_2017-2018/</guid>
       <description>ADCS This year corresponds the B phase of the Attitude Determination and Control System (ADCS) of the ECE3SAT. Our work will be centralized on 4 fields.
 First of all, we want our satellite to be as open source as possible, that&amp;rsquo;s why we are going to develop our visibility and to document all our work through the year. That means we are going to be much more present on social media, post videos, communicate…</description>
     </item>
     
     <item>
       <title>ADCS: Attitude Determination And Control System</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</guid>
       <description>Attitude Determination And Control System (ADCS) The ADCS is divided into 4 modules. It is important to note that the ADCS system is currently based on a preliminary design and is subject to changes. The objectives of each module are depicted in the following list:
  The SENS is composed of a set of sensors. This set will have to harvest data in order to get information about the CubeSat position.</description>
     </item>
     
     <item>
       <title>EPS: Electrical Power Supply</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/</guid>
       <description>Electrical Power Supply (EPS) The Electrical Power Supply, or EPS of the CubeSat is composed by three modules which are the PCC (Power Control Circuit), the PV (photovoltaic panel) and the BAT (Battery). The role of the EPS is to generate, store and distribute the electricity produced by the solar panels.
 Subsystems of EPS PCC is responsible for the voltage regulation, the modules protection and the energy distribution. In others words, it has to manage the energy through the ECE3Sat.</description>
     </item>
     
     <item>
       <title>OBC: On Board Computer</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/</guid>
       <description>On Board Computer (OBC) Presentation The On Board Computer, or OBC, is the brain of the satellite and has different missions such as the coordination of all the actions, sending orders to the different modules, the reception and storage of information of the CubeSat, sending this information back to Earth via the TCS error handling within the CubeSat.
 Subsystem division The OBC is divided into three subsystems which are Microcontroller, Interfaces and Electronics.</description>
     </item>
     
     <item>
       <title>Payload</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/theproject/payload/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/theproject/payload/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/theproject/payload/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/theproject/payload/</guid>
       <description>The payload was developed in parallel of the 4 modules:
  On Board Computer (OBC) Energy Power Supply (EPS) Attitude Determination Control System (ADCS) Telecommunication System (TCS)  The goal of the payload is to test in practice a physical theory who was validated as a new deorbiting system.The launch is scheduled for the end of 2021. If the mission is a success this can lead to great progress on larger satellites.</description>
     </item>
     
     <item>
       <title>Requirements</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/theproject/requirements/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/theproject/requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/theproject/requirements/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/theproject/requirements/</guid>
       <description> Definition A requirement is a statement that identifies a necessary capability, attribute, characteristic, or quality of a system for it have value and utility to a customer, organization or internal user. A requirement specification refers to an explicit set of requirements to be satisfied by a material, design, product, or service.
 EPS requirements PV (Photovoltaic) BAT (Battery) PCC (Power Circuit Control) OBC requirements ADCS requirements ACT (Actuators system) SENS (Sensors system) CTRL (Controller) TCS (Telecommunication system) UI (user interface) Ground Station (GRD) </description>
     </item>
     
     <item>
       <title>TCS: Telecommunication System</title>
-      <link>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/</link>
+      <link>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/</guid>
+      <guid>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/</guid>
       <description>Telecommunication System (TCS) Presentation The TCS, or telecommunication system, communicates with the Ground Control Station. It sends data to the Earth and receive orders (to shut down the satellite because of an external factor for example). The data sent to the Ground Control Station are transmitted to the TCS by the OBC. And, in the same way, orders sent from Earth to TCS are transmit to the OBC.
 Subsystem division The TCS is divided in three subsystems which are Antenna, Modulation/Demodulation (MODEM) and Data processing.</description>
     </item>
