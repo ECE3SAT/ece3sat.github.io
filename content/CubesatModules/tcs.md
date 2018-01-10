@@ -1,8 +1,9 @@
 {
-    "title": "TCS"
+    "title": "TCS: Telecommunication System",
+    "image": "https://placehold.it/800x600"
 }
 
-### Telecommunication System (TCS) {#telecommunication-system-tcs .v1-center}
+### Telecommunication System (TCS)
 
 #### Presentation
 

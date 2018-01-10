@@ -1,9 +1,10 @@
 {
-    "title": "ADCS"
+    "title": "ADCS: Attitude Determination And Control System",
+    "image": "https://placehold.it/800x600"
 }
 
 
-## Attitude Determination Control System (ADCS)
+## Attitude Determination And Control System (ADCS)
 
 The ADCS is divided into 4 modules. It is important to note that the
 ADCS system is currently based on a preliminary design and is subject to

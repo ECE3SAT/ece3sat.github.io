@@ -1,3 +1,19 @@
+
+{{ if eq $.URL "/" }}
+    {{ $.Scratch.Add "navbar_css_home" "active" }}
+{{ else if hasPrefix $.URL "/theproject/" }}
+    {{ $.Scratch.Add "category_title" "The Project" }}
+    {{ $.Scratch.Add "navbar_css_theproject" "active" }}
+{{ else if hasPrefix $.URL "/cubesatmodules/" }}
+    {{ $.Scratch.Add "category_title" "ECE3Sat SubModules" }}
+    {{ $.Scratch.Add "navbar_css_submodules" "active" }}
+{{ else if hasPrefix $.URL "/blog/" }}
+    {{ $.Scratch.Add "category_title" "Blog" }}
+    {{ $.Scratch.Add "navbar_css_blog" "active" }}
+{{ else }}
+    {{ $.Scratch.Add "category_title" "You seems lost..." }}
+{{ end }}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
     <head>
@@ -18,17 +34,15 @@
     </head>
     <body lang="en">
 
-            {{ partial "header.html" . }}
+            {{ partial "navbar.html" . }}
 
             {{ block "header" . }}
                 <div style="height: 40px"></div>
             {{ end }}
 
             <div class="content-bg">
-                <div class="content">
-                    {{ block "main" . }}
-                    {{ end }}
-                </div>
+                {{ block "main" . }}
+                {{ end }}
             </div>
 
             {{ partial "footer.html" . }}

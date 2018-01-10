@@ -1,14 +1,9 @@
 {{ define "main" }}
 
-{{ if eq $.URL "/theproject/" }}
-    <h1>The Project</h1>
-{{ else if eq $.URL "/cubesatmodules/" }}
-    <h1>Cubesat Modules</h1>
-{{ else if eq $.URL "/blog/" }}
-    <h1>Blog</h1>
-{{ else }}
-    <h1>You seems lost...</h1>
-{{ end }}
+<div class="content content_listing">
+
+<h1>{{ $.Scratch.Get "category_title" }}</h1>
+<hr />
 
 {{ range $index, $post := $.Paginator.Pages }}
     <article>
@@ -19,17 +14,17 @@
                 <span><i class="fa fa-calendar"></i> {{ $post.Lastmod.Format "January 2, 2006" }}</span>
             {{ end }}
         </h2>
-        <section class="post-excerpt">
-            {{ if $post.Params.image }}
-                <p style="overflow: auto">
-                    <img src="{{ $post.Params.image }}" style="float:left; height:150px; width:auto; margin-right:10px; min-width: 150px;">
-                    {{ $post.Summary }}<a class="read-more" href="{{ $post.RelPermalink }}">&raquo;</a>
-                </p>
-            {{ else }}
-                <p>{{ $post.Summary }} <a class="read-more" href="{{ $post.RelPermalink }}">&raquo;</a></p>
-            {{ end }}
+        <section>
+            <p class="post_summary">
+                {{ if $post.Params.image }}
+                    <img class="post_illustration" src="{{ $post.Params.image }}">
+                {{ end }}
+                {{ $post.Summary }} <a href="{{ $post.RelPermalink }}"><i>Read more</i></a>
+            </p>
         </section>
     </article>
 {{ end }}
+
+</div>
 
 {{ end }}

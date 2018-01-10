@@ -1,8 +1,8 @@
 {
-    "title": "EPS"
+    "title": "EPS: Electrical Power Supply"
 }
 
-## Electrical Power Supply (EPS) {#electrical-power-supply-eps .v1-center}
+## Electrical Power Supply (EPS)
 
 The **Electrical Power Supply**, or EPS of the CubeSat is composed by
 three modules which are the **PCC** (Power Control Circuit), the **PV**

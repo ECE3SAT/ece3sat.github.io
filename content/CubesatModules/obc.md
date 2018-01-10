@@ -1,8 +1,9 @@
 {
-    "title": "OBC"
+    "title": "OBC: On Board Computer",
+    "image": "https://placehold.it/800x600"
 }
 
-## On Board Computer (OBC) {#on-board-computer-obc .v1-center}
+## On Board Computer (OBC)
 
 ### Presentation
 

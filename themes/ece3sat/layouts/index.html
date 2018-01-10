@@ -1,10 +1,20 @@
 {{ define "header" }}
     <div class="header_image_container">
         <img class="header_image" src="/images/ece3sat_background.png" />
+        <p>
+            <i>
+                We are a team of students from the French engineer school ECE Paris.
+                We are designing and building a 1U cubesat.
+                <br /><br />
+                Follow our journey on this website.
+            </i>
+        </p>
     </div>
     <div class="header_height"></div>
 {{ end }}
 
 {{ define "main" }}
+<div class="content content_home">
     {{ .Site.Home.Content }}
+</div>
 {{ end }}
