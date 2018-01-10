@@ -2,7 +2,15 @@
 
 <div class="content content_single">
 
-    <h1>{{ .Title }}</h1>
+    <h1>
+        <span>
+            {{ .Title }}
+        </span>
+
+        {{ if .Params.image }}
+            <img class="post_illustration" src="{{ .Params.image }}">
+        {{ end }}
+    </h1>
     <hr />
     {{ .Content }}
 
