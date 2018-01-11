@@ -19,7 +19,13 @@
                 {{ if $post.Params.image }}
                     <img class="post_illustration" src="{{ $post.Params.image }}">
                 {{ end }}
-                {{ $post.Summary }} <a href="{{ $post.RelPermalink }}"><i>Read more</i></a>
+
+                {{ if $post.Params.summary }}
+                    {{ $post.Params.summary }}
+                {{ else }}
+                    {{ $post.Summary }}
+                {{ end }}
+                <a href="{{ $post.RelPermalink }}"><i>Read more</i></a>
             </p>
         </section>
     </article>

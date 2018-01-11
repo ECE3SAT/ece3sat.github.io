@@ -29,8 +29,8 @@ p, li {
     text-align: justify;
 }
 
-a {
-    color: #444;
+h1 {
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {margin-top:0; margin-bottom:0.5rem; line-height:1.2;}
@@ -43,8 +43,14 @@ h4 { color: #6497b1; font-size: 1.50rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.00rem; }
 
+a {
+    color: #005b96;
+    text-decoration: none;
+}
+
 .content-bg {
     width: 100%;
+    padding-bottom: 94px; /* height of the footer */
     background-color: #FFF;
 }
 
@@ -84,12 +90,11 @@ h6 { font-size: 1.00rem; }
 }
 
 #nav_bar_desktop {
-    float: right;
+    float: left;
 }
 
 #nav_bar {
     background-color: rgba(192, 192, 192, 0.75); /* 192 == #CC */
-    float: right;
 }
 
 #nav_bar .active, .v1-button:hover {
@@ -134,9 +139,14 @@ h6 { font-size: 1.00rem; }
 *******************************************************************************/
 
 footer {
-    text-align: center;
+    position: absolute;
+    bottom: 0;
+
     width: 100%;
+    text-align: center;
+
     padding: 30px 0;
+
     background-color: #000;
     color: #CCC;
 }
@@ -145,7 +155,7 @@ footer a {
     color: #CCC;
 }
 
-footer .social_media {
+footer .icon {
     font-size: 150%;
     position: relative;
     top: 3px;
@@ -156,8 +166,43 @@ footer .social_media {
 *******************************************************************************/
 
 .content_home {
-
+    padding-top: 10px;
 }
+
+.parallax-image {
+    height: 300px; /* height of the parallax */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+
+    background-position: center;
+    background-attachment: fixed;
+
+/*
+required ??
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+}
+
+.parallax-placeholder {
+    height: 300px; /* height of the parallax */
+    margin-bottom: 15px;
+}
+
+.parallax-image .title {
+    font-size: 200%;
+    font-weight: bold;
+    color: #FFF;
+
+    text-align: center;
+    position: relative;
+    top: 140px;
+
+    text-shadow: 0px 0px 10px black; /* offset-x | offset-y | blur-radius | color */
+}
+
 
 /*******************************************************************************
     5. Listing Page
@@ -174,6 +219,7 @@ footer .social_media {
 
 .content_listing h2 span {
     font-size: 50%;
+    margin-left: 15px;
 }
 
 .content_listing .post_summary {

@@ -32,7 +32,9 @@
         <script type="text/javascript" src="/js/menu.js"></script>
 
     </head>
+
     <body lang="en">
+        <div class="content-container" style="position:relative; min-height:100%;"> <!-- styles.css does not work -->
 
             {{ partial "navbar.html" . }}
 
@@ -47,5 +49,7 @@
 
             {{ partial "footer.html" . }}
 
+        </div>
     </body>
+
 </html>

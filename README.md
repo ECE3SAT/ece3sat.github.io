@@ -48,3 +48,26 @@ The steps are basically:
 * The category `Cubesat Modules` should contain Wikipedia-style articles (timeless articles)
 * The category `Blog` should contain updates and announcements (timed articles)
 
+**An article should be formatted like this:**
+
+```
+{
+    "title": "This is the article title",
+    "date": "2017-11-14T18:58:44+01:00"
+}
+
+Lorem Ipsum, Markdown formatted. You can also add *shortcode* that add additional features, such as include a youtube video: {{< youtube "video_id" >}}
+
+You can also include raw HTML code, but this is <span style="color:red;">strongly</span> discouraged (really, HTML is the worst).
+
+---
+
+The first part is a JSON header. Most fields are optionals:
+
+* title
+* date: optional
+* summary: shows in the page listing, instead of an auto-generated one that just takes the beginning text
+* image: the URL of an image that will be shown on the listing page
+
+```
+

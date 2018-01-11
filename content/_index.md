@@ -2,9 +2,9 @@
     "title": "ECE3SAT"
 }
 
-## Context
+# Context
 
-### Education
+## Education
 
 Since the beginning of the space race in 1957, the number of objects
 sent into orbit is continuously growing, as does the amount of space
@@ -58,8 +58,9 @@ toward Earth to disintegrate upon re-entry into the atmosphere. Several
 types of deorbiting systems are currently being developed such as the
 aerodynamic sail, chemical engine, and electric/ionic engine.
 
+{{< home_parallax "/images/parallax.jpg" "What Is a Cubesat?" >}}
 
-## What Is a Cubesat?
+# What Is a Cubesat?
 
 ![A cubeast above the Earth](images/429961main_cubesat_1.jpg)
 
@@ -76,7 +77,7 @@ able to design, build, test and operate in space a spacecraft with
 capabilities similar to the first spacecraft,
 [Sputnik](https://en.wikipedia.org/wiki/Sputnik_1)
 
-### Application
+## Application
 
 In terms of applications, CubeSats are generally used to demonstrate
 spacecraft technologies that are targeted for use in small satellites or
@@ -84,7 +85,7 @@ that present questionable feasibility and are unlikely to justify the
 coast of a larger satellite. In our case, the CubeSat will be used to
 test a new deorbitation system.
 
-### Design
+## Design
 
 Many CubeSat's specifications have several high-level goals.
 Miniaturizing satellites does reduce the cost of development and
@@ -97,7 +98,7 @@ units. For example, CubeSat composed of two units (2U) and 3U CubeSat
 for 30cm3 availible volume permitting more advanced missions and more
 are obtained this way.
 
-### Structure
+## Structure
 
 Materials used in the structure must feature the same coefficient of
 thermal expansion as the deployer to prevent jamming. Specifically,
@@ -107,8 +108,9 @@ anodized to prevent cold welding, and other materials may be used for
 structure if a waiver is obtained. Furthermore, further consideration is
 put into material selection as not all materials can be used in vacuums.
 
+{{< home_parallax "/images/parallax.jpg" "ECE3SAT Project" >}}
 
-## ECE3SAT Project
+# ECE3SAT Project
 
 The ECE3SAT project is a student project developed at the french
 engineer school, [ECE Paris](http://www.ece.fr/school-of-engineering/) .
@@ -135,7 +137,22 @@ satellite.
 
 ![ECE3SAT](images/ece3sat_background.png)
 
-## Project Phases
+{{< home_parallax "/images/parallax.jpg" "Project Phases" >}}
+
+# Project Phases
+
+<!-- raw HTML like this is very bad, dont write anymore of it please -->
+<div style="text-align:center">
+    <div style="width:500px; display:inline-block;">
+        {{< youtube sPlnimVf1_o >}}
+    </div>
+    <div style="width:350px; display:inline-block;">
+        {{< youtube 94MddSwKZFQ >}}
+    </div>
+    <div style="width:350px; display:inline-block;">
+        {{< youtube LLoQZBPVrpQ >}}
+    </div>
+</div>
 
 A space project needs a big management to be successful. That's why all
 space projects are divided into various logical stages, called Phases.
@@ -147,7 +164,7 @@ such as proof of concept, equipment delivery, launch, etc.
 
 Typically the phases are:
 
-### Phase 0
+## Phase 0
 
 Phase 0 is sometime already ready but in a project like a
 [Cubesat](#cubesat) it needs to be done. So this includes focusing on
@@ -157,7 +174,7 @@ project agreement and building partner's interest.
 **The Phase 0 is very important for [Cubesat](#cubesat) Projects because
 everything needs to be thought from scratch. (Done in 2015-2016)**
 
-### Phase A
+## Phase A
 
 Phase A is a relatively low cost paper exercise, designed to expand the
 basic idea and confirm that the project is feasible.
@@ -171,7 +188,7 @@ packages etc.
 **Includes: Technical Specifications, Coordination Board, Simple
 Simulations. (In process 2016-2017)**
 
-### Phase B
+## Phase B
 
 The main purpose of Phase B is to convert the conceptual idea into a
 prototype model upon which further investigations can be performed to
@@ -188,7 +205,7 @@ phase.
 **Includes: Technical Modeling, Designing, Simulations, Low level
 Feasibility.**
 
-### Phase C & D
+## Phase C & D
 
 Phases C and D are usually combined. The purpose of Phase C & D is to
 convert the outcome of Phase B into a fully space qualified model that
@@ -198,7 +215,7 @@ or as ground equipment or software to control a particular activity.
 **Includes: Technical Specifications, Management Project, Technical
 Tests & Validations, Partners Financial investments.**
 
-### Phase E & F
+## Phase E & F
 
 Phases E & F are associated with the launch campaign and the post launch
 activities, tests, preparation.
@@ -206,7 +223,7 @@ activities, tests, preparation.
 **Includes: Launch preparation, Ground Relay, Start of launch, Partners
 implications**
 
-### Data analysis phase
+## Data analysis phase
 
 The ultimate stage of a project is the analysis of the data to reach a
 scientific conclusion. Analysis of data may take place at any stage of
@@ -214,7 +231,7 @@ the experiment, prior to flight, in-flight and post flight.
 
 **The interesting part starts ! Will the mission be a success ?**
 
-### Documents / References
+## Documents / References
 
 * [PDF from PRODEX explaining Phases](pdf/PRODEX_USERGUIDE_V7_may2011.pdf)
 * [Complete management project architecture developed](pdf/Management_Plan_ECE³SAT_draft.pdf)
