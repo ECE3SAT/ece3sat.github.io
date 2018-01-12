@@ -46,6 +46,6 @@ log "=> Generating site"
 hugo
 
 log "=> Updating gh-pages branch"
-cd public && git add --all && git commit -m "Publishing to gh-pages (build_wiki.sh)"
+cd public && git add --all && git commit -m "Publishing to gh-pages (build_wiki.sh)" | true
 
 log "=> Done. You can now push your changes: git push origin master && git push origin gh-pages"
