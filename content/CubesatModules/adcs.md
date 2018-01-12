@@ -18,8 +18,8 @@ list:
 - The ADCS controller (CTRL) objectives are to collect data from
     sensors and to process it to get reliable positioning information.
     Then the ADCS will send orders to ACT in order to correct/modify the
-    CubeSat’s attitude if [OBC](ECE3SAT/wiki/obc/index.html) and
-    [EPS](ECE3SAT/wiki/eps/index.html) subsystems allow it.
+    CubeSat’s attitude if [OBC]({{< relref "CubesatModules/obc.md" >}}) and
+    [EPS]({{< relref "CubesatModules/eps.md" >}}) subsystems allow it.
 - The Interface (INT) module has for objective to ensure good
     connection with other systems of the satellite and to send data to
     the other systems.
@@ -154,8 +154,8 @@ them to warn us if they are malfunctioning.
 The controller will collect and process our data. That's why we want the
 result of computation to be in our goal range (5°). CTRL have also to be
 able to determine the necessary correction in order to be able to send
-it to the [OBC](ECE3SAT/wiki/obc/index.html). Finally, the orders coming
-from the [OBC](ECE3SAT/wiki/obc/index.html) have to be processed to
+it to the [OBC]({{< relref "CubesatModules/obc.md" >}}). Finally, the orders coming
+from the [OBC]({{< relref "CubesatModules/obc.md" >}}) have to be processed to
 individually power our actuators.
 
 ### System Specification
@@ -203,10 +203,10 @@ We designed our decision taking algorithm to be as it follows :
 
 As we can see our algorithm begins with the initialization of our module
 (the IO, communication, sensors and actuators).Then a confirmation of
-well-functioning is sent to the [OBC](ECE3SAT/wiki/obc/index.html).
+well-functioning is sent to the [OBC]({{< relref "CubesatModules/obc.md" >}}).
 
 That’s where we reach the central loop. The
-[OBC](ECE3SAT/wiki/obc/index.html) can give us several order which can
+[OBC]({{< relref "CubesatModules/obc.md" >}}) can give us several order which can
 be classified as follow:
 
 -   If it asks us to start to take measure or to move (so to start the
@@ -216,7 +216,7 @@ be classified as follow:
 -   If it asks us to stop measures or movement, we check if we were
     doing it and if it is the case, we stop doing it.
 
--   Finally, if the [OBC](ECE3SAT/wiki/obc/index.html) ask to shutdown,
+-   Finally, if the [OBC]({{< relref "CubesatModules/obc.md" >}}) ask to shutdown,
     we verify if we were performing action and then stop them. This put
     us to the end of our loop.
 

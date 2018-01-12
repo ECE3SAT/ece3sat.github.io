@@ -15,7 +15,7 @@ panels.
 **PCC** is responsible for the voltage regulation, the modules
 protection and the energy distribution. In others words, it has to
 manage the energy through the ECE3Sat. It communicates with the
-[OBC](ECE3SAT/wiki/obc/index.html), thanks to a microcontroller.
+[OBC]({{< relref "CubesatModules/obc.md" >}}), thanks to a microcontroller.
 
 The **PV** has to generate the electricity using the sunlight and the
 photovoltaic effect. This will be possible thanks to five solar panels,
@@ -148,8 +148,6 @@ thanks the I2C buses, of electricity distribution control with digital
 outputs for the electronic switchs and of measure of battery level of
 charge using sensors.
 
-[PDF](PATH.pdf)
-
 ### Architecture
 
 There is two main architectures for CubeSats which are centralized and
@@ -216,7 +214,7 @@ The role of the PCC is to manage and distribute the energy through the
 entire CubeSat thanks to a microcontroller. This energy control shall
 take into account: the regulators (3.7V, 5V) the electronic switches,
 the battery charge level and the communication with the On Board
-Computer ([OBC](ECE3SAT/wiki/obc/index.html)).
+Computer ([OBC]({{< relref "CubesatModules/obc.md" >}})).
 
 {{<
     image_pop_up_legend
@@ -537,7 +535,7 @@ current.Then, the cells have a output Power of
 
 {{<
     image_pop_up_legend
-    "/images/wiki/power-EPS.png"
+    "/images/wiki/Power-EPS.png"
     ""
     "Power equation"
 >}}

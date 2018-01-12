@@ -11,9 +11,9 @@ The TCS, or telecommunication system, communicates with the Ground
 Control Station. It sends data to the Earth and receive orders (to shut
 down the satellite because of an external factor for example). The data
 sent to the Ground Control Station are transmitted to the TCS by the
-[OBC](ECE3SAT/wiki/obc/index.html). And, in the same way, orders sent
+[OBC]({{< relref "CubesatModules/obc.md" >}}). And, in the same way, orders sent
 from Earth to TCS are transmit to the
-[OBC](ECE3SAT/wiki/obc/index.html).
+[OBC]({{< relref "CubesatModules/obc.md" >}}).
 
 #### Subsystem division
 

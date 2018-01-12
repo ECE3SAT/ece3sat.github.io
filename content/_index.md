@@ -133,11 +133,11 @@ authorization.
 
 The ECE3SAT is composed of five modules named
 
-- Attitude Determination Control System ([ADCS](/wiki/adcs/index.html))
-- Energy Power Supply ([EPS](/wiki/eps/index.html))
-- On Board Computer ([OBC](/wiki/obc/index.html))
-- Payload ([PAYLOAD](/wiki/payload/index.html))
-- Telecommunication System ([TCS](/wiki/tcs/index.html))
+- Energy Power Supply ([EPS]({{< relref "CubesatModules/eps.md" >}}))
+- Telecommunication System ([TCS]({{< relref "CubesatModules/tcs.md" >}}))
+- Attitude Determination Control System ([ADCS]({{< relref "CubesatModules/adcs.md" >}}))
+- OnBoard Computer ([OBC]({{< relref "CubesatModules/obc.md" >}}))
+- Payload ([Payload]({{< relref "TheProject/payload.md" >}}))
 
 The [Cubesat](#cubesat) development is divided in five different phases,
 0, A, B, C & D and E & F. Each phase is supposed to be realized in 1

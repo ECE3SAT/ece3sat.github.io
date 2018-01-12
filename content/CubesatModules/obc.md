@@ -11,7 +11,7 @@ The On Board Computer, or OBC, is the brain of the satellite and has
 different missions such as the coordination of all the actions, sending
 orders to the different modules, the reception and storage of
 information of the CubeSat, sending this information back to Earth via
-the [TCS](ECE3SAT/wiki/tcs/index.html) error handling within the
+the [TCS]({{< relref "CubesatModules/tcs.md" >}}) error handling within the
 CubeSat.
 
 ### Subsystem division
@@ -33,7 +33,7 @@ collected through the interface and to use it to give orders.
 The interface subsystem is responsible for the communication with other
 modules. It ensures a good connection with other systems of the
 satellite and allows them to send information. It is also in charge of
-collecting the power supplied by the [EPS](ECE3SAT/wiki/eps/index.html).
+collecting the power supplied by the [EPS]({{< relref "CubesatModules/eps.md" >}}).
 The microcontroller is in charge of the storing system data, operation
 data, logs and measurements.
 
@@ -41,7 +41,7 @@ The electronics subsystem protects all the electronic components of the
 OBC chip from radiation and magnetic fields. It also prevents
 destructive noise on the signals processed within the OBC.
 
-## State Of The Art OBC {#state-of-the-art-obc .v1-center}
+## State Of The Art OBC
 
 The goal of the state of the art is to establish an inventory of the
 existing technologies and to see their underlying potential of their
