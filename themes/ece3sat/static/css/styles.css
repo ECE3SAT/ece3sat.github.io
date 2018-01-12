@@ -33,7 +33,10 @@ h1 {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {margin-top:0; margin-bottom:0.5rem; line-height:1.2;}
+h1 { margin-top: 0.5rem; margin-bottom: 1rem; }
+h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0.5rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
 
 /* From http://www.color-hex.com/color-palette/1294 */
 h1 { color: #011f4b; font-size: 2.50rem; text-decoration: underline; }
@@ -48,9 +51,14 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+
 .content-bg {
     width: 100%;
-    padding-bottom: 94px; /* height of the footer */
+    padding-bottom: 105px; /* height of the footer */
     background-color: #FFF;
 }
 
@@ -60,13 +68,17 @@ a {
     max-width: 800px;
     overflow: auto;
     color: #444;
-    font-family: "Lato", sans-serif;
 }
 
 .content img {
     width: 80%;
     margin: auto;
     display: block;
+}
+
+.content-container {
+    position: relative;
+    min-height: 100%;
 }
 
 .content_listing h1, .content_single h1 {
@@ -78,7 +90,6 @@ a {
 
 .content_listing hr, .content_single hr {
     border-top: 1px solid #CCC;
-    margin-top: 0;
 }
 
 /*******************************************************************************
@@ -90,11 +101,11 @@ a {
 }
 
 #nav_bar_desktop {
-    float: left;
+    text-align: center;
 }
 
 #nav_bar {
-    background-color: rgba(192, 192, 192, 0.75); /* 192 == #CC */
+    background-color: rgba(192, 192, 192, 0.65); /* 192 == #CC */
 }
 
 #nav_bar .active, .v1-button:hover {
@@ -111,6 +122,15 @@ a {
     z-index: -1;
 }
 
+.header_image_container .image {
+    background-image: url("/images/ece3sat_background.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
 .header_image_container p {
     position: absolute;
     top: 100px;
@@ -120,14 +140,6 @@ a {
     font-size: 120%;
     text-align: right;
     color: #FFF;
-}
-
-.header_image {
-    position: relative;
-    top: -100px; /* image vertical pos */
-    width: 1400px;
-    margin-left: -700px;  /* image width/2 */
-    left: 50%;
 }
 
 .header_height {
@@ -148,17 +160,22 @@ footer {
     padding: 30px 0;
 
     background-color: #000;
-    color: #CCC;
 }
 
-footer a {
-    color: #CCC;
+footer, footer a {
+    color: #DDD;
 }
 
 footer .icon {
-    font-size: 150%;
+    font-size: 200%;
     position: relative;
-    top: 3px;
+    top: 5px;
+}
+
+/* cc by nc license */
+footer img {
+    position: relative;
+    top: 5px;
 }
 
 /*******************************************************************************
@@ -247,13 +264,24 @@ required ??
     text-align: center;
 }
 
-.content_single img {
-    max-width: 400px;
-    min-height: 100px;
-    max-height: 300px;
-    margin-top: 10px;
-}
-
 /*******************************************************************************
     7. Miscs
 *******************************************************************************/
+
+.image_pop_up_legend img {
+    margin: 10px auto 0 auto;
+    max-height: 500px;
+    max-width: 80%;
+    width: auto;
+}
+
+.image_pop_up_legend img:hover {
+    opacity: 0.75;
+}
+
+.image_pop_up_legend figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

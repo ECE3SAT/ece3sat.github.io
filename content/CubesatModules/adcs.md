@@ -24,8 +24,12 @@ list:
     connection with other systems of the satellite and to send data to
     the other systems.
 
-![ADCS Subsystems](/images/ADCS_subsystem.png)
-Figure 1: ADCS Subsystems
+{{<
+    image_pop_up_legend
+    "/images/ADCS_subsystem.png"
+    "Figure 1: ADCS Subsystems"
+    "Figure 1: ADCS Subsystems"
+>}}
 
 ### Sensors System (SENS)
 
@@ -53,9 +57,12 @@ The ADCS Interface is the hardware part of ADCS which transmit the
 signal received from Sensors to the micro-controller and it also
 distributes power supply coming from the EPS subsystem to the Actuators.
 
-![ADCS Recap](/images/ADCS_Récap.png)
-Figure 1: ADCS Subsystems
-
+{{<
+    image_pop_up_legend
+    "/images/ADCS_Récap.png"
+    "Figure 2: ADCS Subsystems"
+    "Figure 2: ADCS Subsystems"
+>}}
 
 ### Document
 
@@ -185,8 +192,12 @@ and then apply correction through actuators.
 
 We designed our decision taking algorithm to be as it follows :
 
-![Algorithm ADCS](/images/Algorithm_ADCS.png)
-Figure 1: ADCS Algorithm
+{{<
+    image_pop_up_legend
+    "/images/Algorithm_ADCS.png"
+    "Figure 3: ADCS Algorithm"
+    "Figure 3: ADCS Algorithm"
+>}}
 
 As we can see our algorithm begins with the initialization of our module
 (the IO, communication, sensors and actuators).Then a confirmation of

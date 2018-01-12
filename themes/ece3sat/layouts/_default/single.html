@@ -3,15 +3,14 @@
 <div class="content content_single">
 
     <h1>
-        <span>
-            {{ .Title }}
-        </span>
-
-        {{ if .Params.image }}
-            <img class="post_illustration" src="{{ .Params.image }}">
-        {{ end }}
+        {{ .Title }}
     </h1>
+    {{ if .Params.image }}
+        <img class="post_illustration" src="{{ .Params.image }}">
+    {{ end }}
+
     <hr />
+
     {{ .Content }}
 
 </div>

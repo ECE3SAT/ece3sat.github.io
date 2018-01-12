@@ -29,11 +29,13 @@ The vast majority of space debris is located in Low Earth Orbit (LEO)
 where most space missions are located or planned. Figure 1 illustrates
 the distribution of debris around the Earth in 2013.
 
-![Representation of the distribution of the space debris in LEO
-in 2013. Source: ESA](images/Space_debris_story_video_production_full.png)
+{{<
+    image_pop_up_legend
+    "/images/Space_debris_story_video_production_full.png"
+    "Illustration from space that shows the earth surrounded by thousands of debris."
+    "Figure 1: Representation of the distribution of the space debris in LEO in 2013. Source: ESA"
+>}}
 
-Figure 1 : Representation of the distribution of the space debris in LEO
-in 2013. Source: ESA
 
 Even with the direct threat to space missions that space debris
 represents, the real threat comes in the long-term management of the
@@ -44,11 +46,12 @@ the space industry does not change or if every space activity stops
 considered the limitation of debris creation, End of Life (EOL)
 management, debris removal and the limitation of orbital objects.
 
-![Space debris population forecast in 2209 if nothing is done
-to mitigate them](images/Why_Space_Debris_Mitigation_is_needed_large.gif)
-
-Figure 2 : Space debris population forecast in 2209 if nothing is done
-to mitigate them
+{{<
+    image_pop_up_legend
+    "/images/Why_Space_Debris_Mitigation_is_needed_large.gif"
+    "Illustration from space that shows the earth surrounded by thousands of debris."
+    "Figure 2: Space debris population forecast in 2209 if nothing is done to mitigate them"
+>}}
 
 One part of the implementation of the space debris mitigation is made
 through the development of solutions to give the tools to the new
@@ -62,7 +65,12 @@ aerodynamic sail, chemical engine, and electric/ionic engine.
 
 # What Is a Cubesat?
 
-![A cubeast above the Earth](images/429961main_cubesat_1.jpg)
+{{<
+    image_pop_up_legend
+    "/images/429961main_cubesat_1.jpg"
+    "Illustration of a cubesat above the Earth."
+    "A cubeast above the Earth"
+>}}
 
 A CubeSat (1U-class spacecraft) is a nanosatelite satellite for space
 research that is made up of multiples of 10x10x11.35 cubic units, with a
@@ -135,21 +143,16 @@ The goal of the project is to succeed in the mission, but also to enable
 students to overcome a physical theory through the realization of a
 satellite.
 
-![ECE3SAT](images/ece3sat_background.png)
-
 {{< home_parallax "/images/parallax.jpg" "Project Phases" >}}
 
 # Project Phases
 
 <!-- raw HTML like this is very bad, dont write anymore of it please -->
 <div style="text-align:center">
-    <div style="width:500px; display:inline-block;">
-        {{< youtube sPlnimVf1_o >}}
-    </div>
-    <div style="width:350px; display:inline-block;">
+    <div style="max-width:350px; width:100%; display:inline-block;">
         {{< youtube 94MddSwKZFQ >}}
     </div>
-    <div style="width:350px; display:inline-block;">
+    <div style="max-width:350px; width:100%; display:inline-block;">
         {{< youtube LLoQZBPVrpQ >}}
     </div>
 </div>

@@ -1,0 +1,16 @@
+{{/*
+    Include a parallax image with a title.
+
+    Usage: {{< image_pop_up_legend "<imageUrl>" "<altText>" "<legend>" >}}
+    Ex: {{<
+            image_pop_up_legend
+            "/images/Space_debris_story_video_production_full.png"
+            "Illustration from space that shows the earth surrounded by thousands of debris."
+            "Figure 1: Representation of the distribution of the space debris in LEO in 2013. Source: ESA"
+        >}}
+*/}}
+
+<div class="image_pop_up_legend">
+    <img src="{{ .Get 0 }}"  alt="{{ .Get 1 }}" onclick="image_pop_up(this)">
+    <figcaption>{{ .Get 2 }}</figcaption>
+</div>
