@@ -19,10 +19,12 @@
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/fonts-googleapis-com-css-family-Lato.css">
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
 
-        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/menu.js"></script>
+        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/script.js"></script>
 
     </head>
+
     <body lang="en">
+        <div class="content-container">
 
             <div id="nav_bar" class="v1-top">
     <div id="nav_bar_desktop">
@@ -73,13 +75,12 @@
 <div class="content content_single">
 
     <h1>
-        <span>
-            EPS: Electrical Power Supply
-        </span>
-
-        
+        EPS: Electrical Power Supply
     </h1>
+    
+
     <hr />
+
     
 
 <h2 id="electrical-power-supply-eps">Electrical Power Supply (EPS)</h2>
@@ -95,7 +96,7 @@ panels.</p>
 <p><strong>PCC</strong> is responsible for the voltage regulation, the modules
 protection and the energy distribution. In others words, it has to
 manage the energy through the ECE3Sat. It communicates with the
-<a href="ECE3SAT/wiki/obc/index.html">OBC</a>, thanks to a microcontroller.</p>
+<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>, thanks to a microcontroller.</p>
 
 <p>The <strong>PV</strong> has to generate the electricity using the sunlight and the
 photovoltaic effect. This will be possible thanks to five solar panels,
@@ -104,8 +105,13 @@ on each side of the CubeSat.</p>
 <p>The <strong>BAT</strong> module has to store this energy to enable its using at any
 time.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/EPS_subsystems.jpg" alt="EPS Subsystems" />
-EPS Subsystems</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/EPS_subsystems.jpg"  alt="Schematic of the EPS Subsystems" onclick="image_pop_up(this)">
+    <figcaption>EPS Subsystems</figcaption>
+</div>
+
 
 <h2 id="state-of-the-art">State Of The Art</h2>
 
@@ -130,8 +136,13 @@ solar cells have a layer well adapt to a large wavelength area with an
 absorption wavelength from 300 nm to 1700 nm. This option but also other
 types of technology have been study in the State of the Art document.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Quantum_efficiency-0.jpg" alt="Wavelength Absorption" />
-Wavelength absorption depending on the layer material</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Quantum_efficiency-0.jpg"  alt="Wavelength absorption depending on the layer material" onclick="image_pop_up(this)">
+    <figcaption>Wavelength absorption depending on the layer material</figcaption>
+</div>
+
 
 <h3 id="bat">BAT</h3>
 
@@ -235,8 +246,6 @@ thanks the I2C buses, of electricity distribution control with digital
 outputs for the electronic switchs and of measure of battery level of
 charge using sensors.</p>
 
-<p><a href="PATH.pdf">PDF</a></p>
-
 <h3 id="architecture">Architecture</h3>
 
 <p>There is two main architectures for CubeSats which are centralized and
@@ -248,19 +257,17 @@ used distributed architecture.</p>
 
 <h3 id="references">References</h3>
 
-<p><a href="http://digitalcommons.usu.edu/">Utah State University</a></p>
-
-<p><a href="http://www.utar.edu.my/contentRandD.jsp?catid=9&amp;contentid=417&amp;2ndcontentid=1980">Universiti Tunku Abdul
-Rahman</a></p>
-
-<p><a href="https://cubesatcookbook.com/directory/batteries/">The CubeSat Cook
-Book</a></p>
-
-<p><a href="http://chglib.icp.ac.ru/subjex/2014/pdf03/ActaAstronautica-2011-68(11-12)1752.pdf">Characterization of Lithium-Polymer batteries for CubeSat applications,
+<ul>
+<li><a href="http://digitalcommons.usu.edu/">Utah State University</a></li>
+<li><a href="http://www.utar.edu.my/contentRandD.jsp?catid=9&amp;contentid=417&amp;2ndcontentid=1980">Universiti Tunku Abdul
+Rahman</a></li>
+<li><a href="https://cubesatcookbook.com/directory/batteries/">The CubeSat Cook
+Book</a></li>
+<li><a href="http://chglib.icp.ac.ru/subjex/2014/pdf03/ActaAstronautica-2011-68(11-12)1752.pdf">Characterization of Lithium-Polymer batteries for CubeSat applications,
 Nimal Navarathinam, Regina Lee, Hugh
-Chesser</a></p>
-
-<p><a href="http://www.techbriefs.com/component/content/article/ntb/tech-briefs/physical-sciences/19567">Techbrief</a></p>
+Chesser</a></li>
+<li><a href="http://www.techbriefs.com/component/content/article/ntb/tech-briefs/physical-sciences/19567">Techbrief</a></li>
+</ul>
 
 <h2 id="system-specifications-eps .v1-center">System Specifications EPS</h2>
 
@@ -278,7 +285,13 @@ which will be named the cell.</p>
 temperature, the number of cycles of the battery, the charge level, the
 charging time, the battery&rsquo;s capacity and the heater&rsquo;s consumption.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/111835-battery-loading-status.jpg" alt="Battery" /></p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/111835-battery-loading-status.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Battery</figcaption>
+</div>
+
 
 <h3 id="pv-photovoltaic-panels">PV (Photovoltaic panels)</h3>
 
@@ -289,7 +302,13 @@ wiring, the technology and the size of solar panels (Triple Junction),
 the protection against certain wavelength, the wiring of solar panels,
 and the decrease of the efficiency of solar panels.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Solar-panel-154549_960_720.png" alt="Solar panel" /></p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Solar-panel-154549_960_720.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Solar panel</figcaption>
+</div>
+
 
 <h3 id="pcc-power-control-circuit">PCC (Power Control Circuit)</h3>
 
@@ -297,9 +316,15 @@ and the decrease of the efficiency of solar panels.</p>
 entire CubeSat thanks to a microcontroller. This energy control shall
 take into account: the regulators (3.7V, 5V) the electronic switches,
 the battery charge level and the communication with the On Board
-Computer (<a href="ECE3SAT/wiki/obc/index.html">OBC</a>).</p>
+Computer (<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>).</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Microcontroller-O.png" alt="Microcontroller" /></p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Microcontroller-O.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Microcontroller</figcaption>
+</div>
+
 
 <p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/SystemSpecifications-EPS.pdf">SystemSpecifications EPS</a></p>
 
@@ -323,8 +348,13 @@ and 30%. The energy generated depends on the area of PV under sunlight,
 the inclination of the CubeSat and the solar intensity. Following Matlab
 simulations, the best inclination has been computed:</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Angle_CubeSat.png" alt="Angle CubeSat" />
-CubeSat angles</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Angle_CubeSat.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>CubeSat angles</figcaption>
+</div>
+
 
 <p>The maximum value of power is obtained for three sides under sunlight
 with ϕ = 45° and v = 55°</p>
@@ -347,15 +377,15 @@ and an other to send the step of charge. An UART communication is used
 between the EPS and the OBC. An SPI communication is used for the other
 connections.</p>
 
-<h3 id="files">FILES</h3>
+<h3 id="files">Files</h3>
 
-<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Batteries.pdf">Batteries</a></p>
+<ul>
+<li><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Batteries.pdf">Batteries</a></li>
+<li><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/PCC.pdf">PCC</a></li>
+<li><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Microcontrollers.pdf">Microcontrollers</a></li>
+</ul>
 
-<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/PCC.pdf">PCC</a></p>
-
-<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Microcontrollers.pdf">Microcontrollers</a></p>
-
-<h2 id="feasibility-study-eps .v1-center">Feasibility Study EPS</h2>
+<h2 id="feasibility-study-eps">Feasibility Study EPS</h2>
 
 <p>The feasibility study aims to assess the practicality of the EPS module.
 The purpose of this stage is to assess the performance according to the
@@ -392,8 +422,13 @@ charge is harvested through an analog-digital converter.</p>
 <p>A schematic of the description above, develops the architecture more
 clearly:</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/schema_elec_EPS.png" alt="Electrical Schema EPS" />
-Electrical schema</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/schema_elec_EPS.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Electrical schematic</figcaption>
+</div>
+
 
 <p>According to the availability on the market, the type of regulators
 varies as a function of the input and the output. As the battery charge
@@ -595,18 +630,36 @@ To do so, we used a luxmeter, a multimeter and a load.</p>
 
 <p>CIGS cell is 24 cm by 7.3 cm</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/tall-equation-EPS.png" alt="Tall" /></p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/tall-equation-EPS.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Tall</figcaption>
+</div>
+
 
 <p>The solar power is of 1W/m² according to the lux meter.</p>
 
 <p>The voltage at the output of the solar cell is of 10V for a 0.2A
 current.Then, the cells have a output Power of</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/power-EPS.png" alt="Power equation" /></p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Power-EPS.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Power equation</figcaption>
+</div>
+
 
 <p>We can deduce the efficiency of the cell</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/equation-efficiency-EPS.png" alt="Efficiency equation EPS" /></p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/equation-efficiency-EPS.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Efficiency equation EPS</figcaption>
+</div>
+
 
 <h3 id="voltage-regulators-test">Voltage regulators test</h3>
 
@@ -653,7 +706,13 @@ voltage to turn on the MPPT (MPP-SET shall see 0.3 V at minimum).
 When VR4 equals to zeo, MPP-SET is directly connected to the ground.
 After measuring the input voltage, VR4 can be estimated thanks to
 the following voltage divider equation:
-<img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/equation-model.png" alt="Equation VMPP-SET" /></li>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/equation-model.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Equation VMPP-SET</figcaption>
+</div>
+</li>
 <li>VR2 (0-1 MΩ)
 This variable resistor controls the desired ouptu voltage by
 regulating the voltage of the pin Vctrl. The algorithm inside the
@@ -666,11 +725,29 @@ This resistor is connected to the charge regulator and regulate the
 amplification of the input signal.</li>
 </ul>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Mppt1.png" alt="Steval ISV006V2 schematic" /></p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Mppt2.png" alt="Mppt top view" /></p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Mppt3.png" alt="Mppt bottom view" /></p>
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Mppt1.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Steval ISV006V2 schematic</figcaption>
+</div>
+
+
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Mppt2.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>MPPT top view</figcaption>
+</div>
+
+
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Mppt3.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>MPPT bottom view</figcaption>
+</div>
+
 
 
 </div>
@@ -679,15 +756,18 @@ amplification of the input signal.</li>
             </div>
 
             <footer>
-    <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io">Source Code</a>
-    - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a>
-    - <span class="social_media">
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
         <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
         <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
         <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
     </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <img src="https://nodraak.github.io/ece3satwikiv2/images/cc_by_nc.png" />
 </footer>
 
 
+        </div>
     </body>
+
 </html>

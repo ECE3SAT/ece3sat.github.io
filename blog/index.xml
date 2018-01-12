@@ -22,14 +22,5 @@ Actually, few core functionalities are a standard in nanosatellites:
  First of all, as any other device, the satellite needs power to work. Electricity is produced by solar panels and distributed in the whole CubeSat.</description>
     </item>
     
-    <item>
-      <title>My First Post</title>
-      <link>https://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</link>
-      <pubDate>Tue, 14 Nov 2017 18:58:44 +0100</pubDate>
-      
-      <guid>https://nodraak.github.io/ece3satwikiv2/blog/2017-11-14-my-first-post/</guid>
-      <description>Lorem Ipsum. Update</description>
-    </item>
-    
   </channel>
 </rss>

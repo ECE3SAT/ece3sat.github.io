@@ -19,10 +19,12 @@
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/fonts-googleapis-com-css-family-Lato.css">
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
 
-        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/menu.js"></script>
+        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/script.js"></script>
 
     </head>
+
     <body lang="en">
+        <div class="content-container">
 
             <div id="nav_bar" class="v1-top">
     <div id="nav_bar_desktop">
@@ -73,15 +75,14 @@
 <div class="content content_single">
 
     <h1>
-        <span>
-            ADCS: Attitude Determination And Control System
-        </span>
-
-        
-            <img class="post_illustration" src="https://placehold.it/800x600">
-        
+        ADCS: Attitude Determination And Control System
     </h1>
+    
+        <img class="post_illustration" src="https://placehold.it/800x600">
+    
+
     <hr />
+
     
 
 <h2 id="attitude-determination-and-control-system-adcs">Attitude Determination And Control System (ADCS)</h2>
@@ -99,15 +100,20 @@ the CubeSat’s attitude according to the mission needs.</li>
 <li>The ADCS controller (CTRL) objectives are to collect data from
 sensors and to process it to get reliable positioning information.
 Then the ADCS will send orders to ACT in order to correct/modify the
-CubeSat’s attitude if <a href="ECE3SAT/wiki/obc/index.html">OBC</a> and
-<a href="ECE3SAT/wiki/eps/index.html">EPS</a> subsystems allow it.</li>
+CubeSat’s attitude if <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a> and
+<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/">EPS</a> subsystems allow it.</li>
 <li>The Interface (INT) module has for objective to ensure good
 connection with other systems of the satellite and to send data to
 the other systems.</li>
 </ul>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/images/ADCS_subsystem.png" alt="ADCS Subsystems" />
-Figure 1: ADCS Subsystems</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/ADCS_subsystem.png"  alt="Figure 1: ADCS Subsystems" onclick="image_pop_up(this)">
+    <figcaption>Figure 1: ADCS Subsystems</figcaption>
+</div>
+
 
 <h3 id="sensors-system-sens">Sensors System (SENS)</h3>
 
@@ -135,8 +141,13 @@ the rotations to accomplish for each axis.</p>
 signal received from Sensors to the micro-controller and it also
 distributes power supply coming from the EPS subsystem to the Actuators.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/images/ADCS_Récap.png" alt="ADCS Recap" />
-Figure 1: ADCS Subsystems</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/ADCS_R%c3%a9cap.png"  alt="Figure 2: ADCS Subsystems" onclick="image_pop_up(this)">
+    <figcaption>Figure 2: ADCS Subsystems</figcaption>
+</div>
+
 
 <h3 id="document">Document</h3>
 
@@ -238,8 +249,8 @@ them to warn us if they are malfunctioning.</p>
 <p>The controller will collect and process our data. That&rsquo;s why we want the
 result of computation to be in our goal range (5°). CTRL have also to be
 able to determine the necessary correction in order to be able to send
-it to the <a href="ECE3SAT/wiki/obc/index.html">OBC</a>. Finally, the orders coming
-from the <a href="ECE3SAT/wiki/obc/index.html">OBC</a> have to be processed to
+it to the <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>. Finally, the orders coming
+from the <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a> have to be processed to
 individually power our actuators.</p>
 
 <h3 id="system-specification">System Specification</h3>
@@ -275,20 +286,27 @@ on solar pannel</li>
 
 <h2 id="algorithm-adcs">Algorithm ADCS</h2>
 
+<h3 id="main-functionning">Main functionning</h3>
+
 <p>The ADCS mission is to get access to sensors for attitude determination
 and then apply correction through actuators.</p>
 
 <p>We designed our decision taking algorithm to be as it follows :</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/images/Algorithm_ADCS.png" alt="Algorithm ADCS" />
-Figure 1: ADCS Algorithm</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/Algorithm_ADCS.png"  alt="Figure 3: ADCS Algorithm" onclick="image_pop_up(this)">
+    <figcaption>Figure 3: ADCS Algorithm</figcaption>
+</div>
+
 
 <p>As we can see our algorithm begins with the initialization of our module
 (the IO, communication, sensors and actuators).Then a confirmation of
-well-functioning is sent to the <a href="ECE3SAT/wiki/obc/index.html">OBC</a>.</p>
+well-functioning is sent to the <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>.</p>
 
 <p>That’s where we reach the central loop. The
-<a href="ECE3SAT/wiki/obc/index.html">OBC</a> can give us several order which can
+<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a> can give us several order which can
 be classified as follow:</p>
 
 <ul>
@@ -299,10 +317,52 @@ it is not we perform the task and send the data.</p></li>
 <li><p>If it asks us to stop measures or movement, we check if we were
 doing it and if it is the case, we stop doing it.</p></li>
 
-<li><p>Finally, if the <a href="ECE3SAT/wiki/obc/index.html">OBC</a> ask to shutdown,
+<li><p>Finally, if the <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a> ask to shutdown,
 we verify if we were performing action and then stop them. This put
 us to the end of our loop.</p></li>
 </ul>
+
+<h3 id="bdot-stabilization">BDOT Stabilization</h3>
+
+<p>The goal is to decrease the kinetic energy of the system, which means stabilize the satellite.</p>
+
+<p>In order to do that we need to use the properties of our actuators: when the magnetorquers are supplied correctly, they can generate a torque of equation <code>T = m ^ B</code> (m being the magnetic moment of the dipole and B the earth magnetic field). That means the satellite, which is totally linked with them will have the tendancy to align itself with the Earth magnetic field.
+The principle is the following:</p>
+
+<p>The torque created by the coils is calculated by: <code>T = iS n ^ B</code>
+With I the intensity of current in A, S the surface of a spire in m², n the normal vector to this surface and B the magetic field (here earth).</p>
+
+<p>In our case every element here are fixed except the intensity so using a positive or negative intensity will determine the rotation direction.
+We can also see that the torque being the result of a cross product, the magnetic moment will only create a torque if he is coplanar to the B vector (at least one component of it).</p>
+
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/ADCS-BDOT-illustration.png"  alt="Figure 4: BDOT illustration" onclick="image_pop_up(this)">
+    <figcaption>Figure 4: BDOT illustration</figcaption>
+</div>
+
+
+<p>The Bdot algorithm itself work as follow: when the satellite is moving so that the Y axis is moving toward the earth magnetic field, the temporal derivative of B will be positive.
+We use our magnetorquers to generate a torque opposed to the rotation (negative intensity here to have a magnetic moment oriented toward Y-).
+We then reverse the dipole orientation (so I positive) when Y passes B, that is to say B° negative.</p>
+
+<p>To sum up the way the Bdot algorithm work:</p>
+
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/ADCS-BDOT-Algorithm.png"  alt="Figure 5: BDOT algorithm" onclick="image_pop_up(this)">
+    <figcaption>Figure 5: BDOT algorithm</figcaption>
+</div>
+
+
+<p>Therefore, the control law applies a magnetic dipole in the opposite direction to the change in the magnetic field (estimated with magnetometers data).
+The magnetorquers applies a torque following this equation:</p>
+
+<p>Mi = -ki B’i  (with i being one of the three axis and B’ the temporal derivative of the B field)</p>
+
+<p>As we can see the BDOT algorithm is a simple stabilization algorithm, only knowing the evolution of the magnetic field allow us to take the right decision to stop the rotation of our Cubesat.</p>
 
 
 </div>
@@ -311,15 +371,18 @@ us to the end of our loop.</p></li>
             </div>
 
             <footer>
-    <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io">Source Code</a>
-    - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a>
-    - <span class="social_media">
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
         <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
         <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
         <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
     </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <img src="https://nodraak.github.io/ece3satwikiv2/images/cc_by_nc.png" />
 </footer>
 
 
+        </div>
     </body>
+
 </html>

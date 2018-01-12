@@ -19,10 +19,12 @@
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/fonts-googleapis-com-css-family-Lato.css">
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
 
-        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/menu.js"></script>
+        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/script.js"></script>
 
     </head>
+
     <body lang="en">
+        <div class="content-container">
 
             <div id="nav_bar" class="v1-top">
     <div id="nav_bar_desktop">
@@ -65,7 +67,8 @@
 
             
     <div class="header_image_container">
-        <img class="header_image" src="https://nodraak.github.io/ece3satwikiv2/images/ece3sat_background.png" />
+        <div class="image">
+        </div>
         <p>
             <i>
                 We are a team of students from the French engineer school ECE Paris.
@@ -83,9 +86,9 @@
 <div class="content content_home">
     
 
-<h2 id="context">Context</h2>
+<h1 id="context">Context</h1>
 
-<h3 id="education">Education</h3>
+<h2 id="education">Education</h2>
 
 <p>Since the beginning of the space race in 1957, the number of objects
 sent into orbit is continuously growing, as does the amount of space
@@ -112,11 +115,13 @@ detected.</p>
 where most space missions are located or planned. Figure 1 illustrates
 the distribution of debris around the Earth in 2013.</p>
 
-<p><img src="images/Space_debris_story_video_production_full.png" alt="Representation of the distribution of the space debris in LEO
-in 2013. Source: ESA" /></p>
 
-<p>Figure 1 : Representation of the distribution of the space debris in LEO
-in 2013. Source: ESA</p>
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/Space_debris_story_video_production_full.png"  alt="Illustration from space that shows the earth surrounded by thousands of debris." onclick="image_pop_up(this)">
+    <figcaption>Figure 1: Representation of the distribution of the space debris in LEO in 2013. Source: ESA</figcaption>
+</div>
+
 
 <p>Even with the direct threat to space missions that space debris
 represents, the real threat comes in the long-term management of the
@@ -127,11 +132,13 @@ the space industry does not change or if every space activity stops
 considered the limitation of debris creation, End of Life (EOL)
 management, debris removal and the limitation of orbital objects.</p>
 
-<p><img src="images/Why_Space_Debris_Mitigation_is_needed_large.gif" alt="Space debris population forecast in 2209 if nothing is done
-to mitigate them" /></p>
 
-<p>Figure 2 : Space debris population forecast in 2209 if nothing is done
-to mitigate them</p>
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/Why_Space_Debris_Mitigation_is_needed_large.gif"  alt="Illustration from space that shows the earth surrounded by thousands of debris." onclick="image_pop_up(this)">
+    <figcaption>Figure 2: Space debris population forecast in 2209 if nothing is done to mitigate them</figcaption>
+</div>
+
 
 <p>One part of the implementation of the space debris mitigation is made
 through the development of solutions to give the tools to the new
@@ -141,9 +148,28 @@ toward Earth to disintegrate upon re-entry into the atmosphere. Several
 types of deorbiting systems are currently being developed such as the
 aerodynamic sail, chemical engine, and electric/ionic engine.</p>
 
-<h2 id="what-is-a-cubesat">What Is a Cubesat?</h2>
 
-<p><img src="images/429961main_cubesat_1.jpg" alt="A cubeast above the Earth" /></p>
+
+<div class="parallax-image" style="background-image: url(/ece3satwikiv2//images/parallax.jpg);">
+    <div class="title">
+        What Is a Cubesat?
+    </div>
+</div>
+<div class="parallax-placeholder">
+</div>
+
+
+<!--
+    # What Is a Cubesat?
+-->
+
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/429961main_cubesat_1.jpg"  alt="Illustration of a cubesat above the Earth." onclick="image_pop_up(this)">
+    <figcaption>A cubeast above the Earth</figcaption>
+</div>
+
 
 <p>A CubeSat (1U-class spacecraft) is a nanosatelite satellite for space
 research that is made up of multiples of 10x10x11.35 cubic units, with a
@@ -158,7 +184,7 @@ able to design, build, test and operate in space a spacecraft with
 capabilities similar to the first spacecraft,
 <a href="https://en.wikipedia.org/wiki/Sputnik_1">Sputnik</a></p>
 
-<h3 id="application">Application</h3>
+<h2 id="application">Application</h2>
 
 <p>In terms of applications, CubeSats are generally used to demonstrate
 spacecraft technologies that are targeted for use in small satellites or
@@ -166,7 +192,7 @@ that present questionable feasibility and are unlikely to justify the
 coast of a larger satellite. In our case, the CubeSat will be used to
 test a new deorbitation system.</p>
 
-<h3 id="design">Design</h3>
+<h2 id="design">Design</h2>
 
 <p>Many CubeSat&rsquo;s specifications have several high-level goals.
 Miniaturizing satellites does reduce the cost of development and
@@ -179,7 +205,7 @@ units. For example, CubeSat composed of two units (2U) and 3U CubeSat
 for 30cm3 availible volume permitting more advanced missions and more
 are obtained this way.</p>
 
-<h3 id="structure">Structure</h3>
+<h2 id="structure">Structure</h2>
 
 <p>Materials used in the structure must feature the same coefficient of
 thermal expansion as the deployer to prevent jamming. Specifically,
@@ -189,7 +215,20 @@ anodized to prevent cold welding, and other materials may be used for
 structure if a waiver is obtained. Furthermore, further consideration is
 put into material selection as not all materials can be used in vacuums.</p>
 
-<h2 id="ece3sat-project">ECE3SAT Project</h2>
+
+
+<div class="parallax-image" style="background-image: url(/ece3satwikiv2//images/parallax.jpg);">
+    <div class="title">
+        ECE3SAT Project
+    </div>
+</div>
+<div class="parallax-placeholder">
+</div>
+
+
+<!--
+    # ECE3SAT Project
+-->
 
 <p>The ECE3SAT project is a student project developed at the french
 engineer school, <a href="http://www.ece.fr/school-of-engineering/">ECE Paris</a> .
@@ -201,11 +240,11 @@ authorization.</p>
 <p>The ECE3SAT is composed of five modules named</p>
 
 <ul>
-<li>Attitude Determination Control System (<a href="https://nodraak.github.io/ece3satwikiv2/wiki/adcs/index.html">ADCS</a>)</li>
-<li>Energy Power Supply (<a href="https://nodraak.github.io/ece3satwikiv2/wiki/eps/index.html">EPS</a>)</li>
-<li>On Board Computer (<a href="https://nodraak.github.io/ece3satwikiv2/wiki/obc/index.html">OBC</a>)</li>
-<li>Payload (<a href="https://nodraak.github.io/ece3satwikiv2/wiki/payload/index.html">PAYLOAD</a>)</li>
-<li>Telecommunication System (<a href="https://nodraak.github.io/ece3satwikiv2/wiki/tcs/index.html">TCS</a>)</li>
+<li>Energy Power Supply (<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/">EPS</a>)</li>
+<li>Telecommunication System (<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/">TCS</a>)</li>
+<li>Attitude Determination Control System (<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/">ADCS</a>)</li>
+<li>OnBoard Computer (<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>)</li>
+<li>Payload (<a href="https://nodraak.github.io/ece3satwikiv2/theproject/payload/">Payload</a>)</li>
 </ul>
 
 <p>The <a href="#cubesat">Cubesat</a> development is divided in five different phases,
@@ -216,9 +255,39 @@ Year.</p>
 students to overcome a physical theory through the realization of a
 satellite.</p>
 
-<p><img src="images/ece3sat_background.png" alt="ECE3SAT" /></p>
 
-<h2 id="project-phases">Project Phases</h2>
+
+<div class="parallax-image" style="background-image: url(/ece3satwikiv2//images/parallax.jpg);">
+    <div class="title">
+        Project Phases
+    </div>
+</div>
+<div class="parallax-placeholder">
+</div>
+
+
+<!--
+    # Project Phases
+-->
+
+<!-- raw HTML like this is very bad, dont write anymore of it please -->
+
+<div style="text-align:center">
+    <div style="max-width:350px; width:100%; display:inline-block;">
+        
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/94MddSwKZFQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
+    </div>
+    <div style="max-width:350px; width:100%; display:inline-block;">
+        
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/LLoQZBPVrpQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
+    </div>
+</div>
 
 <p>A space project needs a big management to be successful. That&rsquo;s why all
 space projects are divided into various logical stages, called Phases.
@@ -230,7 +299,7 @@ such as proof of concept, equipment delivery, launch, etc.</p>
 
 <p>Typically the phases are:</p>
 
-<h3 id="phase-0">Phase 0</h3>
+<h2 id="phase-0">Phase 0</h2>
 
 <p>Phase 0 is sometime already ready but in a project like a
 <a href="#cubesat">Cubesat</a> it needs to be done. So this includes focusing on
@@ -240,7 +309,7 @@ project agreement and building partner&rsquo;s interest.</p>
 <p><strong>The Phase 0 is very important for <a href="#cubesat">Cubesat</a> Projects because
 everything needs to be thought from scratch. (Done in 2015-2016)</strong></p>
 
-<h3 id="phase-a">Phase A</h3>
+<h2 id="phase-a">Phase A</h2>
 
 <p>Phase A is a relatively low cost paper exercise, designed to expand the
 basic idea and confirm that the project is feasible.</p>
@@ -252,9 +321,9 @@ for the development of sub-systems, algorithm&rsquo;s, data interpretation
 packages etc.</p>
 
 <p><strong>Includes: Technical Specifications, Coordination Board, Simple
-Simulations. (In process 2016-2017)</strong></p>
+Simulations. (Done 2016-2017)</strong></p>
 
-<h3 id="phase-b">Phase B</h3>
+<h2 id="phase-b">Phase B</h2>
 
 <p>The main purpose of Phase B is to convert the conceptual idea into a
 prototype model upon which further investigations can be performed to
@@ -269,9 +338,9 @@ the hardware or software, the project is ready to move onto the next
 phase.</p>
 
 <p><strong>Includes: Technical Modeling, Designing, Simulations, Low level
-Feasibility.</strong></p>
+Feasibility. (In process 2017-2018)</strong></p>
 
-<h3 id="phase-c-d">Phase C &amp; D</h3>
+<h2 id="phase-c-d">Phase C &amp; D</h2>
 
 <p>Phases C and D are usually combined. The purpose of Phase C &amp; D is to
 convert the outcome of Phase B into a fully space qualified model that
@@ -281,7 +350,7 @@ or as ground equipment or software to control a particular activity.</p>
 <p><strong>Includes: Technical Specifications, Management Project, Technical
 Tests &amp; Validations, Partners Financial investments.</strong></p>
 
-<h3 id="phase-e-f">Phase E &amp; F</h3>
+<h2 id="phase-e-f">Phase E &amp; F</h2>
 
 <p>Phases E &amp; F are associated with the launch campaign and the post launch
 activities, tests, preparation.</p>
@@ -289,7 +358,7 @@ activities, tests, preparation.</p>
 <p><strong>Includes: Launch preparation, Ground Relay, Start of launch, Partners
 implications</strong></p>
 
-<h3 id="data-analysis-phase">Data analysis phase</h3>
+<h2 id="data-analysis-phase">Data analysis phase</h2>
 
 <p>The ultimate stage of a project is the analysis of the data to reach a
 scientific conclusion. Analysis of data may take place at any stage of
@@ -297,7 +366,7 @@ the experiment, prior to flight, in-flight and post flight.</p>
 
 <p><strong>The interesting part starts ! Will the mission be a success ?</strong></p>
 
-<h3 id="documents-references">Documents / References</h3>
+<h2 id="documents-references">Documents / References</h2>
 
 <ul>
 <li><a href="pdf/PRODEX_USERGUIDE_V7_may2011.pdf">PDF from PRODEX explaining Phases</a></li>
@@ -309,15 +378,18 @@ the experiment, prior to flight, in-flight and post flight.</p>
             </div>
 
             <footer>
-    <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io">Source Code</a>
-    - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a>
-    - <span class="social_media">
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
         <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
         <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
         <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
     </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <img src="https://nodraak.github.io/ece3satwikiv2/images/cc_by_nc.png" />
 </footer>
 
 
+        </div>
     </body>
+
 </html>

@@ -19,10 +19,12 @@
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/fonts-googleapis-com-css-family-Lato.css">
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
 
-        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/menu.js"></script>
+        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/script.js"></script>
 
     </head>
+
     <body lang="en">
+        <div class="content-container">
 
             <div id="nav_bar" class="v1-top">
     <div id="nav_bar_desktop">
@@ -73,15 +75,14 @@
 <div class="content content_single">
 
     <h1>
-        <span>
-            OBC: On Board Computer
-        </span>
-
-        
-            <img class="post_illustration" src="https://placehold.it/800x600">
-        
+        OBC: On Board Computer
     </h1>
+    
+        <img class="post_illustration" src="https://placehold.it/800x600">
+    
+
     <hr />
+
     
 
 <h2 id="on-board-computer-obc">On Board Computer (OBC)</h2>
@@ -92,7 +93,7 @@
 different missions such as the coordination of all the actions, sending
 orders to the different modules, the reception and storage of
 information of the CubeSat, sending this information back to Earth via
-the <a href="ECE3SAT/wiki/tcs/index.html">TCS</a> error handling within the
+the <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/">TCS</a> error handling within the
 CubeSat.</p>
 
 <h3 id="subsystem-division">Subsystem division</h3>
@@ -100,8 +101,13 @@ CubeSat.</p>
 <p>The OBC is divided into three subsystems which are Microcontroller,
 Interfaces and Electronics.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/OBC_schematic.jpg" alt="OBC schematic" />
-OBC schematic</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/OBC_schematic.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>OBC schematic</figcaption>
+</div>
+
 
 <p>The Microcontroller is a processing unit of the OBC dedicated to the
 Satellite Management (SM). Its has to manage the data from other modules
@@ -110,7 +116,7 @@ collected through the interface and to use it to give orders.</p>
 <p>The interface subsystem is responsible for the communication with other
 modules. It ensures a good connection with other systems of the
 satellite and allows them to send information. It is also in charge of
-collecting the power supplied by the <a href="ECE3SAT/wiki/eps/index.html">EPS</a>.
+collecting the power supplied by the <a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/">EPS</a>.
 The microcontroller is in charge of the storing system data, operation
 data, logs and measurements.</p>
 
@@ -118,7 +124,7 @@ data, logs and measurements.</p>
 OBC chip from radiation and magnetic fields. It also prevents
 destructive noise on the signals processed within the OBC.</p>
 
-<h2 id="state-of-the-art-obc .v1-center">State Of The Art OBC</h2>
+<h2 id="state-of-the-art-obc">State Of The Art OBC</h2>
 
 <p>The goal of the state of the art is to establish an inventory of the
 existing technologies and to see their underlying potential of their
@@ -161,8 +167,13 @@ University students for their CubeSat Oufti.</p>
 
 <h3 id="architecture-of-the-obc">Architecture of the OBC</h3>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/OBC.png" alt="Cubesat organization" />
-Cubesat Organization</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/OBC.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Cubesat Organization</figcaption>
+</div>
+
 
 <p>The OBC architecture is essentially based on the connectivity between
 subsystems within the CubeSat. This simply means that the
@@ -175,15 +186,14 @@ within the CubeSat’s computing scheme.</p>
 
 <h3 id="references">References</h3>
 
-<p><a href="http://space.epfl.ch/files/content/sites/space/files/Bulletin%20-%20D%C3%A9veloppement%20d'un%20micro-ordinateur...%20-%2003.10.2014">Developpement d&rsquo;un micro-ordinateur</a></p>
+<ul>
+<li><a href="http://space.epfl.ch/files/content/sites/space/files/Bulletin%20-%20D%C3%A9veloppement%20d'un%20micro-ordinateur...%20-%2003.10.2014">Developpement d&rsquo;un micro-ordinateur</a></li>
+<li><a href="http://www.ti.com/lit/ug/slau049f/slau049f.pdf">MSP430x1xx User&rsquo;s guide</a></li>
+<li><a href="https://www.silabs.com/documents/public/data-sheets/EFM32GG880.pdf">EFM32GG880 DATASHEET</a></li>
+<li><a href="http://digitalknowledge.cput.ac.za/jspui/bitstream/11189/1307/1/Lumbwe_T_Final2013.pdf">Development of an onboard computer (OBC) for a CubeSat</a></li>
+</ul>
 
-<p><a href="http://www.ti.com/lit/ug/slau049f/slau049f.pdf">MSP430x1xx User&rsquo;s guide</a></p>
-
-<p><a href="https://www.silabs.com/documents/public/data-sheets/EFM32GG880.pdf">EFM32GG880 DATASHEET</a></p>
-
-<p><a href="http://digitalknowledge.cput.ac.za/jspui/bitstream/11189/1307/1/Lumbwe_T_Final2013.pdf">Development of an onboard computer (OBC) for a CubeSat</a></p>
-
-<h2 id="sizing-obc .v1-center">Sizing OBC</h2>
+<h2 id="sizing-obc">Sizing OBC</h2>
 
 <p>Since the OBC is such as a computer, the components to size are
 everything about calculation power and memories. The ROM, the RAM, the
@@ -228,12 +238,13 @@ is only two different OS mainly use. FreeRTOS and Salvo.</p>
 
 <h3 id="references-1">References</h3>
 
-<p><a href="http://dtusat1.dtusat.dtu.dk/files/filedl.html?fileid=244">OnBoard Computer for PicoSatellite</a></p>
+<ul>
+<li><a href="http://dtusat1.dtusat.dtu.dk/files/filedl.html?fileid=244">OnBoard Computer for PicoSatellite</a></li>
+<li>Design and Development of an ADCS OBC for a CubeSat By Pieter Johannes
+Botma</li>
+</ul>
 
-<p>Design and Development of an ADCS OBC for a CubeSat By Pieter Johannes
-Botma</p>
-
-<h2 id="organization-chart-obc .v1-center">Organization Chart OBC</h2>
+<h2 id="organization-chart-obc">Organization Chart OBC</h2>
 
 <p>There are three phases of algorithms:</p>
 
@@ -261,8 +272,13 @@ stabilize the CubeSat. The OBC sends regulary an order to ask if the
 detumbling phase is finished. When it is finished, an order is sent to
 stop the detumbling and the next loop begins.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Loop_1.png" alt="Detumbling algorithm" />
-Detumbling algorithm</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Loop_1.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Detumbling algorithm</figcaption>
+</div>
+
 
 <h4 id="loop-2-charge-battery"><strong>Loop 2: Charge battery</strong></h4>
 
@@ -272,16 +288,22 @@ CubeSat is oriented correctly.</p>
 
 <p>This loop is executed when the CubeSat is under sunlight.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Loop_2.png" alt="Charge battery algorithm" />
-Charge battery algorithm</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Loop_2.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Charge battery algorithm</figcaption>
+</div>
+
 
 <h4 id="loop-3-payload-deployment"><strong>Loop 3: Payload Deployment</strong></h4>
 
 <h3 id="files">Files</h3>
 
-<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Loop_1_Detumbling.pdf">Loop 1 Detumbling</a></p>
-
-<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Loop_2_Charge_battery.pdf">Loop 2 Charge battery</a></p>
+<ul>
+<li><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Loop_1_Detumbling.pdf">Loop 1 Detumbling</a></li>
+<li><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Loop_2_Charge_battery.pdf">Loop 2 Charge battery</a></li>
+</ul>
 
 
 </div>
@@ -290,15 +312,18 @@ Charge battery algorithm</p>
             </div>
 
             <footer>
-    <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io">Source Code</a>
-    - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a>
-    - <span class="social_media">
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
         <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
         <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
         <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
     </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <img src="https://nodraak.github.io/ece3satwikiv2/images/cc_by_nc.png" />
 </footer>
 
 
+        </div>
     </body>
+
 </html>

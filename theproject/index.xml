@@ -27,7 +27,7 @@ First of all, we want our satellite to be as open source as possible, that&amp;r
       
       <guid>https://nodraak.github.io/ece3satwikiv2/theproject/payload/</guid>
       <description>The payload was developed in parallel of the 4 modules:
- On Board Computer (OBC) Energy Power Supply (EPS) Attitude Determination Control System (ADCS) Telecommunication System (TCS)  The goal of the payload is to test in practice a physical theory who was validated as a new deorbiting system.The launch is scheduled for the end of 2021. If the mission is a success this can lead to great progress on larger satellites.</description>
+ Energy Power Supply (EPS) Telecommunication System (TCS) Attitude Determination Control System (ADCS) OnBoard Computer (OBC)  The goal of the payload is to test in practice a physical theory who was validated as a new deorbiting system.The launch is scheduled for the end of 2021. If the mission is a success this can lead to great progress on larger satellites.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ First of all, we want our satellite to be as open source as possible, that&amp;r
       
       <guid>https://nodraak.github.io/ece3satwikiv2/theproject/requirements/</guid>
       <description> Definition A requirement is a statement that identifies a necessary capability, attribute, characteristic, or quality of a system for it have value and utility to a customer, organization or internal user. A requirement specification refers to an explicit set of requirements to be satisfied by a material, design, product, or service.
-EPS requirements PV (Photovoltaic) BAT (Battery) PCC (Power Circuit Control) OBC requirements ADCS requirements ACT (Actuators system) SENS (Sensors system) CTRL (Controller) TCS (Telecommunication system) UI (user interface) Ground Station (GRD) </description>
+EPS requirements Photovoltaic (PV) requirements  Battery (BAT) requirements   Power Circuit Control (PCC) requirements  OBC requirements OBC requirements  ADCS requirements Actuators system (ACT) requirements  Sensors system (SENS) requirements   Controller (CTRL) requirements  Telecommunication System (TCS) Telecommunication system (TCS) rfequirements  User Interface (UI) User Interface (UI) requirements  Ground Station (GRD) Ground Station (GRD) requirements  </description>
     </item>
     
   </channel>

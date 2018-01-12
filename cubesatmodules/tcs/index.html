@@ -19,10 +19,12 @@
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/fonts-googleapis-com-css-family-Lato.css">
         <link rel="stylesheet" type="text/css" href="https://nodraak.github.io/ece3satwikiv2/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
 
-        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/menu.js"></script>
+        <script type="text/javascript" src="https://nodraak.github.io/ece3satwikiv2/js/script.js"></script>
 
     </head>
+
     <body lang="en">
+        <div class="content-container">
 
             <div id="nav_bar" class="v1-top">
     <div id="nav_bar_desktop">
@@ -73,15 +75,14 @@
 <div class="content content_single">
 
     <h1>
-        <span>
-            TCS: Telecommunication System
-        </span>
-
-        
-            <img class="post_illustration" src="https://placehold.it/800x600">
-        
+        TCS: Telecommunication System
     </h1>
+    
+        <img class="post_illustration" src="https://placehold.it/800x600">
+    
+
     <hr />
+
     
 
 <h3 id="telecommunication-system-tcs">Telecommunication System (TCS)</h3>
@@ -92,17 +93,22 @@
 Control Station. It sends data to the Earth and receive orders (to shut
 down the satellite because of an external factor for example). The data
 sent to the Ground Control Station are transmitted to the TCS by the
-<a href="ECE3SAT/wiki/obc/index.html">OBC</a>. And, in the same way, orders sent
+<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>. And, in the same way, orders sent
 from Earth to TCS are transmit to the
-<a href="ECE3SAT/wiki/obc/index.html">OBC</a>.</p>
+<a href="https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/">OBC</a>.</p>
 
 <h4 id="subsystem-division">Subsystem division</h4>
 
 <p>The TCS is divided in three subsystems which are Antenna,
 Modulation/Demodulation (MODEM) and Data processing.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_schematic.jpg" alt="TCS Subsystems" />
-TCS Subsystems</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_schematic.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS Subsystems</figcaption>
+</div>
+
 
 <p>The first subsystem, is mixed of two antenna embedded on the CubeSat.
 One to receive order, and the other one to send data and transmit
@@ -141,21 +147,25 @@ CubeSat only in this direction)</li>
 
 <p>The protocol for communication follow the layer Model :</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Protocol_img_TCS.png" alt="Protocol TCS" />
-Protocol TCS</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Protocol_img_TCS.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Protocol TCS</figcaption>
+</div>
+
 
 <p>Several protocol can be used for satellites. The most used are the
 following :</p>
 
 <ul>
-<li><p>AX.25 :</p>
+<li>AX.25 :
 
 <ul>
 <li>It is the most used data link layer protocol between radio
 amateurs is AX.25</li>
 </ul></li>
-
-<li><p>CCSDS :</p>
+<li>CCSDS :
 
 <ul>
 <li>It is the most used transmission protocol for professional
@@ -163,8 +173,13 @@ satellite</li>
 </ul></li>
 </ul>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/CCSDS_prootcol_img_TCS.png" alt="CCSDS prootcol TCS" />
-CCSDS prootcol TCS</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/CCSDS_prootcol_img_TCS.png"  alt="" onclick="image_pop_up(this)">
+    <figcaption>CCSDS prootcol TCS</figcaption>
+</div>
+
 
 <p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Protocol_TCS.pdf">Protocol TCS</a></p>
 
@@ -319,8 +334,13 @@ revolutions around Earth per day. We have only 3 orbits of 7 to 13
 minutes per day that we can truly be exploited. That is aproximatly 30
 minutes of visibility per day.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/Size_of-data-TCS.jpg" alt="Size of data TCS" />
-Size of data TCS</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/Size_of-data-TCS.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>Size of data TCS</figcaption>
+</div>
+
 
 <p>Note : The period of sampling is arbitrarily fixed here.</p>
 
@@ -332,8 +352,7 @@ in the memory of the satellite: we are not able to transmit data each
 orbit of our satellite and sometimes, you can have 8 successive orbits
 without visibility as we can see in Gpredict for similar projects.</p>
 
-<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Orbit-and_data_estimation_TCS.pdf">Orbit and data estimation
-TCS</a></p>
+<p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf/Orbit-and_data_estimation_TCS.pdf">Orbit and data estimation TCS</a></p>
 
 <h4 id="thermal-simulation-tcs">Thermal simulation TCS</h4>
 
@@ -374,8 +393,13 @@ dongle, an LNA amplifier and our home-made antenna.</p>
 allows us to pilot the key via an interface of spectrum analysis and
 selection of frequency, bandwidth and signal processing tools.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_SDR.jpg" alt="TCS SDR" />
-TCS SDR</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_SDR.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS SDR</figcaption>
+</div>
+
 
 <h4 id="doppler-effect">Doppler effect</h4>
 
@@ -383,8 +407,13 @@ TCS SDR</p>
 satellite tracking station with TLE (Two-Line Elements) information and
 automatic correction of the retroactive Doppler effect on SDRSharp.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_orbit.jpg" alt="TCS ORBIT" />
-TCS ORBIT</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_orbit.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS Orbit</figcaption>
+</div>
+
 
 <p>The two-line orbital parameters (TLE) are elements measured and
 calculated by NORAD and NASA, not only for artificial satellites, but
@@ -398,8 +427,13 @@ the satellites we are interested in, namely the CubeSat of the AMSAT.</p>
 <p>Once selected, we have access to a lot of satellite information,
 including emission frequency and Doppler calculation.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_dopler.jpg" alt="TCS Dopler" />
-TCS Dopler</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_dopler.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS Dopler</figcaption>
+</div>
+
 
 <p>The Orbitron software allows us to control the frequency selection of
 SDRSharp by taking into account the value of the Doppler in real time.</p>
@@ -432,8 +466,13 @@ frame, it translates it into telemetry data.</p></li>
 
 <p>We decided to use the following TNT USB key:</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_USB.jpg" alt="TCS USB" />
-TCS USB</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_USB.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS USB</figcaption>
+</div>
+
 
 <p>This key contains the RLT2832U chip and the R820T2 tuner. It competes
 perfectly with the usual scanners since it covers from 30MHz to 1500MHz,
@@ -462,8 +501,13 @@ dipole takes place a slightly shorter element, this element is called
 &ldquo;director&rdquo;. Behind the dipole is positioned a slightly longer element
 called &ldquo;reflector&rdquo;.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_anthena.jpg" alt="TCS anthena" />
-TCS anthena</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_anthena.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS Anthena</figcaption>
+</div>
+
 
 <p>We made this antenna with a square aluminum profile and 8 mm aluminum
 rod.</p>
@@ -471,14 +515,24 @@ rod.</p>
 <p>Concerning the length of the dipoles, it was chosen according to the
 frequency of emission of the FUNcube:</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_anthena2.jpg" alt="TCS anthena2" />
-TCS anthena2</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_anthena2.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS Anthena</figcaption>
+</div>
+
 
 <p>To tune the antenna impedance, we installed a gamma match element as
 follows:</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_gammamatch.jpg" alt="TCS gammamatch" />
-TCS gammamatch</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_gammamatch.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS Gammamatch</figcaption>
+</div>
+
 
 <h4 id="preamplifier">Preamplifier</h4>
 
@@ -488,13 +542,23 @@ covering all bands from 28 MHz to 2500 MHz (2.5Ghz). We chose this one
 because it allows to improve very clearly the reception performance, on
 all bands VHF and UHF up to 2.5Ghz, of a TNT key RTL-SDR.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_preamplifier.jpg" alt="TCS preamplifier" />
-TCS preamplifier</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_preamplifier.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS preamplifier</figcaption>
+</div>
+
 
 <p>The LNA was then bought and the model assembled.</p>
 
-<p><img src="https://nodraak.github.io/ece3satwikiv2/wiki/images/TCS_LNA.jpg" alt="TCS LNA" />
-TCS LNA</p>
+
+
+<div class="image_pop_up_legend">
+    <img src="https://nodraak.github.io/ece3satwikiv2/images/wiki/TCS_LNA.jpg"  alt="" onclick="image_pop_up(this)">
+    <figcaption>TCS LNA</figcaption>
+</div>
+
 
 <p><a href="https://nodraak.github.io/ece3satwikiv2/wiki/pdf//Technical_realization_TCS.pdf">Technical realization TCS</a></p>
 
@@ -505,15 +569,18 @@ TCS LNA</p>
             </div>
 
             <footer>
-    <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io">Source Code</a>
-    - <a href="mailto:ece3sat@gmail.com">ece3sat@gmail.com</a>
-    - <span class="social_media">
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
         <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
         <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
         <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
     </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <img src="https://nodraak.github.io/ece3satwikiv2/images/cc_by_nc.png" />
 </footer>
 
 
+        </div>
     </body>
+
 </html>

@@ -29,11 +29,14 @@ p, li {
     text-align: justify;
 }
 
-a {
-    color: #444;
+h1 {
+    text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {margin-top:0; margin-bottom:0.5rem; line-height:1.2;}
+h1 { margin-top: 0.5rem; margin-bottom: 1rem; }
+h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0.5rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
 
 /* From http://www.color-hex.com/color-palette/1294 */
 h1 { color: #011f4b; font-size: 2.50rem; text-decoration: underline; }
@@ -43,24 +46,39 @@ h4 { color: #6497b1; font-size: 1.50rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.00rem; }
 
+a {
+    color: #005b96;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+
 .content-bg {
     width: 100%;
+    padding-bottom: 105px; /* height of the footer */
     background-color: #FFF;
 }
 
 .content {
     margin: auto;
     padding: 0 15px;
-    max-width: 800px;
+    max-width: 850px;
     overflow: auto;
     color: #444;
-    font-family: "Lato", sans-serif;
 }
 
 .content img {
     width: 80%;
     margin: auto;
     display: block;
+}
+
+.content-container {
+    position: relative;
+    min-height: 100%;
 }
 
 .content_listing h1, .content_single h1 {
@@ -72,7 +90,6 @@ h6 { font-size: 1.00rem; }
 
 .content_listing hr, .content_single hr {
     border-top: 1px solid #CCC;
-    margin-top: 0;
 }
 
 /*******************************************************************************
@@ -84,12 +101,11 @@ h6 { font-size: 1.00rem; }
 }
 
 #nav_bar_desktop {
-    float: right;
+    text-align: center;
 }
 
 #nav_bar {
-    background-color: rgba(192, 192, 192, 0.75); /* 192 == #CC */
-    float: right;
+    background-color: rgba(192, 192, 192, 0.65); /* 192 == #CC */
 }
 
 #nav_bar .active, .v1-button:hover {
@@ -106,6 +122,15 @@ h6 { font-size: 1.00rem; }
     z-index: -1;
 }
 
+.header_image_container .image {
+    background-image: url("/ece3satwikiv2/images/ece3sat_background.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
 .header_image_container p {
     position: absolute;
     top: 100px;
@@ -117,14 +142,6 @@ h6 { font-size: 1.00rem; }
     color: #FFF;
 }
 
-.header_image {
-    position: relative;
-    top: -100px; /* image vertical pos */
-    width: 1400px;
-    margin-left: -700px;  /* image width/2 */
-    left: 50%;
-}
-
 .header_height {
     height: 450px; /* text vertical pos */
 }
@@ -134,21 +151,31 @@ h6 { font-size: 1.00rem; }
 *******************************************************************************/
 
 footer {
-    text-align: center;
+    position: absolute;
+    bottom: 0;
+
     width: 100%;
+    text-align: center;
+
     padding: 30px 0;
+
     background-color: #000;
-    color: #CCC;
 }
 
-footer a {
-    color: #CCC;
+footer, footer a {
+    color: #DDD;
 }
 
-footer .social_media {
-    font-size: 150%;
+footer .icon {
+    font-size: 200%;
     position: relative;
-    top: 3px;
+    top: 5px;
+}
+
+/* cc by nc license */
+footer img {
+    position: relative;
+    top: 5px;
 }
 
 /*******************************************************************************
@@ -156,8 +183,43 @@ footer .social_media {
 *******************************************************************************/
 
 .content_home {
-
+    padding-top: 10px;
 }
+
+.parallax-image {
+    height: 300px; /* height of the parallax */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+
+    background-position: center;
+    background-attachment: fixed;
+
+/*
+required ??
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+}
+
+.parallax-placeholder {
+    height: 300px; /* height of the parallax */
+    margin-bottom: 15px;
+}
+
+.parallax-image .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFF;
+
+    text-align: center;
+    position: relative;
+    top: 140px;
+
+    text-shadow: 0px 0px 10px black; /* offset-x | offset-y | blur-radius | color */
+}
+
 
 /*******************************************************************************
     5. Listing Page
@@ -174,6 +236,7 @@ footer .social_media {
 
 .content_listing h2 span {
     font-size: 50%;
+    margin-left: 15px;
 }
 
 .content_listing .post_summary {
@@ -201,13 +264,28 @@ footer .social_media {
     text-align: center;
 }
 
-.content_single img {
-    max-width: 400px;
-    min-height: 100px;
-    max-height: 300px;
-    margin-top: 10px;
-}
-
 /*******************************************************************************
     7. Miscs
 *******************************************************************************/
+
+.image_pop_up_legend img {
+    margin: 10px auto 0 auto;
+    max-height: 500px;
+    max-width: 80%;
+    width: auto;
+}
+
+.image_pop_up_legend img:hover {
+    opacity: 0.75;
+}
+
+.image_pop_up_legend figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.children_div_inline_block div {
+    display: inline-block;
+}
