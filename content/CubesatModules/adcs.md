@@ -187,6 +187,8 @@ categories
 
 ## Algorithm ADCS
 
+### Main functionning
+
 The ADCS mission is to get access to sensors for attitude determination
 and then apply correction through actuators.
 
@@ -217,3 +219,43 @@ be classified as follow:
 -   Finally, if the [OBC](ECE3SAT/wiki/obc/index.html) ask to shutdown,
     we verify if we were performing action and then stop them. This put
     us to the end of our loop.
+
+### BDOT Stabilization
+
+The goal is to decrease the kinetic energy of the system, which means stabilize the satellite.
+
+In order to do that we need to use the properties of our actuators: when the magnetorquers are supplied correctly, they can generate a torque of equation `T = m ^ B` (m being the magnetic moment of the dipole and B the earth magnetic field). That means the satellite, which is totally linked with them will have the tendancy to align itself with the Earth magnetic field.
+The principle is the following:
+
+The torque created by the coils is calculated by: `T = iS n ^ B`
+With I the intensity of current in A, S the surface of a spire in m², n the normal vector to this surface and B the magetic field (here earth).
+
+In our case every element here are fixed except the intensity so using a positive or negative intensity will determine the rotation direction.
+We can also see that the torque being the result of a cross product, the magnetic moment will only create a torque if he is coplanar to the B vector (at least one component of it).
+
+{{<
+    image_pop_up_legend
+    "/images/ADCS-BDOT-illustration.png"
+    "Figure 4: BDOT illustration"
+    "Figure 4: BDOT illustration"
+>}}
+
+The Bdot algorithm itself work as follow: when the satellite is moving so that the Y axis is moving toward the earth magnetic field, the temporal derivative of B will be positive.
+We use our magnetorquers to generate a torque opposed to the rotation (negative intensity here to have a magnetic moment oriented toward Y-).
+We then reverse the dipole orientation (so I positive) when Y passes B, that is to say B° negative.
+
+To sum up the way the Bdot algorithm work:
+
+{{<
+    image_pop_up_legend
+    "/images/ADCS-BDOT-Algorithm.png"
+    "Figure 5: BDOT algorithm"
+    "Figure 5: BDOT algorithm"
+>}}
+
+Therefore, the control law applies a magnetic dipole in the opposite direction to the change in the magnetic field (estimated with magnetometers data).
+The magnetorquers applies a torque following this equation:
+
+Mi = -ki B’i  (with i being one of the three axis and B’ the temporal derivative of the B field)
+
+As we can see the BDOT algorithm is a simple stabilization algorithm, only knowing the evolution of the magnetic field allow us to take the right decision to stop the rotation of our Cubesat.

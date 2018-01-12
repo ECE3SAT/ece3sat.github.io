@@ -189,7 +189,7 @@ for the development of sub-systems, algorithm's, data interpretation
 packages etc.
 
 **Includes: Technical Specifications, Coordination Board, Simple
-Simulations. (In process 2016-2017)**
+Simulations. (Done 2016-2017)**
 
 ## Phase B
 
@@ -206,7 +206,7 @@ the hardware or software, the project is ready to move onto the next
 phase.
 
 **Includes: Technical Modeling, Designing, Simulations, Low level
-Feasibility.**
+Feasibility. (In process 2017-2018)**
 
 ## Phase C & D
 
