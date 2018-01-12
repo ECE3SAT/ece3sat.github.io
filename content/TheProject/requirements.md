@@ -12,44 +12,92 @@ by a material, design, product, or service.
 
 ## EPS requirements
 
-### PV (Photovoltaic)
+<div class="children_div_inline_block">
+{{<
+    image_pop_up_legend
+    "/images/wiki/Pv_requirements.jpg"
+    "Photovoltaic (PV) requirements"
+    "Photovoltaic (PV) requirements"
+>}}
 
-![PV requirements](/wiki/images/Pv_requirements.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Bat_requirements.jpg"
+    "Battery (BAT) requirements"
+    "Battery (BAT) requirements"
+>}}
+</div>
 
-### BAT (Battery)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Pcc_requirements.jpg"
+    "Power Circuit Control (PCC) requirements"
+    "Power Circuit Control (PCC) requirements"
+>}}
 
-![BAT requirements](/wiki/images/Bat_requirements.jpg)
-
-### PCC (Power Circuit Control)
-
-![PCC requirements](/wiki/images/Pcc_requirements.jpg)
 
 ## OBC requirements
 
-![OBC requirements](/wiki/images/Obc_requirements.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Obc_requirements.jpg"
+    "OBC requirements"
+    "OBC requirements"
+>}}
+
 
 ## ADCS requirements
 
-### ACT (Actuators system)
+<div class="children_div_inline_block">
+{{<
+    image_pop_up_legend
+    "/images/wiki/Act_requirements.jpg"
+    "Actuators system (ACT) requirements"
+    "Actuators system (ACT) requirements"
+>}}
 
-![ACT requirements](/wiki/images/Act_requirements.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Sens_requirements.jpg"
+    "Sensors system (SENS) requirements"
+    "Sensors system (SENS) requirements"
+>}}
+</div>
 
-### SENS (Sensors system)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Ctrl_requirements.jpg"
+    "Controller (CTRL) requirements"
+    "Controller (CTRL) requirements"
+>}}
 
-![SENS requirements](/wiki/images/Sens_requirements.jpg)
 
-### CTRL (Controller)
+## Telecommunication System (TCS)
 
-![CTRL requirements](/wiki/images/Ctrl_requirements.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Tcs_requirements.jpg"
+    "Telecommunication system (TCS) rfequirements"
+    "Telecommunication system (TCS) rfequirements"
+>}}
 
-## TCS (Telecommunication system)
 
-![TCS rfequirements](/wiki/images/Tcs_requirements.jpg)
+## User Interface (UI)
 
-## UI (user interface)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Ui_requirements.jpg"
+    "User Interface (UI) requirements"
+    "User Interface (UI) requirements"
+>}}
 
-![UI requirements](/wiki/images/Ui_requirements.jpg)
 
 ## Ground Station (GRD)
 
-![Ground Station requirements](/wiki/images/Grd_requirements.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Grd_requirements.jpg"
+    "Ground Station (GRD) requirements"
+    "Ground Station (GRD) requirements"
+>}}
+

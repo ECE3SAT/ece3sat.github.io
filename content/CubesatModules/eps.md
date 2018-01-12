@@ -24,8 +24,12 @@ on each side of the CubeSat.
 The **BAT** module has to store this energy to enable its using at any
 time.
 
-![EPS Subsystems](/wiki/images/EPS_subsystems.jpg)
-EPS Subsystems
+{{<
+    image_pop_up_legend
+    "/images/wiki/EPS_subsystems.jpg"
+    "Schematic of the EPS Subsystems"
+    "EPS Subsystems"
+>}}
 
 
 ## State Of The Art
@@ -51,8 +55,13 @@ solar cells have a layer well adapt to a large wavelength area with an
 absorption wavelength from 300 nm to 1700 nm. This option but also other
 types of technology have been study in the State of the Art document.
 
-![Wavelength Absorption](/wiki/images/Quantum_efficiency-0.jpg)
-Wavelength absorption depending on the layer material
+{{<
+    image_pop_up_legend
+    "/images/wiki/Quantum_efficiency-0.jpg"
+    "Wavelength absorption depending on the layer material"
+    "Wavelength absorption depending on the layer material"
+>}}
+
 
 ### BAT
 
@@ -152,19 +161,15 @@ used distributed architecture.
 
 ### References
 
-[Utah State University](http://digitalcommons.usu.edu/)
-
-[Universiti Tunku Abdul
+* [Utah State University](http://digitalcommons.usu.edu/)
+* [Universiti Tunku Abdul
 Rahman](http://www.utar.edu.my/contentRandD.jsp?catid=9&contentid=417&2ndcontentid=1980)
-
-[The CubeSat Cook
+* [The CubeSat Cook
 Book](https://cubesatcookbook.com/directory/batteries/)
-
-[Characterization of Lithium-Polymer batteries for CubeSat applications,
+* [Characterization of Lithium-Polymer batteries for CubeSat applications,
 Nimal Navarathinam, Regina Lee, Hugh
 Chesser](http://chglib.icp.ac.ru/subjex/2014/pdf03/ActaAstronautica-2011-68(11-12)1752.pdf)
-
-[Techbrief](http://www.techbriefs.com/component/content/article/ntb/tech-briefs/physical-sciences/19567)
+* [Techbrief](http://www.techbriefs.com/component/content/article/ntb/tech-briefs/physical-sciences/19567)
 
 ## System Specifications EPS {#system-specifications-eps .v1-center}
 
@@ -182,7 +187,12 @@ Thus, many factors have to be taken in account such as: the battery's
 temperature, the number of cycles of the battery, the charge level, the
 charging time, the battery's capacity and the heater's consumption.
 
-![Battery](/wiki/images/111835-battery-loading-status.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/111835-battery-loading-status.jpg"
+    ""
+    "Battery"
+>}}
 
 ### PV (Photovoltaic panels)
 
@@ -193,7 +203,12 @@ wiring, the technology and the size of solar panels (Triple Junction),
 the protection against certain wavelength, the wiring of solar panels,
 and the decrease of the efficiency of solar panels.
 
-![Solar panel](/wiki/images/Solar-panel-154549_960_720.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Solar-panel-154549_960_720.png"
+    ""
+    "Solar panel"
+>}}
 
 ### PCC (Power Control Circuit)
 
@@ -203,7 +218,12 @@ take into account: the regulators (3.7V, 5V) the electronic switches,
 the battery charge level and the communication with the On Board
 Computer ([OBC](ECE3SAT/wiki/obc/index.html)).
 
-![Microcontroller](/wiki/images/Microcontroller-O.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Microcontroller-O.png"
+    ""
+    "Microcontroller"
+>}}
 
 [SystemSpecifications EPS](/wiki/pdf/SystemSpecifications-EPS.pdf)
 
@@ -227,8 +247,12 @@ and 30%. The energy generated depends on the area of PV under sunlight,
 the inclination of the CubeSat and the solar intensity. Following Matlab
 simulations, the best inclination has been computed:
 
-![Angle CubeSat](/wiki/images/Angle_CubeSat.png)
-CubeSat angles
+{{<
+    image_pop_up_legend
+    "/images/wiki/Angle_CubeSat.png"
+    ""
+    "CubeSat angles"
+>}}
 
 The maximum value of power is obtained for three sides under sunlight
 with ϕ = 45° and v = 55°
@@ -251,15 +275,13 @@ and an other to send the step of charge. An UART communication is used
 between the EPS and the OBC. An SPI communication is used for the other
 connections.
 
-### FILES
+### Files
 
-[Batteries](/wiki/pdf/Batteries.pdf)
+* [Batteries](/wiki/pdf/Batteries.pdf)
+* [PCC](/wiki/pdf/PCC.pdf)
+* [Microcontrollers](/wiki/pdf/Microcontrollers.pdf)
 
-[PCC](/wiki/pdf/PCC.pdf)
-
-[Microcontrollers](/wiki/pdf/Microcontrollers.pdf)
-
-## Feasibility Study EPS {#feasibility-study-eps .v1-center}
+## Feasibility Study EPS
 
 The feasibility study aims to assess the practicality of the EPS module.
 The purpose of this stage is to assess the performance according to the
@@ -296,8 +318,12 @@ charge is harvested through an analog-digital converter.
 A schematic of the description above, develops the architecture more
 clearly:
 
-![Electrical Schema EPS](/wiki/images/schema_elec_EPS.png)
-Electrical schema
+{{<
+    image_pop_up_legend
+    "/images/wiki/schema_elec_EPS.png"
+    ""
+    "Electrical schematic"
+>}}
 
 According to the availability on the market, the type of regulators
 varies as a function of the input and the output. As the battery charge
@@ -497,18 +523,33 @@ To do so, we used a luxmeter, a multimeter and a load.
 
 CIGS cell is 24 cm by 7.3 cm
 
-![Tall](/wiki/images/tall-equation-EPS.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/tall-equation-EPS.png"
+    ""
+    "Tall"
+>}}
 
 The solar power is of 1W/m² according to the lux meter.
 
 The voltage at the output of the solar cell is of 10V for a 0.2A
 current.Then, the cells have a output Power of
 
-![Power equation](/wiki/images/power-EPS.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/power-EPS.png"
+    ""
+    "Power equation"
+>}}
 
 We can deduce the efficiency of the cell
 
-![Efficiency equation EPS](/wiki/images/equation-efficiency-EPS.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/equation-efficiency-EPS.png"
+    ""
+    "Efficiency equation EPS"
+>}}
 
 ### Voltage regulators test
 
@@ -554,7 +595,12 @@ device input corresponds to the PV pins.
     When VR4 equals to zeo, MPP-SET is directly connected to the ground.
     After measuring the input voltage, VR4 can be estimated thanks to
     the following voltage divider equation:
-    ![Equation VMPP-SET](/wiki/images/equation-model.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/equation-model.png"
+    ""
+    "Equation VMPP-SET"
+>}}
 -   VR2 (0-1 MΩ)
     This variable resistor controls the desired ouptu voltage by
     regulating the voltage of the pin Vctrl. The algorithm inside the
@@ -566,8 +612,23 @@ device input corresponds to the PV pins.
     This resistor is connected to the charge regulator and regulate the
     amplification of the input signal.
 
-![Steval ISV006V2 schematic](/wiki/images/Mppt1.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Mppt1.png"
+    ""
+    "Steval ISV006V2 schematic"
+>}}
 
-![Mppt top view](/wiki/images/Mppt2.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Mppt2.png"
+    ""
+    "MPPT top view"
+>}}
 
-![Mppt bottom view](/wiki/images/Mppt3.png)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Mppt3.png"
+    ""
+    "MPPT bottom view"
+>}}

@@ -65,7 +65,7 @@ a:hover {
 .content {
     margin: auto;
     padding: 0 15px;
-    max-width: 800px;
+    max-width: 850px;
     overflow: auto;
     color: #444;
 }
@@ -209,7 +209,7 @@ required ??
 }
 
 .parallax-image .title {
-    font-size: 200%;
+    font-size: 3rem;
     font-weight: bold;
     color: #FFF;
 
@@ -284,4 +284,8 @@ required ??
     font-style: italic;
     margin-top: 5px;
     margin-bottom: 10px;
+}
+
+.children_div_inline_block div {
+    display: inline-block;
 }

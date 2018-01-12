@@ -14,4 +14,9 @@ validated as a new deorbiting system.The launch is scheduled for the end
 of 2021. If the mission is a success this can lead to great progress on
 larger satellites.
 
-![Descr](/wiki/images/Observatoire-de-l-astrobleme.jpg)
+{{<
+    image_pop_up_legend
+    "/images/wiki/Observatoire-de-l-astrobleme.jpg"
+    "Fireball heading toward the Earth, suggesting a satellite re-entering Earth's atmosphere"
+    "Fireball heading toward the Earth, suggesting a satellite re-entering Earth's atmosphere"
+>}}

@@ -63,7 +63,9 @@ aerodynamic sail, chemical engine, and electric/ionic engine.
 
 {{< home_parallax "/images/parallax.jpg" "What Is a Cubesat?" >}}
 
-# What Is a Cubesat?
+<!--
+    # What Is a Cubesat?
+-->
 
 {{<
     image_pop_up_legend
@@ -118,7 +120,9 @@ put into material selection as not all materials can be used in vacuums.
 
 {{< home_parallax "/images/parallax.jpg" "ECE3SAT Project" >}}
 
-# ECE3SAT Project
+<!--
+    # ECE3SAT Project
+-->
 
 The ECE3SAT project is a student project developed at the french
 engineer school, [ECE Paris](http://www.ece.fr/school-of-engineering/) .
@@ -145,7 +149,9 @@ satellite.
 
 {{< home_parallax "/images/parallax.jpg" "Project Phases" >}}
 
-# Project Phases
+<!--
+    # Project Phases
+-->
 
 <!-- raw HTML like this is very bad, dont write anymore of it please -->
 <div style="text-align:center">

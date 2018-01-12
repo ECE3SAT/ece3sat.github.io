@@ -20,8 +20,12 @@ from Earth to TCS are transmit to the
 The TCS is divided in three subsystems which are Antenna,
 Modulation/Demodulation (MODEM) and Data processing.
 
-![TCS Subsystems](/wiki/images/TCS_schematic.jpg)
-TCS Subsystems
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_schematic.jpg"
+    ""
+    "TCS Subsystems"
+>}}
 
 The first subsystem, is mixed of two antenna embedded on the CubeSat.
 One to receive order, and the other one to send data and transmit
@@ -58,24 +62,29 @@ The communication subsystem of a CubeSat has two main purposes:
 
 The protocol for communication follow the layer Model :
 
-![Protocol TCS](/wiki/images/Protocol_img_TCS.png)
-Protocol TCS
+{{<
+    image_pop_up_legend
+    "/images/wiki/Protocol_img_TCS.png"
+    ""
+    "Protocol TCS"
+>}}
 
 Several protocol can be used for satellites. The most used are the
 following :
 
 -   AX.25 :
-
     -   It is the most used data link layer protocol between radio
         amateurs is AX.25
-
 -   CCSDS :
-
     -   It is the most used transmission protocol for professional
         satellite
 
-![CCSDS prootcol TCS](/wiki/images/CCSDS_prootcol_img_TCS.png)
-CCSDS prootcol TCS
+{{<
+    image_pop_up_legend
+    "/images/wiki/CCSDS_prootcol_img_TCS.png"
+    ""
+    "CCSDS prootcol TCS"
+>}}
 
 [Protocol TCS](/wiki/pdf/Protocol_TCS.pdf)
 
@@ -217,8 +226,12 @@ revolutions around Earth per day. We have only 3 orbits of 7 to 13
 minutes per day that we can truly be exploited. That is aproximatly 30
 minutes of visibility per day.
 
-![Size of data TCS](/wiki/images/Size_of-data-TCS.jpg)
-Size of data TCS
+{{<
+    image_pop_up_legend
+    "/images/wiki/Size_of-data-TCS.jpg"
+    ""
+    "Size of data TCS"
+>}}
 
 Note : The period of sampling is arbitrarily fixed here.
 
@@ -230,8 +243,7 @@ in the memory of the satellite: we are not able to transmit data each
 orbit of our satellite and sometimes, you can have 8 successive orbits
 without visibility as we can see in Gpredict for similar projects.
 
-[Orbit and data estimation
-TCS](/wiki/pdf/Orbit-and_data_estimation_TCS.pdf)
+[Orbit and data estimation TCS](/wiki/pdf/Orbit-and_data_estimation_TCS.pdf)
 
 #### Thermal simulation TCS
 
@@ -270,8 +282,12 @@ For the software part we used the software SDRSharp, a software that
 allows us to pilot the key via an interface of spectrum analysis and
 selection of frequency, bandwidth and signal processing tools.
 
-![TCS SDR](/wiki/images/TCS_SDR.jpg)
-TCS SDR
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_SDR.jpg"
+    ""
+    "TCS SDR"
+>}}
 
 #### Doppler effect
 
@@ -279,8 +295,12 @@ In parallel with the SDR we used the software Orbitron to have a
 satellite tracking station with TLE (Two-Line Elements) information and
 automatic correction of the retroactive Doppler effect on SDRSharp.
 
-![TCS ORBIT](/wiki/images/TCS_orbit.jpg)
-TCS ORBIT
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_orbit.jpg"
+    ""
+    "TCS Orbit"
+>}}
 
 The two-line orbital parameters (TLE) are elements measured and
 calculated by NORAD and NASA, not only for artificial satellites, but
@@ -294,8 +314,12 @@ the satellites we are interested in, namely the CubeSat of the AMSAT.
 Once selected, we have access to a lot of satellite information,
 including emission frequency and Doppler calculation.
 
-![TCS Dopler](/wiki/images/TCS_dopler.jpg)
-TCS Dopler
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_dopler.jpg"
+    ""
+    "TCS Dopler"
+>}}
 
 The Orbitron software allows us to control the frequency selection of
 SDRSharp by taking into account the value of the Doppler in real time.
@@ -326,8 +350,12 @@ For the demodulation, we had several choices :
 
 We decided to use the following TNT USB key:
 
-![TCS USB](/wiki/images/TCS_USB.jpg)
-TCS USB
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_USB.jpg"
+    ""
+    "TCS USB"
+>}}
 
 This key contains the RLT2832U chip and the R820T2 tuner. It competes
 perfectly with the usual scanners since it covers from 30MHz to 1500MHz,
@@ -354,8 +382,12 @@ dipole takes place a slightly shorter element, this element is called
 "director". Behind the dipole is positioned a slightly longer element
 called "reflector".
 
-![TCS anthena](/wiki/images/TCS_anthena.jpg)
-TCS anthena
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_anthena.jpg"
+    ""
+    "TCS Anthena"
+>}}
 
 We made this antenna with a square aluminum profile and 8 mm aluminum
 rod.
@@ -363,14 +395,22 @@ rod.
 Concerning the length of the dipoles, it was chosen according to the
 frequency of emission of the FUNcube:
 
-![TCS anthena2](/wiki/images/TCS_anthena2.jpg)
-TCS anthena2
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_anthena2.jpg"
+    ""
+    "TCS Anthena"
+>}}
 
 To tune the antenna impedance, we installed a gamma match element as
 follows:
 
-![TCS gammamatch](/wiki/images/TCS_gammamatch.jpg)
-TCS gammamatch
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_gammamatch.jpg"
+    ""
+    "TCS Gammamatch"
+>}}
 
 #### Preamplifier
 
@@ -380,12 +420,20 @@ covering all bands from 28 MHz to 2500 MHz (2.5Ghz). We chose this one
 because it allows to improve very clearly the reception performance, on
 all bands VHF and UHF up to 2.5Ghz, of a TNT key RTL-SDR.
 
-![TCS preamplifier](/wiki/images/TCS_preamplifier.jpg)
-TCS preamplifier
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_preamplifier.jpg"
+    ""
+    "TCS preamplifier"
+>}}
 
 The LNA was then bought and the model assembled.
 
-![TCS LNA](/wiki/images/TCS_LNA.jpg)
-TCS LNA
+{{<
+    image_pop_up_legend
+    "/images/wiki/TCS_LNA.jpg"
+    ""
+    "TCS LNA"
+>}}
 
 [Technical realization TCS](/wiki/pdf//Technical_realization_TCS.pdf)
