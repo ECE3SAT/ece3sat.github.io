@@ -1,5 +1,6 @@
 {
-    "title": "EPS: Electrical Power Supply"
+    "title": "EPS: Electrical Power Supply",
+    "image": "/images/CubesatModules/EPS.jpg"
 }
 
 ## Electrical Power Supply (EPS)

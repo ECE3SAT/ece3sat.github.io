@@ -1,6 +1,6 @@
 {
     "title": "TCS: Telecommunication System",
-    "image": "https://placehold.it/800x600"
+    "image": "/images/CubesatModules/TCS.jpg"
 }
 
 ### Telecommunication System (TCS)

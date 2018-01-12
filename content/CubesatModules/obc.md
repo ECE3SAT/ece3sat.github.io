@@ -1,6 +1,6 @@
 {
     "title": "OBC: On Board Computer",
-    "image": "https://placehold.it/800x600"
+    "image": "/images/CubesatModules/OBC.jpg"
 }
 
 ## On Board Computer (OBC)

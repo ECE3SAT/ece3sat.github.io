@@ -1,6 +1,7 @@
 {
     "title": "ADCS: Attitude Determination And Control System",
-    "image": "https://placehold.it/800x600"
+    "image": "https://media.giphy.com/media/3osBL1WVO9SflVB5Pa/giphy.gif",
+    "image_legend": "From Giphy"
 }
 
 
