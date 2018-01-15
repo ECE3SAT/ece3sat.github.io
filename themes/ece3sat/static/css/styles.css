@@ -282,7 +282,7 @@ required ??
 
 .content_single h1 {
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     text-align: center;
 }
 

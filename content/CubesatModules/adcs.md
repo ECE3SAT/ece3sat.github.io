@@ -60,7 +60,7 @@ distributes power supply coming from the EPS subsystem to the Actuators.
 
 {{<
     image_pop_up_legend
-    "/images/ADCS_Récap.png"
+    "/images/wiki/ADCS_Recap.png"
     "Figure 2: ADCS Subsystems"
     "Figure 2: ADCS Subsystems"
 >}}

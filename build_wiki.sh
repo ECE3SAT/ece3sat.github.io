@@ -9,10 +9,12 @@
 # 3. If it's all good, deploy your changes:
 #     1. Commit your changes
 #     2. Run the build: `./build_wiki.sh`
-#     3. Push the sources and the generated wiki: `git push origin master && git push origin gh-pages`
+#     3. Push the sources and the generated wiki: `git push origin master && git push origin dev`
 #
 
+# Exit on errors
 set -e
+set -u
 
 DIR=$(dirname "$0")
 
@@ -36,8 +38,8 @@ mkdir public
 git worktree prune
 rm -rf .git/worktrees/public/
 
-log "=> Checking out gh-pages branch into public"
-git worktree add -B gh-pages public origin/gh-pages
+log "=> Checking out master branch into public/"
+git worktree add -B master public/ origin/master
 
 log "=> Removing existing files"
 rm -rf public/*
@@ -46,6 +48,6 @@ log "=> Generating site"
 hugo
 
 log "=> Updating gh-pages branch"
-cd public && git add --all && git commit -m "Publishing to gh-pages (build_wiki.sh)" | true
+cd public/ && git add --all && git commit -m "Publishing to master (build_wiki.sh)" | true
 
-log "=> Done. You can now push your changes: git push origin master && git push origin gh-pages"
+log "=> Done. You can now push your changes: git push origin master && git push origin dev"

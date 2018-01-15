@@ -41,7 +41,7 @@ The steps are basically:
 3. If it's all good, deploy your changes:
     1. Commit your changes
     2. Run the build: `./build_wiki.sh`
-    3. Push the sources and the generated wiki: `git push origin master && git push origin gh-pages`
+    3. Push the sources and the generated wiki: `git push origin master && git push origin dev`
 
 ## Writing Instructions
 

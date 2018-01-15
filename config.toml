@@ -1,4 +1,4 @@
-baseurl = "http://ece3sat.com/"
+baseurl = "http://www.ece3sat.com/"
 languageCode = "en-us"
 theme = "ece3sat"
 title = "ECE3SAT"
