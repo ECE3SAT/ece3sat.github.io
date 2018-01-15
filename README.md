@@ -5,8 +5,10 @@
 
 ## Prerequisite
 
-* Git (not required but will help in case of problems): https://git-scm.com
-* Go Hugo (not required but will help in case of problems): http://gohugo.io/
+You can read some doc on the following topics, it is not required, but will help you:
+
+* Git (not required but will help in case of problems): https://git-scm.com/
+* Go Hugo (not required but will help in case of problems): https://gohugo.io/
 * Markdown:
     * The original spec: https://daringfireball.net/projects/markdown/syntax
     * Github's Markdown documentation: https://guides.github.com/features/mastering-markdown/

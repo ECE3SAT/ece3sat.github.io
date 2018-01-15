@@ -1,6 +1,7 @@
 {
     "title": "OBC: On Board Computer",
-    "image": "/images/CubesatModules/OBC.jpg"
+    "image": "/images/CubesatModules/OBC.jpg",
+    "image_legend": "Raspberry Pi Zero, a minimal single-board computer - From https://en.wikipedia.org/wiki/File:Raspberry-Pi-Zero-FL.jpg"
 }
 
 ## On Board Computer (OBC)
@@ -98,7 +99,7 @@ within the CubeSat’s computing scheme.
 
 ### Download the State Of the Art - OBC
 
-[Onboard computer of the cubsat](/wiki/pdf/ON-BOARD-COMPUTER-OF-THE-CUBSAT_version_2.pdf)
+[Onboard computer of the cubsat](/pdf/ON-BOARD-COMPUTER-OF-THE-CUBSAT_version_2.pdf)
 
 ### References
 
@@ -208,5 +209,5 @@ This loop is executed when the CubeSat is under sunlight.
 
 ### Files
 
-* [Loop 1 Detumbling](/wiki/pdf/Loop_1_Detumbling.pdf)
-* [Loop 2 Charge battery](/wiki/pdf/Loop_2_Charge_battery.pdf)
+* [Loop 1 Detumbling](/pdf/Loop_1_Detumbling.pdf)
+* [Loop 2 Charge battery](/pdf/Loop_2_Charge_battery.pdf)

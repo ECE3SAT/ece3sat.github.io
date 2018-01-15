@@ -1,6 +1,7 @@
 {
     "title": "EPS: Electrical Power Supply",
-    "image": "/images/CubesatModules/EPS.jpg"
+    "image": "/images/CubesatModules/EPS.jpg",
+    "image_legend": "In a clean room at Astrotech, the solar panels of the Dawn spacecraft are extended to their full extent - From https://commons.wikimedia.org/wiki/File:Dawn_solar_panel.jpg"
 }
 
 ## Electrical Power Supply (EPS)
@@ -224,7 +225,7 @@ Computer ([OBC]({{< relref "CubesatModules/obc.md" >}})).
     "Microcontroller"
 >}}
 
-[SystemSpecifications EPS](/wiki/pdf/SystemSpecifications-EPS.pdf)
+[SystemSpecifications EPS](/pdf/SystemSpecifications-EPS.pdf)
 
 ## Sizing EPS {#sizing-eps .v1-center}
 
@@ -276,9 +277,9 @@ connections.
 
 ### Files
 
-* [Batteries](/wiki/pdf/Batteries.pdf)
-* [PCC](/wiki/pdf/PCC.pdf)
-* [Microcontrollers](/wiki/pdf/Microcontrollers.pdf)
+* [Batteries](/pdf/Batteries.pdf)
+* [PCC](/pdf/PCC.pdf)
+* [Microcontrollers](/pdf/Microcontrollers.pdf)
 
 ## Feasibility Study EPS
 

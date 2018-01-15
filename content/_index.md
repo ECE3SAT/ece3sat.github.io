@@ -242,5 +242,5 @@ the experiment, prior to flight, in-flight and post flight.
 
 ## Documents / References
 
-* [PDF from PRODEX explaining Phases](pdf/PRODEX_USERGUIDE_V7_may2011.pdf)
-* [Complete management project architecture developed](pdf/Management_Plan_ECE³SAT_draft.pdf)
+* [PDF from PRODEX explaining Phases](/pdf/PRODEX_USERGUIDE_V7_may2011.pdf)
+* [Complete management project architecture developed](/pdf/Management_Plan_ECE3SAT_draft.pdf)

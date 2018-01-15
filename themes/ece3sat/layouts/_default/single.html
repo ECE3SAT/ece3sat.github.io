@@ -6,8 +6,8 @@
         {{ .Title }}
     </h1>
     {{ if .Params.image }}
-        <img class="post_illustration" src="{{ .Params.image }}">
-        <legend>{{ .Params.image_legend }}</legend>
+        <img class="post_illustration" src="{{ .Params.image }}" alt="{{ .Params.image_legend }}">
+        <legend style="margin:auto; text-align:center;">{{ .Params.image_legend }}</legend>
     {{ end }}
 
     <hr />

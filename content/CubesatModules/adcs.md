@@ -1,7 +1,7 @@
 {
     "title": "ADCS: Attitude Determination And Control System",
-    "image": "https://media.giphy.com/media/3osBL1WVO9SflVB5Pa/giphy.gif",
-    "image_legend": "From Giphy"
+    "image": "/images/CubesatModules/ADCS.gif",
+    "image_legend": "Satellite tumbling in space - Extracted from the ESA video \"Space debris - a journey to Earth\""
 }
 
 
@@ -67,7 +67,7 @@ distributes power supply coming from the EPS subsystem to the Actuators.
 
 ### Document
 
-[System Specifications ADCS and SOA](/wiki/pdf/System_Specifications_ADCS_+_SOA.pdf)
+[System Specifications ADCS and SOA](/pdf/System_Specifications_ADCS_+_SOA.pdf)
 
 ## State Of The Art
 
@@ -87,7 +87,7 @@ Measuring the attitude:
 - TRIAD Algorithm
 - Kalman Filter 
 
-[Positioning method and algorithm ADCS](/wiki/pdf/Positioning_method_and_algorithm_ADCS.pdf)
+[Positioning method and algorithm ADCS](/pdf/Positioning_method_and_algorithm_ADCS.pdf)
 
 ### Sensors
 
@@ -104,7 +104,7 @@ Estimate an angular rotation:
 - Magnetometer
 - Temperature sensors
 
-[Sensors ADCS](/wiki/pdf/Sensors_ADCS.pdf)
+[Sensors ADCS](/pdf/Sensors_ADCS.pdf)
 
 ### Actuators
 
@@ -118,7 +118,7 @@ Estimate an angular rotation:
 - Magnetorquer
 - Permanent magnet
 
-[Actuators ADCS](/wiki/pdf/Actuators_ADCS.pdf)
+[Actuators ADCS](/pdf/Actuators_ADCS.pdf)
 
 ### Electronic board
 
@@ -127,7 +127,7 @@ Estimate an angular rotation:
 - Hardware
 - Software
 
-[Electronic board ADCS](/wiki/pdf/Electronic_board_ADCS.pdf)
+[Electronic board ADCS](/pdf/Electronic_board_ADCS.pdf)
 
 ## System Specifications ADCS {#system-specifications-adcs .v1-center}
 
@@ -161,11 +161,11 @@ individually power our actuators.
 
 ### System Specification
 
-[System Specifications ADCS](/wiki/pdf/System_Specifications_ADCS.pdf)
+[System Specifications ADCS](/pdf/System_Specifications_ADCS.pdf)
 
 ### Mission Specification
 
-[Specifications ADCS](/wiki/pdf/Specifications_ADCS.pdf)
+[Specifications ADCS](/pdf/Specifications_ADCS.pdf)
 
 ## System Specifications ADCS {#system-specifications-adcs .v1-center}
 
@@ -184,7 +184,7 @@ categories
 - Magnetorquers: The most reliable solution seem to be to locate them
     on solar pannel
 
-[Sizing ADCS](/wiki/pdf/Sizing_ADCS.pdf)
+[Sizing ADCS](/pdf/Sizing_ADCS.pdf)
 
 ## Algorithm ADCS
 

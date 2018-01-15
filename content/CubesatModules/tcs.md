@@ -1,6 +1,7 @@
 {
     "title": "TCS: Telecommunication System",
-    "image": "/images/CubesatModules/TCS.jpg"
+    "image": "/images/CubesatModules/TCS.jpg",
+    "image_legend": "Ground station at Naval Computer and Telecommunications Area Master Station Pacific, Hawaii - From https://commons.wikimedia.org/wiki/File:The_Mobile_User_Objective_System.jpg"
 }
 
 ### Telecommunication System (TCS)
@@ -86,7 +87,7 @@ following :
     "CCSDS prootcol TCS"
 >}}
 
-[Protocol TCS](/wiki/pdf/Protocol_TCS.pdf)
+[Protocol TCS](/pdf/Protocol_TCS.pdf)
 
 The carrier is a pure sinusoidal signal of constant amplitude, frequency
 and phase. This carrier must be modified to carry the signal we want to
@@ -138,7 +139,7 @@ C is the channel capacity in bps
 
 B is the channel bandwidth in Hz
 
-[Modulation TCS](/wiki/pdf/Modulation_TCS.pdf)
+[Modulation TCS](/pdf/Modulation_TCS.pdf)
 
 
 ### Sizing TCS {#sizing-tcs .v1-center}
@@ -165,7 +166,7 @@ To respect those values, we saw the cards on board of other cubeSats.
 The band chosen for downlink communications is 435-438 MHzand the
 transmission rate: 1200 to 9600 bauds
 
-[Electronic components TCS](/wiki/pdf/Electronic_components_TCS.pdf)
+[Electronic components TCS](/pdf/Electronic_components_TCS.pdf)
 
 #### Mecanical Components
 
@@ -217,7 +218,7 @@ match with system and environmental specifications:
 
 -   Dipole length: λ/2
 
-[Mecanical components TCS](/wiki/pdf/Mecanical_components_TCS.pdf)
+[Mecanical components TCS](/pdf/Mecanical_components_TCS.pdf)
 
 #### Orbit and data estimation
 
@@ -243,7 +244,7 @@ in the memory of the satellite: we are not able to transmit data each
 orbit of our satellite and sometimes, you can have 8 successive orbits
 without visibility as we can see in Gpredict for similar projects.
 
-[Orbit and data estimation TCS](/wiki/pdf/Orbit-and_data_estimation_TCS.pdf)
+[Orbit and data estimation TCS](/pdf/Orbit-and_data_estimation_TCS.pdf)
 
 #### Thermal simulation TCS
 
@@ -265,7 +266,7 @@ We can identify four sources of heat:
 The data coming from the FUNcube-1 also gave us the temperature range in
 which a satellite operates : from -30 ° C to 85 ° C
 
-[Thermal Simulation TCS](/wiki/pdf/Thermal_Simulation_TCS.pdf)
+[Thermal Simulation TCS](/pdf/Thermal_Simulation_TCS.pdf)
 
 ### Model TCS {#model-tcs .v1-center}
 
@@ -436,4 +437,4 @@ The LNA was then bought and the model assembled.
     "TCS LNA"
 >}}
 
-[Technical realization TCS](/wiki/pdf//Technical_realization_TCS.pdf)
+[Technical realization TCS](/pdf//Technical_realization_TCS.pdf)

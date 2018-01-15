@@ -11,13 +11,13 @@
         <h2>
             <a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
             {{ if eq $.URL "/blog/" }}
-                <span><i class="fa fa-calendar"></i> {{ $post.Lastmod.Format "January 2, 2006" }}</span>
+                <span><i class="fa fa-calendar"></i> {{ $post.Date.Format "January 2, 2006" }}</span>
             {{ end }}
         </h2>
         <section>
             <p class="post_summary">
                 {{ if $post.Params.image }}
-                    <img class="post_illustration" src="{{ $post.Params.image }}">
+                    <img class="post_illustration" src="{{ $post.Params.image }}" alt="{{ $post.Params.image_legend }}">
                 {{ end }}
 
                 {{ if $post.Params.summary }}

@@ -3,6 +3,7 @@
     1. General
     2. Nav Bar, Home Page Header, breadcrumb
     3. Footer
+    3a. 404
     4. Home Page
     5. Listing Page
     6. Article Page
@@ -39,7 +40,7 @@ h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0.5rem; }
 h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
 
 /* From http://www.color-hex.com/color-palette/1294 */
-h1 { color: #011f4b; font-size: 2.50rem; text-decoration: underline; }
+h1 { color: #011f4b; font-size: 2.50rem; }
 h2 { color: #03396c; font-size: 2.00rem; }
 h3 { color: #005b96; font-size: 1.75rem; }
 h4 { color: #6497b1; font-size: 1.50rem; }
@@ -177,6 +178,27 @@ footer img {
     position: relative;
     top: 5px;
 }
+
+/*******************************************************************************
+    3a. 404
+*******************************************************************************/
+
+.content_404 {
+    padding: 100px 10px;
+}
+
+.content_404 p {
+    text-align: center;
+}
+
+.content_404 #houston {
+    font-size: 200%;
+}
+
+.content_404 #reason {
+    font-size: 150%;
+}
+
 
 /*******************************************************************************
     4. Home Page
