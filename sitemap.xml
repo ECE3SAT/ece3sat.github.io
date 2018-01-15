@@ -3,74 +3,74 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</loc>
-    <lastmod>2018-01-09T16:50:07+01:00</lastmod>
+    <loc>http://ece3sat.com/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/theproject/objectives_2017-2018/</loc>
+    <loc>http://ece3sat.com/theproject/objectives_2017-2018/</loc>
     <lastmod>2017-11-28T18:08:24+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/adcs/</loc>
-    <lastmod>2018-01-12T16:36:38+01:00</lastmod>
+    <loc>http://ece3sat.com/cubesatmodules/adcs/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/blog/</loc>
-    <lastmod>2018-01-09T16:50:07+01:00</lastmod>
+    <loc>http://ece3sat.com/blog/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/categories/</loc>
+    <loc>http://ece3sat.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/</loc>
-    <lastmod>2018-01-12T16:36:38+01:00</lastmod>
+    <loc>http://ece3sat.com/cubesatmodules/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/</loc>
+    <loc>http://ece3sat.com/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ece3sat.com/cubesatmodules/eps/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ece3sat.com/cubesatmodules/obc/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ece3sat.com/theproject/payload/</loc>
     <lastmod>2018-01-12T15:58:42+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/eps/</loc>
-    <lastmod>2018-01-12T16:36:38+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/obc/</loc>
-    <lastmod>2018-01-12T16:36:38+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/theproject/payload/</loc>
-    <lastmod>2018-01-12T15:58:42+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/theproject/requirements/</loc>
+    <loc>http://ece3sat.com/theproject/requirements/</loc>
     <lastmod>2018-01-12T15:23:32+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/cubesatmodules/tcs/</loc>
-    <lastmod>2018-01-12T16:36:38+01:00</lastmod>
+    <loc>http://ece3sat.com/cubesatmodules/tcs/</loc>
+    <lastmod>2018-01-15T09:47:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/tags/</loc>
+    <loc>http://ece3sat.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://nodraak.github.io/ece3satwikiv2/theproject/</loc>
+    <loc>http://ece3sat.com/theproject/</loc>
     <lastmod>2018-01-12T15:23:32+01:00</lastmod>
     <priority>0</priority>
   </url>
