@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on ECE3SAT</title>
-    <link>http://ece3sat.com/blog/</link>
+    <link>http://www.ece3sat.com/blog/</link>
     <description>Recent content in Blogs on ECE3SAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://ece3sat.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.ece3sat.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is a student-designed cubesat made of?</title>
-      <link>http://ece3sat.com/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</link>
+      <link>http://www.ece3sat.com/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</link>
       <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://ece3sat.com/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</guid>
+      <guid>http://www.ece3sat.com/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of/</guid>
       <description>Building a satellite is a big adventure for students like us! Even so this enterprise could seem demanding and perhaps even intimidating, we have to manage this just as any other project. And it starts with defining what are the system functionalities.
 Actually, there are a few standard core functionalities in the world of nanosatellites:
  First of all, as any other device, the satellite needs power to work. Electricity is produced by solar panels and distributed in the whole CubeSat.</description>

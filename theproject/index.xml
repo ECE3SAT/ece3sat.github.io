@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TheProjects on ECE3SAT</title>
-    <link>http://ece3sat.com/theproject/</link>
+    <link>http://www.ece3sat.com/theproject/</link>
     <description>Recent content in TheProjects on ECE3SAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://ece3sat.com/theproject/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.ece3sat.com/theproject/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2017-2018 Objectives</title>
-      <link>http://ece3sat.com/theproject/objectives_2017-2018/</link>
+      <link>http://www.ece3sat.com/theproject/objectives_2017-2018/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ece3sat.com/theproject/objectives_2017-2018/</guid>
+      <guid>http://www.ece3sat.com/theproject/objectives_2017-2018/</guid>
       <description>ADCS This year corresponds the B phase of the Attitude Determination and Control System (ADCS) of the ECE3SAT. Our work will be centralized on 4 fields.
 First of all, we want our satellite to be as open source as possible, that&amp;rsquo;s why we are going to develop our visibility and to document all our work through the year. That means we are going to be much more present on social media, post videos, communicate…</description>
     </item>
     
     <item>
       <title>Payload</title>
-      <link>http://ece3sat.com/theproject/payload/</link>
+      <link>http://www.ece3sat.com/theproject/payload/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ece3sat.com/theproject/payload/</guid>
+      <guid>http://www.ece3sat.com/theproject/payload/</guid>
       <description>The payload was developed in parallel of the 4 modules:
  Energy Power Supply (EPS) Telecommunication System (TCS) Attitude Determination Control System (ADCS) OnBoard Computer (OBC)  The goal of the payload is to test in practice a physical theory who was validated as a new deorbiting system.The launch is scheduled for the end of 2021. If the mission is a success this can lead to great progress on larger satellites.</description>
     </item>
     
     <item>
       <title>Requirements</title>
-      <link>http://ece3sat.com/theproject/requirements/</link>
+      <link>http://www.ece3sat.com/theproject/requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ece3sat.com/theproject/requirements/</guid>
+      <guid>http://www.ece3sat.com/theproject/requirements/</guid>
       <description> Definition A requirement is a statement that identifies a necessary capability, attribute, characteristic, or quality of a system for it have value and utility to a customer, organization or internal user. A requirement specification refers to an explicit set of requirements to be satisfied by a material, design, product, or service.
 EPS requirements Photovoltaic (PV) requirements  Battery (BAT) requirements   Power Circuit Control (PCC) requirements  OBC requirements OBC requirements  ADCS requirements Actuators system (ACT) requirements  Sensors system (SENS) requirements   Controller (CTRL) requirements  Telecommunication System (TCS) Telecommunication system (TCS) rfequirements  User Interface (UI) User Interface (UI) requirements  Ground Station (GRD) Ground Station (GRD) requirements  </description>
     </item>
