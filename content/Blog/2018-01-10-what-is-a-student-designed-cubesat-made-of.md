@@ -1,6 +1,9 @@
 {
     "title": "What is a student-designed cubesat made of?",
-    "date": "2017-01-10"
+    "date": "2018-01-10",
+    "aliases": [
+        "/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of"
+    ]
 }
 
 Building a satellite is a big adventure for students like us! Even so this enterprise could seem demanding and perhaps even intimidating, we have to manage this just as any other project. And it starts with defining what are the *system functionalities*.
