@@ -1,5 +1,5 @@
 {
-    "title": "How to slow down rotation ? The Bdot algorithm",
+    "title": "How to slow down satellite rotation ? - The B-dot algorithm",
     "date": "2018-01-25",
     "aliases": [
         "/blog/2018-01-24-how-to-slow-down-rotation-the-bdot-algorithm"
@@ -7,9 +7,11 @@
     "draft": true
 }
 
-The primary purpose of the ADCS (as its name would suggest) is to control the attitude of the satellite. In the case of ECE³SAT, this will be done by interacting with the Earth's magnetic field. How so ? By using _magnetorquers_, which are just some kind of coils used to produce a torque, thus so adjusting the satellite's rotation.
+The primary purpose of the Attitude Determination and Control System (or ADCS) is to control the attitude of the satellite (as its name would suggest). In the case of ECE³SAT, this will be done by interacting with the Earth's magnetic field. 
 
-Most certainly, the nanosatellite will undergo some rotation at various stages of its flight: upon separation with the PPOD launcher or when deploying the antennas or the Electrodynamic Tether, in all these situations (and even more) a perturbation torque will be applied to the Cubesat, making it a freely spinning unusable orbiting junk.
+How so ? By using _magnetorquers_, which are just some kind of coils used to produce a torque, thus so adjusting the satellite's rotation.
+
+Most certainly, the nanosatellite will undergo some rotation at various stages of its flight: upon separation with the [PPOD launcher](https://directory.eoportal.org/web/eoportal/satellite-missions/c-missions/cubesat-concept) (or any other launcher) or when deploying the antennas or the Electrodynamic Tether. In all these situations (and even more) a perturbation torque will be applied to the Cubesat, making it a freely spinning unusable orbiting junk.
 And for sure, we don't like space junk...
 Thus, the very first step of any attempt to control the attitude in a stable way should be to reach a rather small rotation velocity (and to keep it throughout time).
 Only then can we try to point to a more specific direction.
@@ -22,40 +24,56 @@ But first, let's recall how magnetorquers may be used to act on the satellite's 
 ## How to use the actuators?
 
 When the magnetorquers are supplied appropriately, they can generate a torque, obeying the law: 
-$$\vec{T} = \vec{m} \times \vec{B} = \|\vec{m}\| \dot \|\vec{B}\| \sin(\theta) \vec{u} $$,
-where $\vec{m}$ is the magnetic moment of the dipole (the coil), $\vec{B}$ is the Earth's magnetic field, $\theta$ is the angle between $\vec{m}$ and $\vec{B}$, and $\vec{n}$ is the unit vector resulting from the cross-poduct and is orthogonal to both $\vec{m}$ and $\vec{B}$).
+$$\vec{T} = \vec{M} \times \vec{B} = \\|\vec{M}\\| \\|\vec{B}\\| \sin(\theta) \vec{u} $$,
+where $\vec{M}$ is the magnetic moment of the dipole (the coil), $\vec{B}$ is the Earth's magnetic field, $\theta$ is the angle between $\vec{M}$ and $\vec{B}$, and $\vec{u}$ is the unit vector resulting from the cross-poduct and is orthogonal to both $\vec{M}$ and $\vec{B}$).
 
-Hence, the torque is maximal when the angle between the magnetic moment of the magnetorquer and the magnetic field are orthogonal (i.e. when $\theta = \frac{\pi}{2}$).
+Hence, the torque is maximal when the magnetic moment of the magnetorquer and the magnetic field are orthogonal (i.e. when $\theta = \frac{\pi}{2}$).
 
 This means that the satellite, which is rigidly linked with the magnetorquers, will have the tendancy to align itself in a way that the angle between each of the coils' magnetic moment and the Earth's magnetic field is minimised.
 
 Thus, to control the attitude of the satellite, one has to control each of the three magnetorquers' moment which is ruled by:
-$$\vec{m} = i S \vec{n}\_{coil}$$,
+$$\vec{M} = i S \cdot \vec{n}\_{coil}$$,
 where $i$ the intensity of the current flowing through one magnetorquer (in A), $S$ the surface enclosed by a turn of the coil's spiral (in m²) and $\vec{n}\_{coil}$ the normal vector to this surface.
 In our case, each element of this equation is fixed except the current intensity. Therefore, controlling the sign and magnitude of the intensity in each coil will determine the rotation direction implied by the resulting torque.
 
-## How does the BDOT work?
+## How does the B-dot work?
+
+The principle of the B-dot algorithm relies on the usage of magnetorquers to generate a torque which is opposed to the "natural" rotation of the satellite (based on Newton's 2nd law equivalent for rotational motions).
+This is made possible by applying an alternating positive/negative current to the coil to have an appropriate magnetic moment (see the equations in the previous section).
 
 {{<
     image_pop_up_legend
-    "/images/Blog/bdot-schema.png"
-    "BDOT schema"
-    "Example of the Weber State University cubesat's"
+    "/images/bdot-schema.png"
+    "Figure 1: Example of the B-dot algorithm applied to the Weber State University's satellite"
+    "Figure 1: Example of the B-dot algorithm applied to the Weber State University's satellite"
 >}}
 
-The Bdot algorithm itself work as follow: when the satellite is moving so that the Y axis is moving toward the earth magnetic field, the temporal derivative of B will be positive. The magnetorquers  will be used to generate a torque opposed to the rotation (negative intensity here to have a magnetic moment oriented toward Y-). The dipole orientation (so I positive) is then reversed, when Y passes B, that is to say \mathring{B}_i negative.
+For instance, as seen on Figure 1:
 
-To sum up the way the Bdot algorithm work:
+* Given a satellite which magnetorquer is aligned along a Y axis fixed with the satellite's rotation;
+* When the satellite is rotating so that the Y axis is progressively pointing in the same direction as the Earth's magnetic field, the temporal derivative of B, or rather its projection on that same Y axis, will be positive (i.e. $B\_Y$ increases and $\dot{B} > 0$);
+* A control signal with the opposite sign of the aforementioned derivative (thus a negative current) is sent through the coil so that its magnetic moment $\vec{M}$ points to the -Y direction;
+* When Y passes B and moves further away (that is to say when $\dot{B}$ is negative), the dipole orientation of the coil is then reversed so that the sign of the resulting torque is preserved.
+
+To sum up the way the B-dot algorithm works, here is a simple flow chart:
  
 {{<
     image_pop_up_legend
-    "/images/Blog/bdot-algorithm.jpg"
-    "BDOT algorithm simplified"
-    "Example of the Weber State University cubesat's"
+    "/images/bdot-algorithm.jpg"
+    "Figure 2: B-dot simplified flow chart"
+    "Figure 2: B-dot simplified flow chart"
 >}}
 
-So The control law applies a magnetic dipole in the opposite direction to the change in the magnetic field (estimated with magnetometers data). The magnetorquers applies a torque following this equation:
+The control law creates a magnetic dipole in the opposite direction to the change in the magnetic field, estimated with magnetometers data: 
+$$M\_i = -k_i \dot{B}_i$$ (with $i$ being one of the three axes and $\dot{B}_i$ the temporal derivative of the $\vec{B}$ field with respect to this axis)
 
-Mi = $-k_i$$\dot{B}$$_i$ (with i being one of the three axes and $\dot{B}$$_i$ the temporal derivative of the B field)
+As we have seen the B-dot algorithm is a rather simple stabilization algorithm which only requires knowing the evolution of the magnetic field as measured by our Cubesat's sensors.
 
-As we can see the BDOT algorithm is a simple stabilization algorithm, only knowing the evolution of the magnetic field allow us to take the right decision to stop the rotation of our Cubesat.
+A few things to note, though:
+
+1. We haven't covered the way we compute the derivative of the magnetic field from the values we obtain from the sensors, but this should be fairly simple if we follow the mathematical definition of a derivative;
+2. We haven't covered the method used to tune the coefficient
+3. You should as much as possible run unit tests and functional tests of your control algorithms both in a high-level simulation environment and on the target hardware. This helps designining, fine-tuning and understanding the algorithms behaviour and also generally eliminates most of the elementary mistakes made during implementation;
+4. Power consumption on-board the satellite will often be critical ! It is important to have this in mind when implementing algorithms. The B-dot is rather economic in terms of computational power but the activation of magnetorquers doesn't have to continuously be ON 100% of the time. And besides energy considerations, it is also essential that the values read from the magnetometers are not influenced by the magnetic field that we generate from the magentorquers. But these practical considerations may be the subject of a future article. :wink:
+
+Lastly, if you are interested in attitude determination or control algorithms, feel free to check the [Wiki](/cubesatmodules) part on the ADCS from times to times as we will try to progressively add more descriptive content there.
