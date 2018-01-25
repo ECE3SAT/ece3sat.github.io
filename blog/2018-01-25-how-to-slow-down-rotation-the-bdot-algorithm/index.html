@@ -1,0 +1,197 @@
+
+
+    
+    
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            How to slow down satellite rotation ? - The B-dot algorithm - ECE3SAT
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/v1.css">
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/fonts-googleapis-com-css-family-Lato.css">
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
+
+        <script type="text/javascript" src="http://www.ece3sat.com/js/script.js"></script>
+        <script type="text/javascript" src="http://www.ece3sat.com/js/mathjax-config.js"></script>
+
+        <script type="text/javascript" src="http://www.ece3sat.com/js/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-104420142-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body lang="en">
+        <div class="content-container">
+
+            <div id="nav_bar" class="v1-top">
+    <div id="nav_bar_desktop">
+        <a class="v1-bar-item v1-button v1-hover-black v1-hide-medium v1-hide-large v1-right" href="javascript:void(0);" onclick="menu_toggle()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <a class="v1-bar-item v1-button v1-hide-small " href="http://www.ece3sat.com/">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small " href="http://www.ece3sat.com/theproject">
+            <i class="fa fa-rocket"></i> The Project
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small " href="http://www.ece3sat.com/cubesatmodules">
+            <i class="fa fa-cube"></i> ECE3Sat SubModules
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small active" href="http://www.ece3sat.com/blog">
+            <i class="fa fa-calendar-o"></i> Blog
+        </a>
+
+    </div>
+
+    
+    <div id="nav_bar_mobile" class="v1-bar-block v1-dark-grey v1-hide v1-hide-large v1-hide-medium">
+        <a class="v1-bar-item v1-button " href="http://www.ece3sat.com/">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a class="v1-bar-item v1-button " href="http://www.ece3sat.com/theproject">
+            <i class="fa fa-rocket"></i> The Project
+        </a>
+        <a class="v1-bar-item v1-button " href="http://www.ece3sat.com/cubesatmodules">
+            <i class="fa fa-cube"></i> ECE3Sat SubModules
+        </a>
+        <a class="v1-bar-item v1-button active" href="http://www.ece3sat.com/blog">
+            <i class="fa fa-calendar-o"></i> Blog
+        </a>
+    </div>
+</div>
+
+
+            
+                <div style="height: 40px"></div>
+            
+
+            <div class="content-bg">
+                
+
+<div class="content content_single">
+
+    <h1>
+        How to slow down satellite rotation ? - The B-dot algorithm
+    </h1>
+    
+
+    <hr />
+
+    
+
+<p>The primary purpose of the Attitude Determination and Control System (or ADCS) is to control the attitude of the satellite (as its name would suggest). In the case of ECE³SAT, this will be done by interacting with the Earth&rsquo;s magnetic field.</p>
+
+<p>How so ? By using <em>magnetorquers</em>, which are just some kind of coils used to produce a torque, thus so adjusting the satellite&rsquo;s rotation.</p>
+
+<p>Most certainly, the nanosatellite will undergo some rotation at various stages of its flight: upon separation with the <a href="https://directory.eoportal.org/web/eoportal/satellite-missions/c-missions/cubesat-concept">PPOD launcher</a> (or any other launcher) or when deploying the antennas or the Electrodynamic Tether. In all these situations (and even more) a perturbation torque will be applied to the Cubesat, making it a freely spinning unusable orbiting junk.
+And for sure, we don&rsquo;t like space junk&hellip;
+Thus, the very first step of any attempt to control the attitude in a stable way should be to reach a rather small rotation velocity (and to keep it throughout time).
+Only then can we try to point to a more specific direction.</p>
+
+<p>This is why a detumbling algorithm is needed.
+And that&rsquo;s where the <em>BDOT</em> algoritm comes up: it provides a simple way to reduce the angular speed.</p>
+
+<p>But first, let&rsquo;s recall how magnetorquers may be used to act on the satellite&rsquo;s rotation.</p>
+
+<h2 id="how-to-use-the-actuators">How to use the actuators?</h2>
+
+<p>When the magnetorquers are supplied appropriately, they can generate a torque, obeying the law:
+$$\vec{T} = \vec{M} \times \vec{B} = \|\vec{M}\| \|\vec{B}\| \sin(\theta) \vec{u} $$,
+where $\vec{M}$ is the magnetic moment of the dipole (the coil), $\vec{B}$ is the Earth&rsquo;s magnetic field, $\theta$ is the angle between $\vec{M}$ and $\vec{B}$, and $\vec{u}$ is the unit vector resulting from the cross-poduct and is orthogonal to both $\vec{M}$ and $\vec{B}$).</p>
+
+<p>Hence, the torque is maximal when the magnetic moment of the magnetorquer and the magnetic field are orthogonal (i.e. when $\theta = \frac{\pi}{2}$).</p>
+
+<p>This means that the satellite, which is rigidly linked with the magnetorquers, will have the tendancy to align itself in a way that the angle between each of the coils&rsquo; magnetic moment and the Earth&rsquo;s magnetic field is minimised.</p>
+
+<p>Thus, to control the attitude of the satellite, one has to control each of the three magnetorquers&rsquo; moment which is ruled by:
+$$\vec{M} = i S \cdot \vec{n}_{coil}$$,
+where $i$ the intensity of the current flowing through one magnetorquer (in A), $S$ the surface enclosed by a turn of the coil&rsquo;s spiral (in m²) and $\vec{n}_{coil}$ the normal vector to this surface.
+In our case, each element of this equation is fixed except the current intensity. Therefore, controlling the sign and magnitude of the intensity in each coil will determine the rotation direction implied by the resulting torque.</p>
+
+<h2 id="how-does-the-b-dot-work">How does the B-dot work?</h2>
+
+<p>The principle of the B-dot algorithm relies on the usage of magnetorquers to generate a torque which is opposed to the &ldquo;natural&rdquo; rotation of the satellite (based on Newton&rsquo;s 2nd law equivalent for rotational motions).
+This is made possible by applying an alternating positive/negative current to the coil to have an appropriate magnetic moment (see the equations in the previous section).</p>
+
+
+
+<div class="image_pop_up_legend">
+    <img src="http://www.ece3sat.com/images/bdot-schema.png"  alt="Figure 1: Example of the B-dot algorithm applied to the Weber State University&#39;s satellite" onclick="image_pop_up(this)">
+    <figcaption>Figure 1: Example of the B-dot algorithm applied to the Weber State University&#39;s satellite</figcaption>
+</div>
+
+
+<p>For instance, as seen on Figure 1:</p>
+
+<ul>
+<li>Given a satellite which magnetorquer is aligned along a Y axis fixed with the satellite&rsquo;s rotation;</li>
+<li>When the satellite is rotating so that the Y axis is progressively pointing in the same direction as the Earth&rsquo;s magnetic field, the temporal derivative of B, or rather its projection on that same Y axis, will be positive (i.e. $B_Y$ increases and $\dot{B} &gt; 0$);</li>
+<li>A control signal with the opposite sign of the aforementioned derivative (thus a negative current) is sent through the coil so that its magnetic moment $\vec{M}$ points to the -Y direction;</li>
+<li>When Y passes B and moves further away (that is to say when $\dot{B}$ is negative), the dipole orientation of the coil is then reversed so that the sign of the resulting torque is preserved.</li>
+</ul>
+
+<p>To sum up the way the B-dot algorithm works, here is a simple flow chart:</p>
+
+
+
+<div class="image_pop_up_legend">
+    <img src="http://www.ece3sat.com/images/bdot-algorithm.jpg"  alt="Figure 2: B-dot simplified flow chart" onclick="image_pop_up(this)">
+    <figcaption>Figure 2: B-dot simplified flow chart</figcaption>
+</div>
+
+
+<p>The control law creates a magnetic dipole in the opposite direction to the change in the magnetic field, estimated with magnetometers data:
+$$M_i = -k_i \dot{B}_i$$ (with $i$ being one of the three axes and $\dot{B}_i$ the temporal derivative of the $\vec{B}$ field with respect to this axis)</p>
+
+<p>As we have seen the B-dot algorithm is a rather simple stabilization algorithm which only requires knowing the evolution of the magnetic field as measured by our Cubesat&rsquo;s sensors.</p>
+
+<p>A few things to note, though:</p>
+
+<ol>
+<li>We haven&rsquo;t covered the way we compute the derivative of the magnetic field from the values we obtain from the sensors, but this should be fairly simple if we follow the mathematical definition of a derivative;</li>
+<li>We haven&rsquo;t covered the method used to tune the coefficient</li>
+<li>You should as much as possible run unit tests and functional tests of your control algorithms both in a high-level simulation environment and on the target hardware. This helps designining, fine-tuning and understanding the algorithms behaviour and also generally eliminates most of the elementary mistakes made during implementation;</li>
+<li>Power consumption on-board the satellite will often be critical ! It is important to have this in mind when implementing algorithms. The B-dot is rather economic in terms of computational power but the activation of magnetorquers doesn&rsquo;t have to continuously be ON 100% of the time. And besides energy considerations, it is also essential that the values read from the magnetometers are not influenced by the magnetic field that we generate from the magentorquers. But these practical considerations may be the subject of a future article. 😉</li>
+</ol>
+
+<p>Lastly, if you are interested in attitude determination or control algorithms, feel free to check the <a href="http://www.ece3sat.com/cubesatmodules">Wiki</a> part on the ADCS from times to times as we will try to progressively add more descriptive content there.</p>
+
+
+</div>
+
+
+            </div>
+
+            <footer>
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
+        <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
+        <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
+    </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+    </a>
+</footer>
+
+
+        </div>
+    </body>
+
+</html>

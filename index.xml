@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>How to slow down satellite rotation ? - The B-dot algorithm</title>
+      <link>http://www.ece3sat.com/blog/2018-01-25-how-to-slow-down-rotation-the-bdot-algorithm/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ece3sat.com/blog/2018-01-25-how-to-slow-down-rotation-the-bdot-algorithm/</guid>
+      <description>The primary purpose of the Attitude Determination and Control System (or ADCS) is to control the attitude of the satellite (as its name would suggest). In the case of ECE³SAT, this will be done by interacting with the Earth&amp;rsquo;s magnetic field.
+How so ? By using magnetorquers, which are just some kind of coils used to produce a torque, thus so adjusting the satellite&amp;rsquo;s rotation.
+Most certainly, the nanosatellite will undergo some rotation at various stages of its flight: upon separation with the PPOD launcher (or any other launcher) or when deploying the antennas or the Electrodynamic Tether.</description>
+    </item>
+    
+    <item>
       <title>What is a student-designed cubesat made of?</title>
       <link>http://www.ece3sat.com/blog/2018-01-10-what-is-a-student-designed-cubesat-made-of/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
