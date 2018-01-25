@@ -2,9 +2,8 @@
     "title": "How to slow down satellite rotation ? - The B-dot algorithm",
     "date": "2018-01-25",
     "aliases": [
-        "/blog/2018-01-24-how-to-slow-down-rotation-the-bdot-algorithm"
-    ],
-    "draft": true
+        "/blog/2018-01-25-how-to-slow-down-rotation-the-bdot-algorithm"
+    ]
 }
 
 The primary purpose of the Attitude Determination and Control System (or ADCS) is to control the attitude of the satellite (as its name would suggest). In the case of ECE³SAT, this will be done by interacting with the Earth's magnetic field. 
