@@ -264,7 +264,7 @@ required ??
 
 .content_listing h2 span {
     font-size: 50%;
-    margin-left: 15px;
+    white-space: nowrap;
 }
 
 .content_listing .post_summary {
