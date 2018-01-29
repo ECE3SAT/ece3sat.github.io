@@ -59,8 +59,14 @@ a:hover {
 
 .content-bg {
     width: 100%;
-    padding-bottom: 105px; /* height of the footer */
     background-color: #FFF;
+}
+
+.content-bg::after
+{
+    height: 105px;  /* footer height */
+    content: "";
+    display: block;
 }
 
 .content {
