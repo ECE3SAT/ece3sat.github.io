@@ -30,6 +30,8 @@ dpkg -i hugo_0.31.1_Linux-64bit.deb
 git clone https://github.com/ECE3SAT/ece3satwiki
 ```
 
+*Note: the branch used to write the content is `dev` and the published branch (HTML) is `master`.*
+
 ## Write And Deploy a New Blog Post
 
 The steps are basically:
@@ -44,6 +46,8 @@ The steps are basically:
     3. Push the sources and the generated wiki: `git push origin master && git push origin dev`
 
 ## Writing Instructions
+
+**Where to write what kind of articles:**
 
 * The `Home` page should shortly present the project
 * The category `The Project` should contain project-wide articles
@@ -67,9 +71,14 @@ You can also include raw HTML code, but this is <span style="color:red;">strongl
 The first part is a JSON header. Most fields are optionals:
 
 * title
-* date: optional
+* date: optional. If the date is in the future, Hugo won't publish the article, unless you pass `--buildFuture` when running hugo.
 * summary: shows in the page listing, instead of an auto-generated one that just takes the beginning text
 * image: the URL of an image that will be shown on the listing page
+* alias: optional. This is usefull if you published an article and shared it, but the auto-generated URL changed (because you changed the date or the title)
 
 ```
+
+**Custom shortcodes:**
+
+A shortcode is a mini template. Custom shortcode are in `layouts/shortcodes/`.
 
