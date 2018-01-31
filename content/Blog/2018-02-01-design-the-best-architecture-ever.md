@@ -62,7 +62,7 @@ Then we take into account the reviews from each module’s team. Indeed, they ha
 
 
 #### summary :
-This representation sum up all the steps from the creation to the maintenance of an architecture :
+This representation sums up all the steps from the creation to the maintenance of an architecture :
 {{<
     image_pop_up_legend
     "/images/Blog/lifecycle.png"
