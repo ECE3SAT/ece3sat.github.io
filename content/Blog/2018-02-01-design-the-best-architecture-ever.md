@@ -9,9 +9,9 @@
 ## What's an architecture ?
 
 A system can be considered as a group of subsystems with their own functionalities and goals.
-The architecture is the general structure distribution of sub-modules on board and the definition of their relations.
+The architecture is both the general structure distribution of sub-modules on board, and the definition of their relations.
 
-We previously presented our 5 modules ADCS, TCS, OBC, EDT and EPS. Our architecture has to create subsystems in terms of hardware, communication and energy while respecting spatial requirements and being the most failure-tolerant.
+We previously presented our 5 modules ADCS, TCS, OBC, EDT and EPS. Our architecture has to create subsystems in terms of hardware, communication and energy, while respecting spatial requirements and being the most failure-tolerant.
 
 ----------
 
@@ -42,14 +42,14 @@ This step involves creating a table of contents that outlines the information an
 - the actual requirements supported by the architecture
 - the definitions of the various structures
 - the inter-relationships between the structures outlining the documentation representing the various structures
-- how these documents are laid out (i.e.,modeling techniques, notation, semantics, etc.), and so on.
+- how these documents are laid out (i.e.,modelling techniques, notation, semantics, etc.), and so on.
 
 2. **A document for each structure**
 
 >This document should indicate which requirements are being supported by the structure and how these requirements are being supported by the design, as well as any relative constraints, issues, or open items.
 This document should also contain graphical and non-graphical (i.e., tabular, text, etc.) representations of each of the various elements within the structure. For instance, a graphical representation of the structural elements and relationships would include an index containing a textual summary of the various elements, their behavior, their interfaces, and their relationships to other structural elements.
 
-This document should be easily adaptable in specification formalism like UML (*Unified Modeling Language*).
+This document should be easily adaptable in specification formalism like UML (*Unified Modelling Language*).
 
 
 #### 6. Analyzing and evaluating the architecture
