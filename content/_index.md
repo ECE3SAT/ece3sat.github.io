@@ -56,22 +56,22 @@ management, debris removal and the limitation of orbital objects.
 One part of the implementation of the space debris mitigation is made
 through the development of solutions to give the tools to the new
 satellites to perform deorbiting maneuvers to either cemetery orbits
-where the satellite is passivized (batteries and tanks emptied) or
+where the satellite is passivised (batteries and tanks emptied) or
 toward Earth to disintegrate upon re-entry into the atmosphere. Several
 types of deorbiting systems are currently being developed such as the
 aerodynamic sail, chemical engine, and electric/ionic engine.
 
-{{< home_parallax "/images/parallax.jpg" "What Is a Cubesat?" >}}
+{{< home_parallax "/images/parallax.jpg" "What is a CubeSat?" >}}
 
 <!--
-    # What Is a Cubesat?
+    # What Is a CubeSat?
 -->
 
 {{<
     image_pop_up_legend
     "/images/429961main_cubesat_1.jpg"
-    "Illustration of a cubesat above the Earth."
-    "A cubeast above the Earth"
+    "Illustration of a cubeSat above the Earth."
+    "A CubeSat above the Earth"
 >}}
 
 A CubeSat (1U-class spacecraft) is a nanosatelite satellite for space
@@ -126,7 +126,7 @@ put into material selection as not all materials can be used in vacuums.
 
 The ECE3SAT project is a student project developed at the french
 engineer school, [ECE Paris](http://www.ece.fr/school-of-engineering/) .
-The goal of the project is to send a [Cubesat](#cubesat) in space to
+The goal of the project is to send a [CubeSat](#cubesat) in space to
 verify a physical theory permitting a fast deorbiting. The project
 started in September 2015 after the [ESA](http://m.esa.int/ESA)
 authorization.
@@ -139,7 +139,7 @@ The ECE3SAT is composed of five modules named
 - OnBoard Computer ([OBC]({{< relref "CubesatModules/obc.md" >}}))
 - Payload ([Payload]({{< relref "TheProject/payload.md" >}}))
 
-The [Cubesat](#cubesat) development is divided in five different phases,
+The [CubeSat](#cubesat) development is divided in five different phases,
 0, A, B, C & D and E & F. Each phase is supposed to be realized in 1
 Year.
 
@@ -169,18 +169,18 @@ Each phase is designed to end with a major milestone in the development,
 such as proof of concept, equipment delivery, launch, etc.
 
 **The text in bold and italics describes the phases specifics for
-[Cubesats](#cubesat).**
+[CubeSats](#cubesat).**
 
 Typically the phases are:
 
 ## Phase 0
 
 Phase 0 is sometime already ready but in a project like a
-[Cubesat](#cubesat) it needs to be done. So this includes focusing on
+[CubeSat](#cubesat) it needs to be done. So this includes focusing on
 the technical aspects of the project, the management plan, the group
 project agreement and building partner's interest.
 
-**The Phase 0 is very important for [Cubesat](#cubesat) Projects because
+**The Phase 0 is very important for [CubeSat](#cubesat) Projects because
 everything needs to be thought from scratch. (Done in 2015-2016)**
 
 ## Phase A

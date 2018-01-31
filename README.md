@@ -51,7 +51,7 @@ The steps are basically:
 
 * The `Home` page should shortly present the project
 * The category `The Project` should contain project-wide articles
-* The category `Cubesat Modules` should contain Wikipedia-style articles (timeless articles)
+* The category `CubeSat Modules` should contain Wikipedia-style articles (timeless articles)
 * The category `Blog` should contain updates and announcements (timed articles)
 
 **An article should be formatted like this:**

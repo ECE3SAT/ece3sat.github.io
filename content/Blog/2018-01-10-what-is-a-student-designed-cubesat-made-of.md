@@ -1,5 +1,5 @@
 {
-    "title": "What is a student-designed cubesat made of?",
+    "title": "What is a student-designed CubeSat made of?",
     "date": "2018-01-10",
     "aliases": [
         "/blog/2017-12-05-what-is-a-student-designed-cubesat-made-of"
@@ -15,8 +15,8 @@ Actually, there are a few standard core functionalities in the world of nanosate
 {{<
     image_pop_up_legend
     "/images/Blog/cubesatInHand_WeberStateUniversity.jpg"
-    "Weber State University cubesat's has solar panels on all faces"
-    "Example of the Weber State University cubesat's"
+    "Weber State University CubeSat's has solar panels on all faces"
+    "Example of the Weber State University CubeSat's"
 >}}
 
 * The CubeSat also needs to *orient itself*. It is not a matter of translations (the satellite is stuck on its orbit since its deployment), but a matter of *rotation* around its axis to properly orient its faces (solar cells towards the Sun and antenna towards Earth). This system is named **Attitude Determination Control System (ADCS)**. It is useful throughout the duration of the mission, and especially more during the detumbling phase: when the satellite is first launched on its orbit, it is spinning at a high speed. The first task to achieve for the satellite is therefore to stabilize itself!

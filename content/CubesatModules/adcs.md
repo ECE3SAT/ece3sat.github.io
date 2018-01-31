@@ -259,4 +259,4 @@ The magnetorquers applies a torque following this equation:
 
 Mi = -ki B’i  (with i being one of the three axis and B’ the temporal derivative of the B field)
 
-As we can see the BDOT algorithm is a simple stabilization algorithm, only knowing the evolution of the magnetic field allow us to take the right decision to stop the rotation of our Cubesat.
+As we can see the BDOT algorithm is a simple stabilization algorithm, only knowing the evolution of the magnetic field allow us to take the right decision to stop the rotation of our CubeSat.
