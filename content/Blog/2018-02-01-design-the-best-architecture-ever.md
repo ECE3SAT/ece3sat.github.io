@@ -6,7 +6,7 @@
 # SYSTEM ARCHITECTURE
 
 
-## What's an architecture ?
+## What's an architecture?
 
 A system can be considered as a group of subsystems with their own functionalities and goals.
 The architecture is both the general structure distribution of sub-modules on board, and the definition of their relations.
@@ -15,7 +15,7 @@ We previously presented our 5 modules ADCS, TCS, OBC, EDT and EPS. Our architect
 
 ----------
 
-## How to find the best architecture ? (methodology)
+## How to find the best architecture? (methodology)
 For a long and ambitious project like ECE3SAT, we wished to follow embedded system methodology.
 We applied the process found in the book *Embedded Systems Architectures* described in the following article.
 
@@ -28,7 +28,7 @@ First of all, we had to gather all requirements from each module. The previous p
 We kept in mind that any information has to be saved (even if it’s written on a napkin). Indeed, we have to be able to make our choices understandable by future working teams.
 
 #### 3. Deﬁning the architectural patterns and reference models
-A state of the art and a study of existing cubesat allows our team to quickly identify important modules : EPS, ADCS, OBC, and TCS.
+A state of the art and a study of existing cubesat allows our team to quickly identify important modules: EPS, ADCS, OBC, and TCS.
 
 #### 4. Creating the architectural structures
 >This is done by decomposing the entire embedded system into hardware and/or software elements, and then further decomposing the elements that need breaking down. These decompositions are represented as some combination of various types of structures [...]. The patterns [...] that most satisfy the system requirements (the most complete, the most accurate, the most buildable, highest conceptual integrity, etc.) should be used as the foundations for the architectural structures.
@@ -61,8 +61,8 @@ To compare and choose the best architecture between all proposals, we used grade
 Then we take into account the reviews from each module’s team. Indeed, they had to read and verify the documented architecture produced to ensure it matches the set of their own requirements. If one need is not answered, the architecture has to be redesigned by integrating the correction and follow the same process: it is a small V-Model.
 
 
-#### summary :
-This representation sums up all the steps from the creation to the maintenance of an architecture :
+#### summary:
+This representation sums up all the steps from the creation to the maintenance of an architecture:
 {{<
     image_pop_up_legend
     "/images/Blog/lifecycle.png"
