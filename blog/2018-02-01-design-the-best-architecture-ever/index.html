@@ -1,0 +1,211 @@
+
+
+    
+    
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            How to determine the system architecture? - ECE3SAT
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/v1.css">
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/fonts-googleapis-com-css-family-Lato.css">
+        <link rel="stylesheet" type="text/css" href="http://www.ece3sat.com/css/cdnjs-cloudflare-com-ajax-libs-font-awesome-4.7.0-css-font-awesome.min.css">
+
+        <script type="text/javascript" src="http://www.ece3sat.com/js/script.js"></script>
+        <script type="text/javascript" src="http://www.ece3sat.com/js/mathjax-config.js"></script>
+        <script type="text/javascript" src="http://www.ece3sat.com/js/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-104420142-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body lang="en">
+        <div class="content-container">
+
+            <div id="nav_bar" class="v1-top">
+    <div id="nav_bar_desktop">
+        <a class="v1-bar-item v1-button v1-hover-black v1-hide-medium v1-hide-large v1-right" href="javascript:void(0);" onclick="menu_toggle()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <a class="v1-bar-item v1-button v1-hide-small " href="http://www.ece3sat.com/">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small " href="http://www.ece3sat.com/theproject">
+            <i class="fa fa-rocket"></i> The Project
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small " href="http://www.ece3sat.com/cubesatmodules">
+            <i class="fa fa-cube"></i> ECE3Sat SubModules
+        </a>
+        <a class="v1-bar-item v1-button v1-hide-small active" href="http://www.ece3sat.com/blog">
+            <i class="fa fa-calendar-o"></i> Blog
+        </a>
+
+    </div>
+
+    
+    <div id="nav_bar_mobile" class="v1-bar-block v1-dark-grey v1-hide v1-hide-large v1-hide-medium">
+        <a class="v1-bar-item v1-button " href="http://www.ece3sat.com/">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a class="v1-bar-item v1-button " href="http://www.ece3sat.com/theproject">
+            <i class="fa fa-rocket"></i> The Project
+        </a>
+        <a class="v1-bar-item v1-button " href="http://www.ece3sat.com/cubesatmodules">
+            <i class="fa fa-cube"></i> ECE3Sat SubModules
+        </a>
+        <a class="v1-bar-item v1-button active" href="http://www.ece3sat.com/blog">
+            <i class="fa fa-calendar-o"></i> Blog
+        </a>
+    </div>
+</div>
+
+
+            
+                <div style="height: 40px"></div>
+            
+
+            <div class="content-bg">
+                
+
+<div class="content content_single">
+
+    <h1>
+        How to determine the system architecture?
+    </h1>
+    
+
+    <hr />
+
+    
+
+<h2 id="what-s-an-architecture">What&rsquo;s an architecture?</h2>
+
+<p>A system can be considered as a group of subsystems with their own functionalities and goals.
+The architecture is both the general structure distribution of sub-modules on board, and the definition of their relations.</p>
+
+<p>We previously presented <a href="http://www.ece3sat.com/blog/2018-01-10-what-is-a-student-designed-cubesat-made-of/">here</a> our 5 modules ADCS, TCS, OBC, EDT and EPS. Our architecture has to create subsystems in terms of hardware, communication and energy, while respecting spatial requirements and being the most fault-tolerant possible.</p>
+
+<hr />
+
+<h2 id="how-to-find-the-best-architecture-methodology">How to find the best architecture? (methodology)</h2>
+
+<p>For a long and ambitious project like ECE3SAT, we wished to follow embedded system methodology.
+We applied the process found in the book <em>Embedded Systems Architectures</em> described in the following article.</p>
+
+<h4 id="1-having-a-solid-technical-base">1. Having a solid technical base</h4>
+
+<p>Our project covers various technical realms. The first aspect is to gather knowledge in order to understand most requirements.</p>
+
+<h4 id="2-understanding-the-architecture-business-cycle">2. Understanding the architecture business cycle</h4>
+
+<p>First of all, we had to gather all requirements from each module. The previous phase focused on it and used formalism to describe it in their reports. However, some requirements had to be updated, that&rsquo;s why communication with other modules (our final clients) was crucial.</p>
+
+<p>We kept in mind that every information should be somehow logged and saved (even if it’s written on a napkin). Indeed, we have to be able to make choices understandable by future working teams.</p>
+
+<h4 id="3-deﬁning-the-architectural-patterns-and-reference-models">3. Deﬁning the architectural patterns and reference models</h4>
+
+<p>A state of the art and a study of existing cubesat allows our team to quickly identify important modules: EPS, ADCS, OBC, and TCS.</p>
+
+<h4 id="4-creating-the-architectural-structures">4. Creating the architectural structures</h4>
+
+<blockquote>
+<p>&ldquo;This is done by decomposing the entire embedded system into hardware and/or software elements, and then further decomposing the elements that need breaking down. These decompositions are represented as some combination of various types of structures (&hellip;). The patterns (&hellip;) that most satisfy the system requirements (the most complete, the most accurate, the most buildable, highest conceptual integrity, etc.) should be used as the foundations for the architectural structures.
+It is ultimately left up to the architects of the system to decide which structures to select and how many to implement.&rdquo;</p>
+</blockquote>
+
+<h4 id="5-documenting-the-architecture">5. Documenting the architecture</h4>
+
+<ol>
+<li><strong>A document outlining the entire architecture</strong></li>
+</ol>
+
+<p>This step involves creating a table of contents that outlines the information and documentation available for the architecture, such as:</p>
+
+<ul>
+<li>an overview of the embedded system</li>
+<li>the actual requirements supported by the architecture</li>
+<li>the definitions of the various structures</li>
+<li>the inter-relationships between the structures outlining the documentation representing the various structures</li>
+<li>how these documents are laid out (i.e., modelling techniques, notation, semantics, etc.), and so on.</li>
+</ul>
+
+<ol>
+<li><strong>A document for each structure</strong></li>
+</ol>
+
+<blockquote>
+<p>&ldquo;This document should indicate which requirements are being supported by the structure and how these requirements are being supported by the design, as well as any relative constraints, issues, or open items.
+This document should also contain graphical and non-graphical (i.e., tabular, text, etc.) representations of each of the various elements within the structure. For instance, a graphical representation of the structural elements and relationships would include an index containing a textual summary of the various elements, their behavior, their interfaces, and their relationships to other structural elements.&rdquo;</p>
+</blockquote>
+
+<p>This document should be easily adaptable in specification formalism like UML (<em>Unified Modelling Language</em>).</p>
+
+<h4 id="6-analyzing-and-evaluating-the-architecture">6. Analyzing and evaluating the architecture</h4>
+
+<blockquote>
+<p>While there are many purposes for reviewing an architecture, primarily it is to determine if an architecture meets the requirements, and to evaluate the potential risks, and possible failure, of a design long before it has been built. When evaluating an architecture, both the person reviewing it and the process of the evaluation must be established.</p>
+</blockquote>
+
+<p>To compare and choose the best architecture between all proposals, we used grades to note each one in function of their behavior in multiple scenarios. It is called <em>qualitative-analysis approach</em>.</p>
+
+<p>Then we took into account the reviews from each module’s team. Indeed, they had to read and verify the documented architecture produced to ensure it matches the set of their own set of requirements. If one need is not answered, the architecture has to be redesigned by integrating the correction and following the same process: it is a small V-Model.</p>
+
+<h4 id="summary">Summary</h4>
+
+<p>This representation sums up all the steps from the creation to the maintenance of an architecture:
+
+
+<div class="image_pop_up_legend">
+    <img src="http://www.ece3sat.com/images/Blog/lifecycle.png"  alt="Figure 1: Embedded Systems Design and Development Lifecycle Model" onclick="image_pop_up(this)">
+    <figcaption>Figure 1: Embedded Systems Design and Development Lifecycle Model</figcaption>
+</div>
+</p>
+
+<hr />
+
+<h3 id="sources">Sources</h3>
+
+<ul>
+<li><em>Embedded Systems Architectures</em> - chapitre 11 (ISBN: 978-0-7506-7792-9)
+<a href="https://www.eyrolles.com/Informatique/Livre/embedded-systems-architecture-9780750677929">Link to Eyrolles</a></li>
+</ul>
+
+
+</div>
+
+
+            </div>
+
+            <footer>
+    <a href="mailto:ece3sat@gmail.com"><i class="fa fa-envelope icon"></i> ece3sat@gmail.com</a>
+    - <span class="icon">
+        <a target="_blank" href="https://www.facebook.com/Ece3sat/"><i class="fa fa-facebook-official"></i></a>
+        <a target="_blank" href="https://twitter.com/Ece3Sat/"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCpAxDrncsTZyOouI4n6Hs2A/"><i class="fa fa-youtube"></i></a>
+    </span>
+    - <a target="_blank" href="https://github.com/ECE3SAT/ECE3SAT.github.io"><i class="fa fa-github icon"></i> Source Code</a>
+    - <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+    </a>
+</footer>
+
+
+        </div>
+    </body>
+
+</html>

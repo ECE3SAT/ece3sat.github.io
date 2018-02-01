@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on ECE3SAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.ece3sat.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to determine the system architecture?</title>
+      <link>http://www.ece3sat.com/blog/2018-02-01-design-the-best-architecture-ever/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ece3sat.com/blog/2018-02-01-design-the-best-architecture-ever/</guid>
+      <description>What&amp;rsquo;s an architecture? A system can be considered as a group of subsystems with their own functionalities and goals. The architecture is both the general structure distribution of sub-modules on board, and the definition of their relations.
+We previously presented here our 5 modules ADCS, TCS, OBC, EDT and EPS. Our architecture has to create subsystems in terms of hardware, communication and energy, while respecting spatial requirements and being the most fault-tolerant possible.</description>
+    </item>
     
     <item>
       <title>How to slow down satellite rotation ? - The B-dot algorithm</title>
