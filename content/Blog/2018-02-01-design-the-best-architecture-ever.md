@@ -1,5 +1,5 @@
 {
-    "title": "How to determine the system architecture ?",
+    "title": "How to determine the system architecture?",
     "date": "2018-02-01"
 }
 
@@ -42,7 +42,7 @@ This step involves creating a table of contents that outlines the information an
 - the actual requirements supported by the architecture
 - the definitions of the various structures
 - the inter-relationships between the structures outlining the documentation representing the various structures
-- how these documents are laid out (i.e.,modelling techniques, notation, semantics, etc.), and so on.
+- how these documents are laid out (i.e., modelling techniques, notation, semantics, etc.), and so on.
 
 2. **A document for each structure**
 
@@ -58,7 +58,7 @@ This document should be easily adaptable in specification formalism like UML (*U
 
 To compare and choose the best architecture between all proposals, we used grades to note each one in function of their behavior in multiple scenarios. It is called *qualitative-analysis approach*.
 
-Then we take into account the reviews from each module’s team. Indeed, they had to read and verify the documented architecture produced to ensure it matches the set of their own requirements. If one need is not answered, the architecture has to be redesigned by integrating the correction and follow the same process : it is a small V-Model.
+Then we take into account the reviews from each module’s team. Indeed, they had to read and verify the documented architecture produced to ensure it matches the set of their own requirements. If one need is not answered, the architecture has to be redesigned by integrating the correction and follow the same process: it is a small V-Model.
 
 
 #### summary :
